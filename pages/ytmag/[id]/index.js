@@ -810,7 +810,7 @@ const ytmagDetail = ({ ytmag }) => {
         >
           *Note: Use Setting in Player to improve the Quality of video to HD
           Quality 1080p.
-        </p>
+        </p>  
         <div class='container1'>
           <ShareButtons
             title='Movies Magazine'
