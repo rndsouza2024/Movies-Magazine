@@ -11,9 +11,9 @@ const Privacy = () => {
     '@graph': [
       {
         '@type': 'Person',
-        '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
+        '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
         name: 'Dr Trailer',
-        url: 'https://youtubemagazine.vercel.app/author/ytmag/',
+        url: 'https://moviesmagazine.onrender.com/author/ytmag/',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -24,37 +24,37 @@ const Privacy = () => {
       },
       {
         '@type': 'Organization',
-        '@id': 'https://youtubemagazine.vercel.app/#organization',
-        name: 'Youtube Magazine™ - For Unlisted Videos. Explore. Discover. Connect.™',
-        url: 'https://youtubemagazine.vercel.app'
+        '@id': 'https://moviesmagazine.onrender.com/#organization',
+        name: 'Movies Magazine™ - For Unlisted Videos. Explore. Discover. Connect.™',
+        url: 'https://moviesmagazine.onrender.com'
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://youtubemagazine.vercel.app/#website',
-        url: 'https://youtubemagazine.vercel.app',
-        name: 'Youtube Magazine™ - For Unlisted Videos. Explore. Discover. Connect.™',
+        '@id': 'https://moviesmagazine.onrender.com/#website',
+        url: 'https://moviesmagazine.onrender.com',
+        name: 'Movies Magazine™ - For Unlisted Videos. Explore. Discover. Connect.™',
         publisher: {
           '@type': 'Organization',
-          '@id': 'https://youtubemagazine.vercel.app/#organization'
+          '@id': 'https://moviesmagazine.onrender.com/#organization'
         },
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://youtubemagazine.vercel.app/?s={search_term_string}',
+          target: 'https://moviesmagazine.onrender.com/?s={search_term_string}',
           'query-input': 'required name=search_term_string'
         }
       },
       {
         '@type': 'WebPage',
-        '@id': 'https://youtubemagazine.vercel.app/#webpage',
-        url: 'https://youtubemagazine.vercel.app/',
+        '@id': 'https://moviesmagazine.onrender.com/#webpage',
+        url: 'https://moviesmagazine.onrender.com/',
         name: 'Movie',
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         about: {
           '@type': 'Person',
-          '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
+          '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
           name: 'Dr Trailer',
-          url: 'https://youtubemagazine.vercel.app/author/ytmag/',
+          url: 'https://moviesmagazine.onrender.com/author/ytmag/',
           image: {
             '@type': 'ImageObject',
             '@id': 'https://gravatar.com/drtrailer2022',
@@ -64,22 +64,22 @@ const Privacy = () => {
           }
         },
         isPartOf: {
-          '@id': 'https://youtubemagazine.vercel.app/#website'
+          '@id': 'https://moviesmagazine.onrender.com/#website'
         },
         inLanguage: 'en-US',
         mainEntity: [
           {
             '@type': 'Article',
-            '@id': 'https://youtubemagazine.vercel.app/',
-            url: 'https://youtubemagazine.vercel.app/',
+            '@id': 'https://moviesmagazine.onrender.com/',
+            url: 'https://moviesmagazine.onrender.com/',
             headline: 'Movie',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
+              '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
               name: 'Dr Trailer',
-              url: 'https://youtubemagazine.vercel.app/author/ytmag/',
+              url: 'https://moviesmagazine.onrender.com/author/ytmag/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -90,23 +90,23 @@ const Privacy = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://youtubemagazine.vercel.app/#organization',
-              name: 'Youtube Magazine™ - For Unlisted Videos. Explore. Discover. Connect.™',
-              url: 'https://youtubemagazine.vercel.app'
+              '@id': 'https://moviesmagazine.onrender.com/#organization',
+              name: 'Movies Magazine™ - For Unlisted Videos. Explore. Discover. Connect.™',
+              url: 'https://moviesmagazine.onrender.com'
             }
           },
           {
             '@type': 'Article',
-            '@id': 'https://youtubemagazine.vercel.app/',
-            url: 'https://youtubemagazine.vercel.app/',
+            '@id': 'https://moviesmagazine.onrender.com/',
+            url: 'https://moviesmagazine.onrender.com/',
             headline: 'Tvshow',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
+              '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
               name: 'Dr Trailer',
-              url: 'https://youtubemagazine.vercel.app/author/ytmag/',
+              url: 'https://moviesmagazine.onrender.com/author/ytmag/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -117,23 +117,23 @@ const Privacy = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://youtubemagazine.vercel.app/#organization',
-              name: 'Youtube Magazine™ - For Unlisted Videos. Explore. Discover. Connect.™',
-              url: 'https://youtubemagazine.vercel.app'
+              '@id': 'https://moviesmagazine.onrender.com/#organization',
+              name: 'Movies Magazine™ - For Unlisted Videos. Explore. Discover. Connect.™',
+              url: 'https://moviesmagazine.onrender.com'
             }
           },
           {
             '@type': 'Article',
-            '@id': 'https://youtubemagazine.vercel.app/',
-            url: 'https://youtubemagazine.vercel.app/',
+            '@id': 'https://moviesmagazine.onrender.com/',
+            url: 'https://moviesmagazine.onrender.com/',
             headline: 'Adult',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
+              '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
               name: 'Dr Trailer',
-              url: 'https://youtubemagazine.vercel.app/author/ytmag/',
+              url: 'https://moviesmagazine.onrender.com/author/ytmag/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -144,9 +144,9 @@ const Privacy = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://youtubemagazine.vercel.app/#organization',
-              name: 'Youtube Magazine™ - For Unlisted Videos. Explore. Discover. Connect.™',
-              url: 'https://youtubemagazine.vercel.app'
+              '@id': 'https://moviesmagazine.onrender.com/#organization',
+              name: 'Movies Magazine™ - For Unlisted Videos. Explore. Discover. Connect.™',
+              url: 'https://moviesmagazine.onrender.com'
             }
           }
         ]
@@ -157,13 +157,13 @@ const Privacy = () => {
   return (
     <div>
        <Head>
-        <title>Youtube Magazine™ | Privacy Policy</title>
+        <title>Movies Magazine™ | Privacy Policy</title>
       
         <link
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://youtubemagazine.vercel.app/sitemap.xml'
+            href='https://moviesmagazine.onrender.com/sitemap.xml'
           />
           <meta
             name='viewport'
@@ -206,32 +206,32 @@ const Privacy = () => {
             name='description'
             content='Discover hidden YouTube gems! Submit your unlisted videos, connect with creators, and explore captivating content.'
           />
-          <link rel='canonical' href='https://youtubemagazine.vercel.app/intro/privacy' />
+          <link rel='canonical' href='https://moviesmagazine.onrender.com/intro/privacy' />
           <meta property='og:locale' content='en_US' />
           <meta property='og:type' content='website' />
           <meta
             property='og:title'
-            content='Youtube Magazine™ - For Unlisted Videos. Explore. Discover. Connect.'
+            content='Movies Magazine™ - For Unlisted Videos. Explore. Discover. Connect.'
           />
           <meta
             property='og:description'
             content='Discover hidden YouTube gems! Submit your unlisted videos, connect with creators, and explore captivating content.'
           />
-          <meta property='og:url' content='https://youtubemagazine.vercel.app/intro/privacy/' />
+          <meta property='og:url' content='https://moviesmagazine.onrender.com/intro/privacy/' />
           <meta
             property='og:site_name'
-            content='Youtube Magazine™ - For Unlisted Videos. Explore. Discover. Connect.'
+            content='Movies Magazine™ - For Unlisted Videos. Explore. Discover. Connect.'
           />
           <meta
             property='og:image'
-            content='https://youtubemagazine.vercel.app/og_image.jpg'
+            content='https://moviesmagazine.onrender.com/og_image.jpg'
           />
           <meta property='og:image:width' content='1280' />
           <meta property='og:image:height' content='720' />
           <meta property='og:image:type' content='image/jpg' />
           <meta
             name='application-name'
-            content='Youtube Magazine™ - For Unlisted Videos. Explore. Discover. Connect.'
+            content='Movies Magazine™ - For Unlisted Videos. Explore. Discover. Connect.'
           />
           <meta
             property='article:modified_time'
@@ -241,7 +241,7 @@ const Privacy = () => {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://youtubemagazine.vercel.app/sitemap.xml'
+            href='https://moviesmagazine.onrender.com/sitemap.xml'
           />
           <meta name='twitter:card' content='summary_large_image' />
           <meta
@@ -287,24 +287,24 @@ const Privacy = () => {
   <div className="flex flex-wrap">
     <div className="grow-0 shrink-0 basis-auto mb-12 md:mb-0 w-full  px-3 lg:px-6">
       <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
-      <p className="font-bold mb-2">Youtube Magazine</p>
+      <p className="font-bold mb-2">Movies Magazine</p>
       <p className="text-gray-500 mb-6">
-      Please read the following terms and conditions carefully and pay attention to the fact that by entering this site you completely agree to its terms and conditions. Youtube Magazine site reserves the right to change these terms and conditions without any prior notice. To get the changes check this policy on a regular base. This Site (Youtube Magazine) shall have no responsibilities or liabilities for the content, data, opinions, statements and links this site contains.
+      Please read the following terms and conditions carefully and pay attention to the fact that by entering this site you completely agree to its terms and conditions. Movies Magazine site reserves the right to change these terms and conditions without any prior notice. To get the changes check this policy on a regular base. This Site (Movies Magazine) shall have no responsibilities or liabilities for the content, data, opinions, statements and links this site contains.
       </p>
       <p className="font-bold mb-2">Note: Important</p>
       <p className="text-gray-500 mb-6">
       YOU HEREBY FURTHER AFFIRM AND WARRANT THAT YOU ARE CURRENTLY OVER THE AGE OF EIGHTEEN (<strong>18</strong>) YEARS (TWENTYONE (<strong>21</strong>) IN PLACES WHERE EIGHTEEN (<strong>18</strong>) YEARS IS NOT THE AGE OF MAJORITY) AND ARE CAPABLE OF LAWFULLY ENTERING INTO AND EXECUTING THE TERMS OF THIS AGREEMENT.
       </p>
       <p className="font-bold mb-2">
-      Youtube Magazine uses the right of &#8220;Free Speech&#8221;.
+      Movies Magazine uses the right of &#8220;Free Speech&#8221;.
       </p>
       <p className="text-gray-500 mb-6">
-      This site (Youtube Magazine) works in accordance with copyright law. Persons who reproduce or distribute any works without a copyright owner&#8217;s consent, may be in violation of this law.
+      This site (Movies Magazine) works in accordance with copyright law. Persons who reproduce or distribute any works without a copyright owner&#8217;s consent, may be in violation of this law.
       </p>
 
      
       <p className="text-gray-500">
-      We do not make warranties that this site will operate error free. If you see an error, please contact the <a className="font-bold text-blue-500 mb-6" href="mailto:drtrailer2022@gmail.com ">webmaster</a>. By entering this site you agree to hold the owners, employees, advertisers of Youtube Magazine free from any and all liability.This site (Youtube Magazine) do not offer any membership.If you have any questions please feel free to <a className="font-bold text-blue-500 mb-6" href="mailto:drtrailer2022@gmail.com">contact us</a>.
+      We do not make warranties that this site will operate error free. If you see an error, please contact the <a className="font-bold text-blue-500 mb-6" href="mailto:drtrailer2022@gmail.com ">webmaster</a>. By entering this site you agree to hold the owners, employees, advertisers of Movies Magazine free from any and all liability.This site (Movies Magazine) do not offer any membership.If you have any questions please feel free to <a className="font-bold text-blue-500 mb-6" href="mailto:drtrailer2022@gmail.com">contact us</a>.
       </p>
     </div>
 

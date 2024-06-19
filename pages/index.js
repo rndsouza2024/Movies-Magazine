@@ -7,20 +7,20 @@ const HomePage = () => {
   const [ytmag, setytmag] = useState(ytmagData)
 
   const pageTitle =
-    'Youtube Magazine - Explore. Discover. Connect.'
+    'Movies Magazine - Explore. Discover. Connect.'
 
     const uwatchfreeSchema = JSON.stringify([
       {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: 'Youtube Magazine',
-        url: 'https://youtubemagazine.vercel.app/',
+        name: 'Movies Magazine',
+        url: 'https://moviesmagazine.onrender.com/',
         image: [
-          'https://youtubemagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'
+          'https://moviesmagazine.onrender.com/wp-content/uploads/2023/05/favicon.ico'
         ],
         logo: {
           '@type': 'ImageObject',
-          url: 'https://youtubemagazine.vercel.app/logo.png',
+          url: 'https://moviesmagazine.onrender.com/logo.png',
           width: 280,
           height: 80
         }
@@ -28,12 +28,12 @@ const HomePage = () => {
       {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        url: 'https://youtubemagazine.vercel.app/',
+        url: 'https://moviesmagazine.onrender.com/',
         potentialAction: {
           '@type': 'SearchAction',
           target: {
             '@type': 'EntryPoint',
-            urlTemplate: 'https://youtubemagazine.vercel.app/search?q={search_term_string}'
+            urlTemplate: 'https://moviesmagazine.onrender.com/search?q={search_term_string}'
           },
           'query-input': 'required name=search_term_string'
         }
@@ -45,9 +45,9 @@ const HomePage = () => {
     '@graph': [
       {
         '@type': 'Person',
-        '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
+        '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
         name: 'Dr Trailer',
-        url: 'https://youtubemagazine.vercel.app/author/ytmag/',
+        url: 'https://moviesmagazine.onrender.com/author/ytmag/',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -58,37 +58,37 @@ const HomePage = () => {
       },
       {
         '@type': 'Organization',
-        '@id': 'https://youtubemagazine.vercel.app/#organization',
-        name: 'Youtube Magazine - Explore. Discover. Connect.',
-        url: 'https://youtubemagazine.vercel.app'
+        '@id': 'https://moviesmagazine.onrender.com/#organization',
+        name: 'Movies Magazine - Explore. Discover. Connect.',
+        url: 'https://moviesmagazine.onrender.com'
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://youtubemagazine.vercel.app/#website',
-        url: 'https://youtubemagazine.vercel.app',
-        name: 'Youtube Magazine - Explore. Discover. Connect.',
+        '@id': 'https://moviesmagazine.onrender.com/#website',
+        url: 'https://moviesmagazine.onrender.com',
+        name: 'Movies Magazine - Explore. Discover. Connect.',
         publisher: {
           '@type': 'Organization',
-          '@id': 'https://youtubemagazine.vercel.app/#organization'
+          '@id': 'https://moviesmagazine.onrender.com/#organization'
         },
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://youtubemagazine.vercel.app/?s={search_term_string}',
+          target: 'https://moviesmagazine.onrender.com/?s={search_term_string}',
           'query-input': 'required name=search_term_string'
         }
       },
       {
         '@type': 'WebPage',
-        '@id': 'https://youtubemagazine.vercel.app/#webpage',
-        url: 'https://youtubemagazine.vercel.app/',
+        '@id': 'https://moviesmagazine.onrender.com/#webpage',
+        url: 'https://moviesmagazine.onrender.com/',
         name: 'Movie',
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         about: {
           '@type': 'Person',
-          '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
+          '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
           name: 'Dr Trailer',
-          url: 'https://youtubemagazine.vercel.app/author/ytmag/',
+          url: 'https://moviesmagazine.onrender.com/author/ytmag/',
           image: {
             '@type': 'ImageObject',
             '@id': 'https://gravatar.com/drtrailer2022',
@@ -98,22 +98,22 @@ const HomePage = () => {
           }
         },
         isPartOf: {
-          '@id': 'https://youtubemagazine.vercel.app/#website'
+          '@id': 'https://moviesmagazine.onrender.com/#website'
         },
         inLanguage: 'en-US',
         mainEntity: [
           {
             '@type': 'Article',
-            '@id': 'https://youtubemagazine.vercel.app/',
-            url: 'https://youtubemagazine.vercel.app/',
+            '@id': 'https://moviesmagazine.onrender.com/',
+            url: 'https://moviesmagazine.onrender.com/',
             headline: 'Movie',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
+              '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
               name: 'Dr Trailer',
-              url: 'https://youtubemagazine.vercel.app/author/ytmag/',
+              url: 'https://moviesmagazine.onrender.com/author/ytmag/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -124,23 +124,23 @@ const HomePage = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://youtubemagazine.vercel.app/#organization',
-              name: 'Youtube Magazine - Explore. Discover. Connect.',
-              url: 'https://youtubemagazine.vercel.app'
+              '@id': 'https://moviesmagazine.onrender.com/#organization',
+              name: 'Movies Magazine - Explore. Discover. Connect.',
+              url: 'https://moviesmagazine.onrender.com'
             }
           },
           {
             '@type': 'Article',
-            '@id': 'https://youtubemagazine.vercel.app/',
-            url: 'https://youtubemagazine.vercel.app/',
+            '@id': 'https://moviesmagazine.onrender.com/',
+            url: 'https://moviesmagazine.onrender.com/',
             headline: 'Tvshow',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
+              '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
               name: 'Dr Trailer',
-              url: 'https://youtubemagazine.vercel.app/author/ytmag/',
+              url: 'https://moviesmagazine.onrender.com/author/ytmag/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -151,23 +151,23 @@ const HomePage = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://youtubemagazine.vercel.app/#organization',
-              name: 'Youtube Magazine - Explore. Discover. Connect.',
-              url: 'https://youtubemagazine.vercel.app'
+              '@id': 'https://moviesmagazine.onrender.com/#organization',
+              name: 'Movies Magazine - Explore. Discover. Connect.',
+              url: 'https://moviesmagazine.onrender.com'
             }
           },
           {
             '@type': 'Article',
-            '@id': 'https://youtubemagazine.vercel.app/',
-            url: 'https://youtubemagazine.vercel.app/',
+            '@id': 'https://moviesmagazine.onrender.com/',
+            url: 'https://moviesmagazine.onrender.com/',
             headline: 'Adult',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
+              '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
               name: 'Dr Trailer',
-              url: 'https://youtubemagazine.vercel.app/author/ytmag/',
+              url: 'https://moviesmagazine.onrender.com/author/ytmag/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -178,9 +178,9 @@ const HomePage = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://youtubemagazine.vercel.app/#organization',
-              name: 'Youtube Magazine - Explore. Discover. Connect.',
-              url: 'https://youtubemagazine.vercel.app'
+              '@id': 'https://moviesmagazine.onrender.com/#organization',
+              name: 'Movies Magazine - Explore. Discover. Connect.',
+              url: 'https://moviesmagazine.onrender.com'
             }
           }
         ]
@@ -197,7 +197,7 @@ const HomePage = () => {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://youtubemagazine.vercel.app/sitemap.xml'
+            href='https://moviesmagazine.onrender.com/sitemap.xml'
           />
           <meta
             name='viewport'
@@ -238,37 +238,37 @@ const HomePage = () => {
           />
           <meta
             name='description'
-            content='Discover hidden YouTube gems! Submit your unlisted videos, connect with creators,  and explore captivating content on Youtube Magazine.Unlock new favorites today!'
+            content='Discover hidden YouTube gems! Submit your unlisted videos, connect with creators,  and explore captivating content on Movies Magazine.Unlock new favorites today!'
           />
-          <link rel='canonical' href='https://youtubemagazine.vercel.app/' />
+          <link rel='canonical' href='https://moviesmagazine.onrender.com/' />
           <meta property='og:locale' content='en_US' />
           <meta property='og:type' content='website' />
           <meta
             property='og:title'
-            content='Youtube Magazine - Explore. Discover. Connect.'
+            content='Movies Magazine - Explore. Discover. Connect.'
           />
           <meta
             property='og:description'
-            content='Discover hidden YouTube gems! Submit your unlisted videos, connect with creators,  and explore captivating content on Youtube Magazine.Unlock new favorites today!'
+            content='Discover hidden YouTube gems! Submit your unlisted videos, connect with creators,  and explore captivating content on Movies Magazine.Unlock new favorites today!'
           />
           <meta
             property='og:url'
-            content='https://youtubemagazine.vercel.app/'
+            content='https://moviesmagazine.onrender.com/'
           />
           <meta
             property='og:site_name'
-            content='Youtube Magazine - Explore. Discover. Connect.'
+            content='Movies Magazine - Explore. Discover. Connect.'
           />
           <meta
             property='og:image'
-            content='https://youtubemagazine.vercel.app/og_image.jpg'
+            content='https://moviesmagazine.onrender.com/og_image.jpg'
           />
           <meta property='og:image:width' content='1280' />
           <meta property='og:image:height' content='720' />
           <meta property='og:image:type' content='image/webp' />
           <meta
             name='application-name'
-            content='Youtube Magazine - Explore. Discover. Connect.'
+            content='Movies Magazine - Explore. Discover. Connect.'
           />
           <meta
             property='article:modified_time'
@@ -278,7 +278,7 @@ const HomePage = () => {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://youtubemagazine.vercel.app/sitemap.xml'
+            href='https://moviesmagazine.onrender.com/sitemap.xml'
           />
           <meta name='twitter:card' content='summary_large_image' />
           <meta name="google-adsense-account" content="ca-pub-5527677677744511" />
@@ -320,7 +320,7 @@ const HomePage = () => {
             }}
           />
         </Head>
-        <h1>Welcome to Youtube Magazine</h1>
+        <h1>Welcome to Movies Magazine</h1>
         <h2>Explore. Discover. Connect. </h2>
         <h3
           className=' text-center  font-bold text-lg items-center justify-center'
@@ -330,24 +330,24 @@ const HomePage = () => {
             textShadow: '5px 5px 2px #000'
           }}
         >
-          Welcome to Youtube Magazine For Unlisted Videos - where hidden gems
+          Welcome to Movies Magazine For Unlisted Videos - where hidden gems
           shine! Explore a curated collection of exclusive unlisted videos from
           talented creators around the globe. Discover captivating content
           that's off the beaten path and connect with a community passionate
           about unique, under-the-radar videos. Do you have an incredible
           unlisted video waiting to be seen? Share your masterpiece with us!
-          Youtube Magazine invites creators to submit their unlisted videos for
+          Movies Magazine invites creators to submit their unlisted videos for
           a chance to be featured and reach a wider audience. Showcase your
           creativity and connect with viewers who appreciate authentic and
           innovative content. Our business model revolves around promoting
           channel subscriptions, giving creators the opportunity to gain
           visibility and build a dedicated following. By subscribing to YouTube
-          Magazine™, viewers unlock access to a world of unlisted videos,
+          Magazine???, viewers unlock access to a world of unlisted videos,
           providing a platform for creators to thrive and share their stories.
           Join us on this exciting journey of exploration and discovery. Submit
           your unlisted videos today and become part of a community that
           celebrates creativity, diversity, and the power of hidden treasures
-          waiting to be uncovered. Connect with Youtube Magazine For Unlisted
+          waiting to be uncovered. Connect with Movies Magazine For Unlisted
           Videos - where every video tells a unique story, and every viewer
           becomes part of the discovery. Together, let's explore the untold
           narratives and connect with creators who redefine what it means to

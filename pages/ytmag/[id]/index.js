@@ -27,7 +27,7 @@ const ytmagDetail = ({ ytmag }) => {
   const [showPopupTrailer, setShowPopupTrailer] = useState(false)
 
   const shareMessage =
-    'Watch Now !!! Youtube Magazine - For ytmags, TV Show & Sports Live.!'
+    'Watch Now !!! Movies Magazine - For ytmags, TV Show & Sports Live.!'
 
   // const togglePopup = () => {
   //   setShowPopup(!showPopup)
@@ -269,12 +269,12 @@ const ytmagDetail = ({ ytmag }) => {
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'Youtube Magazine',
-      url: 'https://youtubemagazine.vercel.app/',
-      image: ['https://youtubemagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'],
+      name: 'Movies Magazine',
+      url: 'https://moviesmagazine.onrender.com/',
+      image: ['https://moviesmagazine.onrender.com/wp-content/uploads/2023/05/favicon.ico'],
       logo: {
         '@type': 'ImageObject',
-        url: 'https://youtubemagazine.vercel.app/logo.png',
+        url: 'https://moviesmagazine.onrender.com/logo.png',
         width: 280,
         height: 80
       }
@@ -282,12 +282,12 @@ const ytmagDetail = ({ ytmag }) => {
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      url: 'https://youtubemagazine.vercel.app/',
+      url: 'https://moviesmagazine.onrender.com/',
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate: 'https://youtubemagazine.vercel.app/search?q={search_term_string}'
+          urlTemplate: 'https://moviesmagazine.onrender.com/search?q={search_term_string}'
         },
         'query-input': 'required name=search_term_string'
       }
@@ -304,9 +304,9 @@ const ytmagDetail = ({ ytmag }) => {
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://youtubemagazine.vercel.app#website',
-        url: 'https://youtubemagazine.vercel.app',
-        name: 'Youtube Magazine',
+        '@id': 'https://moviesmagazine.onrender.com#website',
+        url: 'https://moviesmagazine.onrender.com',
+        name: 'Movies Magazine',
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
@@ -316,19 +316,19 @@ const ytmagDetail = ({ ytmag }) => {
         '@type': 'WebPage',
         '@id': `/${ytmag['ytmag.watch']}#webpage`,
         url: `/${ytmag['ytmag.watch']}`,
-        name: `${ytmag.name} | Youtube Magazine`,
+        name: `${ytmag.name} | Movies Magazine`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         isPartOf: {
-          '@id': 'https://youtubemagazine.vercel.app#website'
+          '@id': 'https://moviesmagazine.onrender.com#website'
         },
         inLanguage: 'en-US'
       },
       {
         '@type': 'Person',
-        '@id': 'https://youtubemagazine.vercel.appauthor/ytmag/',
+        '@id': 'https://moviesmagazine.onrender.comauthor/ytmag/',
         name: 'Dr Trailer',
-        url: 'https://youtubemagazine.vercel.appauthor/ytmag/',
+        url: 'https://moviesmagazine.onrender.comauthor/ytmag/',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -336,24 +336,24 @@ const ytmagDetail = ({ ytmag }) => {
           caption: 'Dr Trailer',
           inLanguage: 'en-US'
         },
-        sameAs: ['https://youtubemagazine.vercel.app']
+        sameAs: ['https://moviesmagazine.onrender.com']
       },
       {
         '@type': 'Article',
         '@id': `/${ytmag['ytmag.watch']}#article`,
-        headline: `Watch ${ytmag.name} | Youtube Magazine`,
+        headline: `Watch ${ytmag.name} | Movies Magazine`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         articleSection: 'ytmag',
         author: {
-          '@id': 'https://youtubemagazine.vercel.appauthor/ytmag/'
+          '@id': 'https://moviesmagazine.onrender.comauthor/ytmag/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
-        description: `Discover hidden YouTube gems! Submit your unlisted videos, connect with creators,  and explore captivating content on Youtube Magazine.Unlock new favorites today!`,
+        description: `Discover hidden YouTube gems! Submit your unlisted videos, connect with creators,  and explore captivating content on Movies Magazine.Unlock new favorites today!`,
         image: ytmag.image,
-        name: `Watch ${ytmag.name} | Youtube Magazine`,
+        name: `Watch ${ytmag.name} | Movies Magazine`,
         isPartOf: {
           '@id': `/${ytmag['ytmag.watch']}#webpage`
         },
@@ -365,19 +365,19 @@ const ytmagDetail = ({ ytmag }) => {
       {
         '@type': 'BlogPosting',
         '@id': `/${ytmag['ytmag.watch']}#blogPost`,
-        headline: `Watch ${ytmag.name} | Youtube Magazine`,
+        headline: `Watch ${ytmag.name} | Movies Magazine`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         articleSection: 'ytmag',
         author: {
-          '@id': 'https://youtubemagazine.vercel.appauthor/ytmag/'
+          '@id': 'https://moviesmagazine.onrender.comauthor/ytmag/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
-        description: `Discover hidden YouTube gems! Submit your unlisted videos, connect with creators,  and explore captivating content on Youtube Magazine.Unlock new favorites today!`,
+        description: `Discover hidden YouTube gems! Submit your unlisted videos, connect with creators,  and explore captivating content on Movies Magazine.Unlock new favorites today!`,
         image: ytmag.image,
-        name: `Watch ${ytmag.name} | Youtube Magazine`,
+        name: `Watch ${ytmag.name} | Movies Magazine`,
         '@id': `/${ytmag['ytmag.watch']}#richSnippet`,
         isPartOf: {
           '@id': `/${ytmag['ytmag.watch']}#webpage`
@@ -418,10 +418,10 @@ const ytmagDetail = ({ ytmag }) => {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Youtube Magazine',
+      name: 'Movies Magazine',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://youtubemagazine.vercel.app/og_image.jpg'
+        url: 'https://moviesmagazine.onrender.com/og_image.jpg'
       }
     },
     additionalProperty: {
@@ -463,7 +463,7 @@ const ytmagDetail = ({ ytmag }) => {
           name='robots'
           content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
         />
-        <title> Watch {ytmag && ytmag.name} | Youtube Magazine</title>
+        <title> Watch {ytmag && ytmag.name} | Movies Magazine</title>
         <link rel='canonical' href={ytmag && ytmag.url} />
         <meta name='robots' content='index, follow' />
         <meta name='googlebot' content='index,follow' />
@@ -472,7 +472,7 @@ const ytmagDetail = ({ ytmag }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:title'
-          content={`${ytmag && ytmag.name} - Youtube Magazine`}
+          content={`${ytmag && ytmag.name} - Movies Magazine`}
         />
         <meta
           property='og:description'
@@ -482,11 +482,11 @@ const ytmagDetail = ({ ytmag }) => {
         />
         <meta
           property='og:description'
-          content='Discover hidden YouTube gems! Submit your unlisted videos, connect with creators,  and explore captivating content on Youtube Magazine.Unlock new favorites today!'
+          content='Discover hidden YouTube gems! Submit your unlisted videos, connect with creators,  and explore captivating content on Movies Magazine.Unlock new favorites today!'
         />
         <meta property='og:url' content={`${ytmag && ytmag.url}`} />
         <meta name='keywords' content={`${ytmag && ytmag.keywords}`} />
-        <meta property='og:site_name' content='Youtube Magazine' />
+        <meta property='og:site_name' content='Movies Magazine' />
         <meta property='og:type' content='article' />
         <meta property=' og:image:alt' content={`${ytmag && ytmag.group}`} />
         <meta name='mobile-web-app-capable' content='yes' />
@@ -588,13 +588,13 @@ const ytmagDetail = ({ ytmag }) => {
           className='flex flex-col text-center py-5 font-bold text-3xl items-center justify-center'
           style={{ color: '#40D7BC', textShadow: '5px 5px 2px #000' }}
         >
-          Youtube Magazine Explore. Discover. Connect.{' '}
+          Movies Magazine Explore. Discover. Connect.{' '}
         </h2>
         <p
           className='flex flex-col text-center py-5 font-bold text-xl items-center justify-center'
           style={{ color: '#40D7BC', textShadow: '5px 5px 2px #000' }}
         >
-          "Youtube Magazine - Explore. Discover. Connect." Unlock the hidden
+          "Movies Magazine - Explore. Discover. Connect." Unlock the hidden
           treasures of YouTube! Submit your exclusive unlisted videos and gain
           exposure to a global audience. Join our community of creators and
           enthusiasts to discover, share, and connect through captivating
@@ -813,7 +813,7 @@ const ytmagDetail = ({ ytmag }) => {
         </p>
         <div class='container1'>
           <ShareButtons
-            title='Youtube Magazine'
+            title='Movies Magazine'
             description='For ytmags, TV Show & Sports Live. social platform'
             shareMessage={shareMessage}
             image={ytmag && ytmag.url}
@@ -837,7 +837,7 @@ const ytmagDetail = ({ ytmag }) => {
         {/* <Max /> */}
         <div class='container1'>
           <ShareButtons
-            title='Youtube Magazine'
+            title='Movies Magazine'
             description='For ytmags, TV Show & Sports Live. social platform'
             shareMessage={shareMessage}
             image={ytmag && ytmag.url}

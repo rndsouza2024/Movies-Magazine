@@ -11,7 +11,7 @@ class MyDocument extends Document {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://youtubemagazine.vercel.app/sitemap.xml'
+            href='https://moviesmagazine.onrender.com/sitemap.xml'
           />
           <link
             rel='icon'
@@ -50,32 +50,32 @@ class MyDocument extends Document {
             name='description'
             content='Discover hidden YouTube gems! Submit your unlisted videos, connect with creators, and explore captivating content.'
           />
-          <link rel='canonical' href='https://youtubemagazine.vercel.app/' />
+          <link rel='canonical' href='https://moviesmagazine.onrender.com/' />
           <meta property='og:locale' content='en_US' />
           <meta property='og:type' content='website' />
           <meta
             property='og:title'
-            content='Youtube Magazine - For Unlisted Videos. Explore. Discover. Connect.'
+            content='Movies Magazine - For Unlisted Videos. Explore. Discover. Connect.'
           />
           <meta
             property='og:description'
             content='Discover hidden YouTube gems! Submit your unlisted videos, connect with creators, and explore captivating content.'
           />
-          <meta property='og:url' content='https://youtubemagazine.vercel.app/' />
+          <meta property='og:url' content='https://moviesmagazine.onrender.com/' />
           <meta
             property='og:site_name'
-            content='Youtube Magazine - For Unlisted Videos. Explore. Discover. Connect.'
+            content='Movies Magazine - For Unlisted Videos. Explore. Discover. Connect.'
           />
           <meta
             property='og:image'
-            content='https://youtubemagazine.vercel.app/og_image.jpg'
+            content='https://moviesmagazine.onrender.com/og_image.jpg'
           />
           <meta property='og:image:width' content='1280' />
           <meta property='og:image:height' content='720' />
           <meta property='og:image:type' content='image/webp' />
           <meta
             name='application-name'
-            content='Youtube Magazine - For Unlisted Videos. Explore. Discover. Connect.'
+            content='Movies Magazine - For Unlisted Videos. Explore. Discover. Connect.'
           />
           <meta
             property='article:modified_time'
@@ -85,7 +85,7 @@ class MyDocument extends Document {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://youtubemagazine.vercel.app/sitemap.xml'
+            href='https://moviesmagazine.onrender.com/sitemap.xml'
           />
           <meta name='twitter:card' content='summary_large_image' />
           <meta name="google-adsense-account" content="ca-pub-5527677677744511" />

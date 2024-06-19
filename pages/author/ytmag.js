@@ -11,9 +11,9 @@ export default function ytmag ({ movie }) {
         let searchTermLower = searchTerm.toLowerCase();
         let searchURL;
         if (searchTermLower.includes('tv show')) {
-            searchURL = `https://www.google.com/search?q=site:https://youtubemagazine.vercel.apptvshow/${encodeURIComponent(searchTermLower)}-2024`;
+            searchURL = `https://www.google.com/search?q=site:https://moviesmagazine.onrender.comtvshow/${encodeURIComponent(searchTermLower)}-2024`;
         } else {
-            searchURL = `https://www.google.com/search?q=site:https://youtubemagazine.vercel.appmovie/${encodeURIComponent(searchTermLower)}-2024`;
+            searchURL = `https://www.google.com/search?q=site:https://moviesmagazine.onrender.commovie/${encodeURIComponent(searchTermLower)}-2024`;
         }
         router.push(searchURL);
     };
@@ -22,7 +22,7 @@ export default function ytmag ({ movie }) {
             <Head>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <title>Youtube Magazine™ - For Unlisted Videos. Explore. Discover. Connect.</title>
+                <title>Movies Magazine™ - For Unlisted Videos. Explore. Discover. Connect.</title>
                 {/* Add your other meta tags here */}
                 <script
                     type="application/ld+json"
@@ -38,9 +38,9 @@ export default function ytmag ({ movie }) {
                                 },
                                 {
                                     "@type": "WebSite",
-                                    "@id": "https://youtubemagazine.vercel.app#website",
-                                    "url": "https://youtubemagazine.vercel.app",
-                                    "name": "Youtube Magazine™",
+                                    "@id": "https://moviesmagazine.onrender.com#website",
+                                    "url": "https://moviesmagazine.onrender.com",
+                                    "name": "Movies Magazine™",
                                     "publisher": {
                                         "@id": "https://gravatar.com/drtrailer2022/#person"
                                     },
@@ -48,22 +48,22 @@ export default function ytmag ({ movie }) {
                                 },
                                 {
                                     "@type": "ProfilePage",
-                                    "@id": "https://youtubemagazine.vercel.appauthor/ytmag/#webpage",
-                                    "url": "https://youtubemagazine.vercel.appauthor/ytmag/",
+                                    "@id": "https://moviesmagazine.onrender.comauthor/ytmag/#webpage",
+                                    "url": "https://moviesmagazine.onrender.comauthor/ytmag/",
                                     "name": "Dr Trailer",
                                     "isPartOf": {
-                                        "@id": "https://youtubemagazine.vercel.app#website"
+                                        "@id": "https://moviesmagazine.onrender.com#website"
                                     },
                                     "inLanguage": "en-US",
                                     "mainEntityOfPage": {
-                                        "@id": "https://youtubemagazine.vercel.appauthor/ytmag/#webpage"
+                                        "@id": "https://moviesmagazine.onrender.comauthor/ytmag/#webpage"
                                     }
                                 },
                                 {
                                     "@type": "Person",
-                                    "@id": "https://youtubemagazine.vercel.appauthor/ytmag/",
+                                    "@id": "https://moviesmagazine.onrender.comauthor/ytmag/",
                                     "name": "Dr Trailer",
-                                    "url": "https://youtubemagazine.vercel.appauthor/ytmag/",
+                                    "url": "https://moviesmagazine.onrender.comauthor/ytmag/",
                                     "image": {
                                         "@type": "ImageObject",
                                         "@id": "https://gravatar.com/drtrailer2022",
@@ -72,10 +72,10 @@ export default function ytmag ({ movie }) {
                                         "inLanguage": "en-US"
                                     },
                                     "sameAs": [
-                                        "https://youtubemagazine.vercel.app"
+                                        "https://moviesmagazine.onrender.com"
                                     ],
                                     "mainEntityOfPage": {
-                                        "@id": "https://youtubemagazine.vercel.appauthor/ytmag/#webpage"
+                                        "@id": "https://moviesmagazine.onrender.comauthor/ytmag/#webpage"
                                     }
                                 }
                             ]
@@ -84,10 +84,10 @@ export default function ytmag ({ movie }) {
                 ></script>
             </Head>
             <div id="main">
-            <h1 className="flex flex-col text-center py-5 font-bold text-3xl items-center justify-center" style={{ color: "#40D7BC", textShadow: "5px 5px 2px #000" }}>Youtube Magazine™ - For Unlisted Videos. Explore. Discover. Connect. </h1>
+            <h1 className="flex flex-col text-center py-5 font-bold text-3xl items-center justify-center" style={{ color: "#40D7BC", textShadow: "5px 5px 2px #000" }}>Movies Magazine™ - For Unlisted Videos. Explore. Discover. Connect. </h1>
                 <div className="container" style={{justifyContent: 'center', alignItems: 'center', height: '10vh', marginTop: '100px', }}>
                     <div className="home-main">
-                        <div className="hm-logo"><a title="" href="https://youtubemagazine.vercel.app" id="logo-home"></a></div>
+                        <div className="hm-logo"><a title="" href="https://moviesmagazine.onrender.com" id="logo-home"></a></div>
                         <div className="addthis_inline_share_toolbox mb10"></div>
                         <div id="hm-search">
                             <div id="search-homepage" className="search-content">
@@ -104,7 +104,7 @@ export default function ytmag ({ movie }) {
                                 <div id="search-homepage-results"></div>
                             </div>
                         </div>
-                        <div className="hm-button"><a href="https://youtubemagazine.vercel.app" className="btn btn-lg btn-successful" style={{ color: '#40D7BC', fontSize: '24px', textShadow: '3px 5px 5px #000' }}>Youtube Magazine™</a></div>
+                        <div className="hm-button"><a href="https://moviesmagazine.onrender.com" className="btn btn-lg btn-successful" style={{ color: '#40D7BC', fontSize: '24px', textShadow: '3px 5px 5px #000' }}>Movies Magazine™</a></div>
                     </div>
                 </div>
             </div>
