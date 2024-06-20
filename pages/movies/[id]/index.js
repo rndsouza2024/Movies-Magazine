@@ -6,6 +6,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Rating from '../../../components/Rating'
 import Pagination from '../../../components/Pagination'
+import MP3Player from '../../../components/MP3Player';
 import Link from 'next/link'
 import HomeStyles from '@styles/styles.module.css'
 import Script from 'next/script'
@@ -79,7 +80,7 @@ const moviesDetail = ({ moviesItem }) => {
       {
         '@type': 'ListItem',
         position: 1,
-        name: 'Windows',
+        name: 'Movies Magazine.',
         item: 'https://moviesmagazine.onrender.com/'
       },
       {
@@ -897,7 +898,20 @@ const moviesDetail = ({ moviesItem }) => {
                   allow='autoplay; encrypted-media'
                 ></iframe>
               </div>
-        
+              <div className='flex flex-col items-center justify-center'>
+                {/* <h2
+                  className='text-black bg-gradient-to-r from-pink-500 to-amber-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300 text-2xl'
+                  style={{
+                    fontFamily: 'Poppins, sans-serif',
+                    fontWeight: 'bold',
+                      marginTop: '15px',
+                    marginBottom: '12px'
+                  }}
+                >
+                 Listen to Podcast
+                </h2> */}
+              </div>
+              {moviesItem.mp3player && <MP3Player mp3Url={moviesItem.mp3player} />}
               <Pagination
                 currentPage={currentPage}
                 totalPages={totalPages}
@@ -981,6 +995,7 @@ const moviesDetail = ({ moviesItem }) => {
                   </>
                 )}
               </div> */}
+            
               <div className='flex flex-col items-center justify-center'>
                 <p
                   className='bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300  text-bg text-black text-bg  mt-2 text-3xl mb-2 items-center justify-center '

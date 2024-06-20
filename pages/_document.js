@@ -42,11 +42,11 @@ class MyDocument extends Document {
           />
           <meta
             name='keywords'
-            content='download, software, freeware, shareware, trial versions, program, utilities, security, network, multimedia, movies, mobile, games, graphic design, file sharing, education, development, desktop, browser'
+            content='movie review sites,movie magazine,movie magazines uk,movie magazines us,movie magazines in,the film magazine,thefilmmagazine,movie news websites,film reviews,film reviews uk,film reviews us,film reviews in,film magazine online'
           />
           <meta
             name='description'
-            content='Explore. Discover. Connect. - Discover your next favorite movie today!'
+            content='Explore the world of cinema with Movies Magazine: Captivating reviews, top picks, and the latest news.'
           />
           <link
             rel='canonical'
@@ -60,7 +60,7 @@ class MyDocument extends Document {
           />
           <meta
             property='og:description'
-            content='Explore. Discover. Connect. - Discover your next favorite movie today!'
+            content='Explore the world of cinema with Movies Magazine: Captivating reviews, top picks, and the latest news.'
           />
           <meta
             property='og:url'

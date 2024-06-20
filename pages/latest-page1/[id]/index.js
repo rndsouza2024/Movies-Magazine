@@ -1,25 +1,15 @@
 import { useRouter } from 'next/router'
-import latestsData from '../../../public/latest.json'
+import latestp1Data from '../../../public/latestp1.json'
 import { useEffect, useState, useRef } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import HomeStyles from '@styles/styles.module.css'
-import MP3Player from '../../../components/MP3Player';
-import Pagination from '../../../components/Pagination'
-// import Marquee from '../../../components/Marquee'
 import Script from 'next/script'
 
-const latestDetail = ({ latest }) => {
+const latestpage1Detail = ({ latestp1 }) => {
   const router = useRouter()
   const { id } = router.query
-
-  const [currentPage, setCurrentPage] = useState(1)
-  const totalPages = 0 // Assume there are 3 pages
-
-  useEffect(() => {
-    // Logic to fetch browsers for the current page
-  }, [currentPage])
 
   const uwatchfreeSchema = JSON.stringify([
     {
@@ -73,9 +63,9 @@ const latestDetail = ({ latest }) => {
       },
       {
         '@type': 'WebPage',
-        '@id': `/${latest['latest.watch']}#webpage`,
-        url: `/${latest['latest.watch']}`,
-        name: `${latest.name} | Movies Magazine`,
+        '@id': `/${latestp1['latestp1.watch']}#webpage`,
+        url: `/${latestp1['latestp1.watch']}`,
+        name: `${latestp1.name} | Movies Magazine`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         isPartOf: {
@@ -85,9 +75,9 @@ const latestDetail = ({ latest }) => {
       },
       {
         '@type': 'Person',
-        '@id': 'https://moviesmagazine.onrender.comauthor/latest/',
+        '@id': 'https://moviesmagazine.onrender.comauthor/latestp1/',
         name: 'Dr Trailer',
-        url: 'https://moviesmagazine.onrender.comauthor/latest/',
+        url: 'https://moviesmagazine.onrender.comauthor/latestp1/',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -99,51 +89,51 @@ const latestDetail = ({ latest }) => {
       },
       {
         '@type': 'Article',
-        '@id': `/${latest['latest.watch']}#article`,
-        headline: `Watch ${latest.name} | Movies Magazine`,
+        '@id': `/${latestp1['latestp1.watch']}#article`,
+        headline: `Watch ${latestp1.name} | Movies Magazine`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
-        articleSection: 'latest',
+        articleSection: 'latestp1',
         author: {
-          '@id': 'https://moviesmagazine.onrender.comauthor/latest/'
+          '@id': 'https://moviesmagazine.onrender.comauthor/latestp1/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
         description: `Explore. Discover. Download - Free Your Desired Software.`,
-        image: latest.image,
-        name: `Watch ${latest.name} | Movies Magazine`,
+        image: latestp1.image,
+        name: `Watch ${latestp1.name} | Movies Magazine`,
         isPartOf: {
-          '@id': `/${latest['latest.watch']}#webpage`
+          '@id': `/${latestp1['latestp1.watch']}#webpage`
         },
         inLanguage: 'en-US',
         mainEntityOfPage: {
-          '@id': `/${latest['latest.watch']}#webpage`
+          '@id': `/${latestp1['latestp1.watch']}#webpage`
         }
       },
       {
         '@type': 'BlogPosting',
-        '@id': `/${latest['latest.watch']}#blogPost`,
-        headline: `Watch ${latest.name} | Movies Magazine`,
+        '@id': `/${latestp1['latestp1.watch']}#blogPost`,
+        headline: `Watch ${latestp1.name} | Movies Magazine`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
-        articleSection: 'latest',
+        articleSection: 'latestp1',
         author: {
-          '@id': 'https://moviesmagazine.onrender.comauthor/latest/'
+          '@id': 'https://moviesmagazine.onrender.comauthor/latestp1/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
         description: `Explore. Discover. Download - Free Your Desired Software.`,
-        image: latest.image,
-        name: `Watch ${latest.name} | Movies Magazine`,
-        '@id': `/${latest['latest.watch']}#richSnippet`,
+        image: latestp1.image,
+        name: `Watch ${latestp1.name} | Movies Magazine`,
+        '@id': `/${latestp1['latestp1.watch']}#richSnippet`,
         isPartOf: {
-          '@id': `/${latest['latest.watch']}#webpage`
+          '@id': `/${latestp1['latestp1.watch']}#webpage`
         },
         inLanguage: 'en-US',
         mainEntityOfPage: {
-          '@id': `/${latest['latest.watch']}#webpage`
+          '@id': `/${latestp1['latestp1.watch']}#webpage`
         }
       }
     ]
@@ -151,24 +141,24 @@ const latestDetail = ({ latest }) => {
   const newsArticleSchema = {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
-    '@id': `/${latest['latest.watch']}`,
-    name: latest.title,
-    url: `/${latest['latest.watch']}`,
-    description: latest.synopsis,
-    image: latest.image,
-    genre: latest.genre,
-    datePublished: latest.startDate,
+    '@id': `/${latestp1['latestp1.watch']}`,
+    name: latestp1.title,
+    url: `/${latestp1['latestp1.watch']}`,
+    description: latestp1.synopsis,
+    image: latestp1.image,
+    genre: latestp1.genre,
+    datePublished: latestp1.startDate,
     potentialAction: {
       '@type': 'WatchAction',
       target: {
         '@type': 'EntryPoint',
-        name: latest.title,
-        urlTemplate: `${latest['url']}`
+        name: latestp1.title,
+        urlTemplate: `${latestp1['url']}`
       }
     },
     locationCreated: {
       '@type': 'Place',
-      name: latest.country
+      name: latestp1.country
     },
     author: {
       '@type': 'Person',
@@ -200,8 +190,8 @@ const latestDetail = ({ latest }) => {
           name='robots'
           content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
         />
-        <title> Watch {latest && latest.name} | Movies Magazine</title>
-        <link rel='canonical' href={latest && latest.url} />
+        <title> Watch {latestp1 && latestp1.name} | Movies Magazine</title>
+        <link rel='canonical' href={latestp1 && latestp1.url} />
         <meta name='robots' content='index, follow' />
         <meta name='googlebot' content='index,follow' />
         <meta name='revisit-after' content='1 days' />
@@ -209,26 +199,26 @@ const latestDetail = ({ latest }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:title'
-          content={`${latest && latest.name} - Movies Magazine`}
+          content={`${latestp1 && latestp1.name} - Movies Magazine`}
         />
 
         <meta
           property='og:description'
-          content='Movies Magazine is the top platform for exploring and downloading software,the premier platform for the latest releases and secure downloads.'
+          content='Movies Magazine is the top platform for exploring and downloading software,the premier platform for the latestp1 releases and secure downloads.'
         />
-        <meta property='og:url' content={`${latest && latest.url}`} />
-        <meta name='keywords' content={`${latest && latest.keywords}`} />
+        <meta property='og:url' content={`${latestp1 && latestp1.url}`} />
+        <meta name='keywords' content={`${latestp1 && latestp1.keywords}`} />
         <meta property='og:site_name' content='Movies Magazine' />
         <meta property='og:type' content='article' />
-        <meta property=' og:image:alt' content={`${latest && latest.group}`} />
+        <meta property=' og:image:alt' content={`${latestp1 && latestp1.group}`} />
         <meta name='mobile-web-app-capable' content='yes' />
-        <meta property='article:section' content='latest' />
+        <meta property='article:section' content='latestp1' />
         <meta name='author' content='admin' />
         <meta
           property='article:modified_time'
           content='2024-01-01T13:13:13+00:00'
         />
-        <meta property='og:image' content={`${latest && latest.backimage}`} />
+        <meta property='og:image' content={`${latestp1 && latestp1.backimage}`} />
 
         <meta property='og:image:width' content='1280px' />
         <meta property='og:image:height' content='720px' />
@@ -319,9 +309,8 @@ const latestDetail = ({ latest }) => {
             marginBottom: '15px'
           }}
         >
-          Welcome to Latest Movies News.
+          Welcome to Movies Magazine Latest Blog Software News.
         </h1>
-        {/* <Marquee /> */}
         {/* 
         <p
           className='px-0 text-black font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl hover:text-blue-800 mt-2'
@@ -338,7 +327,7 @@ const latestDetail = ({ latest }) => {
         >
           Select Categories.{' '}
         </p> */}
-        {/* <div
+        <div
           className='shadow-lg flex items-center justify-center '
           role='navigation'
           style={{
@@ -446,7 +435,7 @@ const latestDetail = ({ latest }) => {
               </li>
             </button>
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-11606' className='menu-education'>
+              <li id='menu-item-11606' className='menu-security'>
                 <a
                   href='../games/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
@@ -476,7 +465,7 @@ const latestDetail = ({ latest }) => {
               </li>
             </button>
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-11606' className='menu-education'>
+              <li id='menu-item-11606' className='menu-security'>
                 <a
                   href='../utilities/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
@@ -495,12 +484,22 @@ const latestDetail = ({ latest }) => {
                 </a>
               </li>
             </button>
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-194' className='menu-tutorials'>
+                <a
+                  href='../latest/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Blog Post<span className='p'></span>
+                </a>
+              </li>
+            </button>
           </ul>
-        </div> */}
+        </div>
         <div className='category-container'>
           <Image
-            src={latest.channelposter}
-            alt={latest.name}
+            src={latestp1.channelposter}
+            alt={latestp1.name}
             width={1280}
             height={720}
             objectFit='cover'
@@ -527,15 +526,15 @@ const latestDetail = ({ latest }) => {
                 textShadow: '1px 2px 1px rgba(0, 0, 0, 0.5)' // Adjusted to include transparency
               }}
             >
-              {latest.title}
+              {latestp1.title}
             </h2>
             <h2 className='text-black font-bold mt-2 text-sm mb-2 items-center justify-center '>
               {' '}
-              Author: {latest.group}.
+              Author: {latestp1.group}.
             </h2>
              <Image
-                src={latest.directorimg}
-                alt={latest.group}
+                src={latestp1.directorimg}
+                alt={latestp1.group}
                 width={100}
                 height={100}
                 quality={90}
@@ -553,15 +552,15 @@ const latestDetail = ({ latest }) => {
                 }}
               />
          
-            {latest.head1 && (
+            {latestp1.head1 && (
               <p className='text-black font-bold mt-2 text-3xl mb-2 items-center justify-center '>
-                <strong>{latest.head1}</strong>
+                <strong>{latestp1.head1}</strong>
               </p>
             )}
-            {latest.image1 && (
+            {latestp1.image1 && (
               <Image
-                src={latest.image1}
-                alt={latest.name}
+                src={latestp1.image1}
+                alt={latestp1.name}
                 width={1280}
                 height={720}
                 quality={90}
@@ -579,62 +578,8 @@ const latestDetail = ({ latest }) => {
                 }}
               />
             )}
-            {latest.news1 &&
-              latest.news1.split('\n\n').map((paragraph, idx) => (
-                <p
-                  key={idx}
-                  className='description text-black font-bold mt-2 text-xl'
-                  style={{
-                    marginBottom: '10px',
-                    fontFamily: 'Poppins, sans-serif'
-                  }}
-                >
-                  {paragraph}
-                </p>
-              ))}
-    {latest.mp3player && <MP3Player mp3Url={latest.mp3player} />}
-   <Pagination
-                currentPage={currentPage}
-                totalPages={totalPages}
-                route='latest'
-                style={{
-                  marginTop: '50px',
-                  marginBottom: '50px',
-                  borderRadius: '50px',
-                  boxShadow: '0 0 10px 0 #fff',
-                  filter:
-                    'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
-                }}
-              />
-            {latest.head2 && (
-              <p className='text-black font-bold mt-2 text-3xl mb-2 items-center justify-center '>
-                <strong>{latest.head2}</strong>
-              </p>
-            )}
-            {latest.image2 && (
-              <Image
-                src={latest.image2}
-                alt={latest.name}
-                width={1280}
-                height={720}
-                quality={90}
-                objectFit='cover'
-                loading='lazy'
-                style={{
-                  width: '800px', // Ensures the image is displayed at this width
-                  height: '400px', // Ensures the image is displayed at this height
-                  margin: 'auto',
-                  marginTop: '50px',
-                  marginBottom: '20px',
-                  borderRadius: '50px',
-                  boxShadow: '0 0 10px 0 #fff',
-                  filter:
-                    'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
-                }}
-              />
-            )}
-            {latest.news2 &&
-              latest.news2.split('\n\n').map((paragraph, idx) => (
+            {latestp1.news1 &&
+              latestp1.news1.split('\n\n').map((paragraph, idx) => (
                 <p
                   key={idx}
                   className='description text-black font-bold mt-2 text-xl'
@@ -647,15 +592,15 @@ const latestDetail = ({ latest }) => {
                 </p>
               ))}
 
-            {latest.head3 && (
+            {latestp1.head2 && (
               <p className='text-black font-bold mt-2 text-3xl mb-2 items-center justify-center '>
-                <strong>{latest.head3}</strong>
+                <strong>{latestp1.head2}</strong>
               </p>
             )}
-            {latest.image3 && (
+            {latestp1.image2 && (
               <Image
-                src={latest.image3}
-                alt={latest.name}
+                src={latestp1.image2}
+                alt={latestp1.name}
                 width={1280}
                 height={720}
                 quality={90}
@@ -673,8 +618,8 @@ const latestDetail = ({ latest }) => {
                 }}
               />
             )}
-            {latest.news3 &&
-              latest.news3.split('\n\n').map((paragraph, idx) => (
+            {latestp1.news2 &&
+              latestp1.news2.split('\n\n').map((paragraph, idx) => (
                 <p
                   key={idx}
                   className='description text-black font-bold mt-2 text-xl'
@@ -687,15 +632,15 @@ const latestDetail = ({ latest }) => {
                 </p>
               ))}
 
-            {latest.head4 && (
+            {latestp1.head3 && (
               <p className='text-black font-bold mt-2 text-3xl mb-2 items-center justify-center '>
-                <strong>{latest.head4}</strong>
+                <strong>{latestp1.head3}</strong>
               </p>
             )}
-            {latest.image4 && (
+            {latestp1.image3 && (
               <Image
-                src={latest.image4}
-                alt={latest.name}
+                src={latestp1.image3}
+                alt={latestp1.name}
                 width={1280}
                 height={720}
                 quality={90}
@@ -713,8 +658,48 @@ const latestDetail = ({ latest }) => {
                 }}
               />
             )}
-            {latest.news4 &&
-              latest.news4.split('\n\n').map((paragraph, idx) => (
+            {latestp1.news3 &&
+              latestp1.news3.split('\n\n').map((paragraph, idx) => (
+                <p
+                  key={idx}
+                  className='description text-black font-bold mt-2 text-xl'
+                  style={{
+                    marginBottom: '10px',
+                    fontFamily: 'Poppins, sans-serif'
+                  }}
+                >
+                  {paragraph}
+                </p>
+              ))}
+
+            {latestp1.head4 && (
+              <p className='text-black font-bold mt-2 text-3xl mb-2 items-center justify-center '>
+                <strong>{latestp1.head4}</strong>
+              </p>
+            )}
+            {latestp1.image4 && (
+              <Image
+                src={latestp1.image4}
+                alt={latestp1.name}
+                width={1280}
+                height={720}
+                quality={90}
+                objectFit='cover'
+                loading='lazy'
+                style={{
+                  width: '800px', // Ensures the image is displayed at this width
+                  height: '400px', // Ensures the image is displayed at this height
+                  margin: 'auto',
+                  marginBottom: '20px',
+                  borderRadius: '50px',
+                  boxShadow: '0 0 10px 0 #fff',
+                  filter:
+                    'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
+                }}
+              />
+            )}
+            {latestp1.news4 &&
+              latestp1.news4.split('\n\n').map((paragraph, idx) => (
                 <p
                   key={idx}
                   className='description text-black font-bold mt-2 text-xl'
@@ -780,21 +765,21 @@ const latestDetail = ({ latest }) => {
 }
 
 export async function getStaticPaths () {
-  const paths = latestsData.map(latest => ({
-    params: { id: latest.id } // Assuming each latest object has an "id" field
+  const paths = latestp1Data.map(latestp1 => ({
+    params: { id: latestp1.id } // Assuming each latestp1 object has an "id" field
   }))
   return { paths, fallback: false }
 }
 
 export async function getStaticProps ({ params }) {
-  // Fetch the latest data based on the provided id
-  const latest = latestsData.find(m => m.id === params.id)
+  // Fetch the latestp1 data based on the provided id
+  const latestp1 = latestp1Data.find(m => m.id === params.id)
 
   return {
     props: {
-      latest
+      latestp1
     }
   }
 }
 
-export default latestDetail
+export default latestpage1Detail

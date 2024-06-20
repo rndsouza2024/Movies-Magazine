@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import latestData from '../../public/latest.json'
-import Marquee from '../../components/Marquee'
+// import Marquee from '../../components/Marquee'
 import Pagination from '../../components/Pagination'
 import Head from 'next/head'
 import Script from 'next/script'
@@ -94,12 +94,12 @@ const breadcrumbSchema = JSON.stringify({
 const latestPage = ({ items }) => {
   const [latest, setLatest] = useState(latestData)
 
-  const [currentPage, setCurrentPage] = useState(1)
-  const totalPages = 0 // Assume there are 3 pages
+  // const [currentPage, setCurrentPage] = useState(1)
+  // const totalPages = 0 // Assume there are 3 pages
 
-  useEffect(() => {
-    // Logic to fetch browsers for the current page
-  }, [currentPage])
+  // useEffect(() => {
+  //   // Logic to fetch browsers for the current page
+  // }, [currentPage])
 
   return (
     <div className='w-full' style={{ backgroundColor: '#D3D3D3' }}>
@@ -226,9 +226,9 @@ const latestPage = ({ items }) => {
           marginBottom: '15px'
         }}
       >
-        Movies Magazine Latest Blog Section.
+        Welcome to Latest Movies Blog Section.
       </h1>
-      <Marquee />
+      {/* <Marquee /> */}
       {/* <p
         className='px-0 text-black font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl hover:text-blue-800 mt-2'
         style={{
@@ -244,7 +244,7 @@ const latestPage = ({ items }) => {
       >
         Select Categories.{' '}
       </p> */}
-      <div
+      {/* <div
         className='shadow-lg flex items-center justify-center'
         role='navigation'
       >
@@ -403,7 +403,7 @@ const latestPage = ({ items }) => {
               </li>
             </button>
         </ul>
-      </div>
+      </div> */}
       {/* </div> */}
     
       <div className='container'>
@@ -463,7 +463,8 @@ const latestPage = ({ items }) => {
                 Many More Coming Soon...
               </p>
             </div>
-            <Pagination currentPage={currentPage} totalPages={totalPages} route="latest" />
+           
+            {/* <Pagination currentPage={currentPage} totalPages={totalPages} route="latest" /> */}
           </div>
           </div>
        

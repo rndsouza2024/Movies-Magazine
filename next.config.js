@@ -1,13 +1,5 @@
 // next.config.js
 
-// module.exports = {
-//     images: {
-//       domains: ['uwatchfreeonline.vercel.app'],
-//     },
-//   };
-  
-
-// next.config.js
 module.exports = {
   /* Custom webpack configuration */
   webpack: (config, { dev, isServer }) => {
@@ -15,6 +7,15 @@ module.exports = {
     return config;
   },
   images: {
-    domains: ['localhost', 'res.cloudinary.com', 'yt3.googleusercontent.com','media.themoviedb.org'], // Add 'uwatchfreeonline.vercel.app' to the domains array
+    domains: ['localhost', 'res.cloudinary.com', 'yt3.googleusercontent.com', 'moviesmagazine.onrender.com'],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: 'https://www.moviesmagazine.onrender.com/',
+        permanent: true,
+      },
+    ];
   },
 };
