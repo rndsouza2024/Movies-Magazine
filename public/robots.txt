@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://moviesmagazine.onrender.com/
-
-# Sitemaps
-Sitemap: https://moviesmagazine.onrender.com/sitemap.xml
