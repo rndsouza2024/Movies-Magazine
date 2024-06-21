@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://moviesmagazine.onrender.com/sitemap.xml
