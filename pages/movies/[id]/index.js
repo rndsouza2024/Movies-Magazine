@@ -6,7 +6,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Rating from '../../../components/Rating'
 import Pagination from '../../../components/Pagination'
-import MP3Player from '../../../components/MP3Player';
+import MP3Player from '../../../components/MP3Player'
+import CommentForm from '../../../components/CommentForm'
+import CommentsDisplay from '../../../components/CommentsDisplay';
 import Link from 'next/link'
 import HomeStyles from '@styles/styles.module.css'
 import Script from 'next/script'
@@ -17,6 +19,8 @@ const moviesDetail = ({ moviesItem }) => {
   const [currentPage, setCurrentPage] = useState(1)
   const totalPages = 0 // Assume there are 3 pages
 
+  const page = 'home'; // Example: Define the page identifier for this page
+  
   const [latest, setLatest] = useState(latestData)
   const [playerReady, setPlayerReady] = useState(false)
   const [showTimer, setShowTimer] = useState(false)
@@ -911,7 +915,10 @@ const moviesDetail = ({ moviesItem }) => {
                  Listen to Podcast
                 </h2> */}
               </div>
-              {moviesItem.mp3player && <MP3Player mp3Url={moviesItem.mp3player} />}
+              {moviesItem.mp3player && (
+                <MP3Player mp3Url={moviesItem.mp3player} />
+              )}
+
               <Pagination
                 currentPage={currentPage}
                 totalPages={totalPages}
@@ -925,6 +932,9 @@ const moviesDetail = ({ moviesItem }) => {
                     'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
                 }}
               />
+
+              <CommentForm page='home' />
+           
               {/* {showTimer && seconds <= 0 && (
                       <div>
                         {moviesItem.downloadlink && (
@@ -995,7 +1005,7 @@ const moviesDetail = ({ moviesItem }) => {
                   </>
                 )}
               </div> */}
-            
+ 
               <div className='flex flex-col items-center justify-center'>
                 <p
                   className='bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300  text-bg text-black text-bg  mt-2 text-3xl mb-2 items-center justify-center '
@@ -1037,6 +1047,9 @@ const moviesDetail = ({ moviesItem }) => {
                   {paragraph}
                 </p>
               ))}
+            
+             
+              
               <div className='flex flex-col items-center justify-center'>
                 {moviesItem.head2 && (
                   <p className='bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300 text-bg text-black text-bg mt-2 text-3xl mb-2 items-center justify-center'>
@@ -1244,9 +1257,13 @@ const moviesDetail = ({ moviesItem }) => {
                       </div>
                     </a>
                   </div>
+                  
                 ))}
+                   < CommentsDisplay  page={page} />
               </div>
+           
             </div>
+         
           </div>
         </div>
 
