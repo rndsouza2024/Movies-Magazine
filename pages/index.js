@@ -4,7 +4,7 @@ import latestData from '../public/latest.json'
 import reviewsData from '../public/reviews.json'
 import trailerData from '../public/trailer.json'
 // import graphicdesignData from '../public/graphicdesign.json'
-import recapsData from '../public/recaps.json'
+// import recapsData from '../public/recaps.json'
 // import Marquee from '../components/Marquee';
 import Head from 'next/head'
 import Image from 'next/image'
@@ -29,7 +29,7 @@ const HomePage = () => {
   const [trailer, settrailer] = useState(trailerData.slice(0, 4))
   // const [graphicdesign, setgraphicdesign] = useState(
   //   graphicdesignData.slice(0, 2))
-    const [recaps, setrecaps] = useState(recapsData.slice(0, 4))
+    // const [recaps, setrecaps] = useState(recapsData.slice(0, 4))
 
   // // Update the state with random items after the component mounts
   useEffect(() => {
@@ -43,7 +43,7 @@ const HomePage = () => {
     setreviews(shuffledreviewsData)
     settrailer(shuffledtrailerData)
   //   setgraphicdesign(shuffledgraphicdesignData)
-    setrecaps(shuffledrecapsData)
+    // setrecaps(shuffledrecapsData)
   }, [])
 
   const pageTitle = 'Movies Magazine. - Explore. Discover. Watch.'
