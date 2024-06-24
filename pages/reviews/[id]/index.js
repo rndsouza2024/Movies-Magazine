@@ -724,7 +724,7 @@ const reviewsDetail = ({ reviewsItem }) => {
                   textShadow: '2px 1px 1px #000000'
                 }}
               >
-                Official reviews With Review.
+                Official Trailer Movie With Review.
               </p>
               <div
                 style={{
