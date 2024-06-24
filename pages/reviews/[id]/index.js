@@ -50,13 +50,13 @@ const reviewsDetail = ({ reviewsItem }) => {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Movies Magazine.',
-      url: 'https://moviesmagazine.vercel.app/',
+      url: 'https://moviesmagazine.onrender.com/',
       image: [
-        'https://moviesmagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'
+        'https://moviesmagazine.onrender.com/wp-content/uploads/2023/05/favicon.ico'
       ],
       logo: {
         '@type': 'ImageObject',
-        url: 'https://moviesmagazine.vercel.app/logo.png',
+        url: 'https://moviesmagazine.onrender.com/logo.png',
         width: 280,
         height: 100
       }
@@ -64,13 +64,13 @@ const reviewsDetail = ({ reviewsItem }) => {
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      url: 'https://moviesmagazine.vercel.app/',
+      url: 'https://moviesmagazine.onrender.com/',
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
           urlTemplate:
-            'https://moviesmagazine.vercel.app/search?q={search_term_string}'
+            'https://moviesmagazine.onrender.com/search?q={search_term_string}'
         },
         'query-input': 'required name=search_term_string'
       }
@@ -85,7 +85,7 @@ const reviewsDetail = ({ reviewsItem }) => {
         '@type': 'ListItem',
         position: 1,
         name: 'Movies Magazine.',
-        item: 'https://moviesmagazine.vercel.app/'
+        item: 'https://moviesmagazine.onrender.com/'
       },
       {
         '@type': 'ListItem',
@@ -112,8 +112,8 @@ const reviewsDetail = ({ reviewsItem }) => {
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://moviesmagazine.vercel.app/#website',
-        url: 'https://moviesmagazine.vercel.app/',
+        '@id': 'https://moviesmagazine.onrender.com/#website',
+        url: 'https://moviesmagazine.onrender.com/',
         name: 'Movies Magazine.',
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -128,15 +128,15 @@ const reviewsDetail = ({ reviewsItem }) => {
         datePublished: reviewsItem.datePublished,
         dateModified: reviewsItem.dateModified,
         isPartOf: {
-          '@id': 'https://moviesmagazine.vercel.app/#website'
+          '@id': 'https://moviesmagazine.onrender.com/#website'
         },
         inLanguage: 'en-US'
       },
       {
         '@type': 'Person',
-        '@id': 'https://moviesmagazine.vercel.app/author/moviesmagazine./',
+        '@id': 'https://moviesmagazine.onrender.com/author/moviesmagazine./',
         name: 'Dr Trailer',
-        url: 'https://moviesmagazine.vercel.app/author/moviesmagazine./',
+        url: 'https://moviesmagazine.onrender.com/author/moviesmagazine./',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -144,7 +144,7 @@ const reviewsDetail = ({ reviewsItem }) => {
           caption: 'Dr Trailer',
           inLanguage: 'en-US'
         },
-        sameAs: ['https://moviesmagazine.vercel.app/']
+        sameAs: ['https://moviesmagazine.onrender.com/']
       },
       {
         '@type': 'Article',
@@ -154,7 +154,7 @@ const reviewsDetail = ({ reviewsItem }) => {
         dateModified: reviewsItem.dateModified,
         articleSection: 'Movies Reviews',
         author: {
-          '@id': 'https://moviesmagazine.vercel.app/author/reviewsItem/'
+          '@id': 'https://moviesmagazine.onrender.com/author/reviewsItem/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -178,7 +178,7 @@ const reviewsDetail = ({ reviewsItem }) => {
         dateModified: reviewsItem.dateModified,
         articleSection: 'Other Software',
         author: {
-          '@id': 'https://moviesmagazine.vercel.app/author/moviesmagazine./'
+          '@id': 'https://moviesmagazine.onrender.com/author/moviesmagazine./'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -229,7 +229,7 @@ const reviewsDetail = ({ reviewsItem }) => {
       name: 'Movies Magazine.',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://moviesmagazine.vercel.app/og_image.jpg'
+        url: 'https://moviesmagazine.onrender.com/og_image.jpg'
       }
     },
     additionalProperty: {
@@ -283,7 +283,7 @@ const reviewsDetail = ({ reviewsItem }) => {
       name: 'Movies Magazine.???',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://moviesmagazine.vercel.app/og_image.jpg'
+        url: 'https://moviesmagazine.onrender.com/og_image.jpg'
       }
     },
     additionalProperty: {
