@@ -60,7 +60,7 @@ export default function Footer() {
         </div>
 
         <div className="bg-black">
-          <div className="flex flex-col items-center justify-center container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+          <div className="flex flex-col items-center justify-center container mx-auto py-4 px-5  flex-wrap sm:flex-row">
             <p className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800  text-center sm:text-left">
               © 2024 Movies Magazine™ —{' '}
               <a href="https://twitter.com/MxplayerMovies" rel="noopener noreferrer" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800 ml-1" target="_blank">
