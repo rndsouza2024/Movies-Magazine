@@ -9,9 +9,9 @@ const contact = () => {
     '@graph': [
       {
         '@type': 'Person',
-        '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
+        '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
         name: 'Dr Trailer',
-        url: 'https://youtubemagazine.vercel.app/author/ytmag/',
+        url: 'https://moviesmagazine.onrender.com/author/ytmag/',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -22,37 +22,37 @@ const contact = () => {
       },
       {
         '@type': 'Organization',
-        '@id': 'https://youtubemagazine.vercel.app/#organization',
+        '@id': 'https://moviesmagazine.onrender.com/#organization',
         name: 'Youtube Magazine - Explore. Discover. Connect..',
-        url: 'https://youtubemagazine.vercel.app'
+        url: 'https://moviesmagazine.onrender.com'
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://youtubemagazine.vercel.app/#website',
-        url: 'https://youtubemagazine.vercel.app',
+        '@id': 'https://moviesmagazine.onrender.com/#website',
+        url: 'https://moviesmagazine.onrender.com',
         name: 'Youtube Magazine - Explore. Discover. Connect..',
         publisher: {
           '@type': 'Organization',
-          '@id': 'https://youtubemagazine.vercel.app/#organization'
+          '@id': 'https://moviesmagazine.onrender.com/#organization'
         },
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://youtubemagazine.vercel.app/?s={search_term_string}',
+          target: 'https://moviesmagazine.onrender.com/?s={search_term_string}',
           'query-input': 'required name=search_term_string'
         }
       },
       {
         '@type': 'WebPage',
-        '@id': 'https://youtubemagazine.vercel.app/#webpage',
-        url: 'https://youtubemagazine.vercel.app/',
+        '@id': 'https://moviesmagazine.onrender.com/#webpage',
+        url: 'https://moviesmagazine.onrender.com/',
         name: 'Movie',
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         about: {
           '@type': 'Person',
-          '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
+          '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
           name: 'Dr Trailer',
-          url: 'https://youtubemagazine.vercel.app/author/ytmag/',
+          url: 'https://moviesmagazine.onrender.com/author/ytmag/',
           image: {
             '@type': 'ImageObject',
             '@id': 'https://gravatar.com/drtrailer2022',
@@ -62,22 +62,22 @@ const contact = () => {
           }
         },
         isPartOf: {
-          '@id': 'https://youtubemagazine.vercel.app/#website'
+          '@id': 'https://moviesmagazine.onrender.com/#website'
         },
         inLanguage: 'en-US',
         mainEntity: [
           {
             '@type': 'Article',
-            '@id': 'https://youtubemagazine.vercel.app/',
-            url: 'https://youtubemagazine.vercel.app/',
+            '@id': 'https://moviesmagazine.onrender.com/',
+            url: 'https://moviesmagazine.onrender.com/',
             headline: 'Movie',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
+              '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
               name: 'Dr Trailer',
-              url: 'https://youtubemagazine.vercel.app/author/ytmag/',
+              url: 'https://moviesmagazine.onrender.com/author/ytmag/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -88,23 +88,23 @@ const contact = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://youtubemagazine.vercel.app/#organization',
+              '@id': 'https://moviesmagazine.onrender.com/#organization',
               name: 'Youtube Magazine - Explore. Discover. Connect..',
-              url: 'https://youtubemagazine.vercel.app'
+              url: 'https://moviesmagazine.onrender.com'
             }
           },
           {
             '@type': 'Article',
-            '@id': 'https://youtubemagazine.vercel.app/',
-            url: 'https://youtubemagazine.vercel.app/',
+            '@id': 'https://moviesmagazine.onrender.com/',
+            url: 'https://moviesmagazine.onrender.com/',
             headline: 'Tvshow',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
+              '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
               name: 'Dr Trailer',
-              url: 'https://youtubemagazine.vercel.app/author/ytmag/',
+              url: 'https://moviesmagazine.onrender.com/author/ytmag/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -115,23 +115,23 @@ const contact = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://youtubemagazine.vercel.app/#organization',
+              '@id': 'https://moviesmagazine.onrender.com/#organization',
               name: 'Youtube Magazine - Explore. Discover. Connect..',
-              url: 'https://youtubemagazine.vercel.app'
+              url: 'https://moviesmagazine.onrender.com'
             }
           },
           {
             '@type': 'Article',
-            '@id': 'https://youtubemagazine.vercel.app/',
-            url: 'https://youtubemagazine.vercel.app/',
+            '@id': 'https://moviesmagazine.onrender.com/',
+            url: 'https://moviesmagazine.onrender.com/',
             headline: 'Adult',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
+              '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
               name: 'Dr Trailer',
-              url: 'https://youtubemagazine.vercel.app/author/ytmag/',
+              url: 'https://moviesmagazine.onrender.com/author/ytmag/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -142,9 +142,9 @@ const contact = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://youtubemagazine.vercel.app/#organization',
+              '@id': 'https://moviesmagazine.onrender.com/#organization',
               name: 'Youtube Magazine - Explore. Discover. Connect..',
-              url: 'https://youtubemagazine.vercel.app'
+              url: 'https://moviesmagazine.onrender.com'
             }
           }
         ]
@@ -163,7 +163,7 @@ const contact = () => {
           rel='sitemap'
           type='application/xml'
           title='Sitemap'
-          href='https://youtubemagazine.vercel.app/sitemap.xml'
+          href='https://moviesmagazine.onrender.com/sitemap.xml'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <link
@@ -205,7 +205,7 @@ const contact = () => {
         />
         <link
           rel='canonical'
-          href='https://youtubemagazine.vercel.app/intro/contact'
+          href='https://moviesmagazine.onrender.com/intro/contact'
         />
         <meta property='og:locale' content='en_US' />
         <meta property='og:type' content='website' />
@@ -216,12 +216,12 @@ const contact = () => {
         />
         <meta
           property='og:url'
-          content='https://youtubemagazine.vercel.app/intro/contact/'
+          content='https://moviesmagazine.onrender.com/intro/contact/'
         />
         <meta property='og:site_name' content='Youtube Magazine ' />
         <meta
           property='og:image'
-          content='https://youtubemagazine.vercel.app/og_image.webp'
+          content='https://moviesmagazine.onrender.com/og_image.webp'
         />
         <meta property='og:image:width' content='1280' />
         <meta property='og:image:height' content='720' />
@@ -235,7 +235,7 @@ const contact = () => {
           rel='sitemap'
           type='application/xml'
           title='Sitemap'
-          href='https://youtubemagazine.vercel.app/sitemap.xml'
+          href='https://moviesmagazine.onrender.com/sitemap.xml'
         />
         <meta name='twitter:card' content='summary_large_image' />
         <meta
