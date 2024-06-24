@@ -1,22 +1,26 @@
 import { useRouter } from 'next/router'
-import moviesData from '../../../public/movies.json'
+import reviewsData from '../../../public/reviews.json'
 import latestData from '../../../public/latest.json'
 import { useEffect, useState, useRef } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Rating from '../../../components/Rating'
 import Pagination from '../../../components/Pagination'
-import MP3Player from '../../../components/MP3Player';
+import MP3Player from '../../../components/MP3Player'
+
+
 import Link from 'next/link'
 import HomeStyles from '@styles/styles.module.css'
 import Script from 'next/script'
 
-const moviesDetail = ({ moviesItem }) => {
+const reviewsDetail = ({ reviewsItem }) => {
   const router = useRouter()
   const { id } = router.query
   const [currentPage, setCurrentPage] = useState(1)
   const totalPages = 0 // Assume there are 3 pages
 
+
+  
   const [latest, setLatest] = useState(latestData)
   const [playerReady, setPlayerReady] = useState(false)
   const [showTimer, setShowTimer] = useState(false)
@@ -86,14 +90,14 @@ const moviesDetail = ({ moviesItem }) => {
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'Movies',
-        item: moviesItem.baseurl
+        name: 'reviews',
+        item: reviewsItem.baseurl
       },
       {
         '@type': 'ListItem',
         position: 3,
-        name: moviesItem.name,
-        item: moviesItem.siteurl
+        name: reviewsItem.name,
+        item: reviewsItem.siteurl
       }
     ]
   })
@@ -108,8 +112,8 @@ const moviesDetail = ({ moviesItem }) => {
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://moviesmagazine.onrender.com#website',
-        url: 'https://moviesmagazine.onrender.com',
+        '@id': 'https://moviesmagazine.onrender.com/#website',
+        url: 'https://moviesmagazine.onrender.com/',
         name: 'Movies Magazine.',
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -118,21 +122,21 @@ const moviesDetail = ({ moviesItem }) => {
       },
       {
         '@type': 'WebPage',
-        '@id': `${moviesItem.siteurl}#webpage`,
-        url: moviesItem.siteurl,
-        name: `${moviesItem.name} | Movies Magazine.`,
-        datePublished: moviesItem.datePublished,
-        dateModified: moviesItem.dateModified,
+        '@id': `${reviewsItem.siteurl}#webpage`,
+        url: reviewsItem.siteurl,
+        name: `${reviewsItem.name} | Movies Magazine.`,
+        datePublished: reviewsItem.datePublished,
+        dateModified: reviewsItem.dateModified,
         isPartOf: {
-          '@id': 'https://moviesmagazine.onrender.com#website'
+          '@id': 'https://moviesmagazine.onrender.com/#website'
         },
         inLanguage: 'en-US'
       },
       {
         '@type': 'Person',
-        '@id': 'https://moviesmagazine.onrender.com/author/Movies Magazine./',
+        '@id': 'https://moviesmagazine.onrender.com/author/moviesmagazine./',
         name: 'Dr Trailer',
-        url: 'https://moviesmagazine.onrender.com/author/Movies Magazine./',
+        url: 'https://moviesmagazine.onrender.com/author/moviesmagazine./',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -140,55 +144,55 @@ const moviesDetail = ({ moviesItem }) => {
           caption: 'Dr Trailer',
           inLanguage: 'en-US'
         },
-        sameAs: ['https://moviesmagazine.onrender.com']
+        sameAs: ['https://moviesmagazine.onrender.com/']
       },
       {
         '@type': 'Article',
-        '@id': `${moviesItem.siteurl}#article`,
-        headline: `Download ${moviesItem.name} | Movies Magazine.`,
-        datePublished: moviesItem.datePublished,
-        dateModified: moviesItem.dateModified,
-        articleSection: 'Other Software',
+        '@id': `${reviewsItem.siteurl}#article`,
+        headline: `Download ${reviewsItem.name} | Movies Magazine.`,
+        datePublished: reviewsItem.datePublished,
+        dateModified: reviewsItem.dateModified,
+        articleSection: 'Movies Reviews',
         author: {
-          '@id': 'https://moviesmagazine.onrender.comauthor/moviesItem/'
+          '@id': 'https://moviesmagazine.onrender.com/author/reviewsItem/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
-        description: moviesItem.synopsis,
-        image: moviesItem.image,
-        name: `Download ${moviesItem.name} | Movies Magazine.`,
+        description: reviewsItem.synopsis,
+        image: reviewsItem.image,
+        name: `Download ${reviewsItem.name} | Movies Magazine.`,
         isPartOf: {
-          '@id': `${moviesItem.siteurl}#webpage`
+          '@id': `${reviewsItem.siteurl}#webpage`
         },
         inLanguage: 'en-US',
         mainEntityOfPage: {
-          '@id': `${moviesItem.siteurl}#webpage`
+          '@id': `${reviewsItem.siteurl}#webpage`
         }
       },
       {
         '@type': 'BlogPosting',
-        '@id': `${moviesItem.siteurl}#blogPost`,
-        headline: `Download ${moviesItem.name} | Movies Magazine.`,
-        datePublished: moviesItem.datePublished,
-        dateModified: moviesItem.dateModified,
+        '@id': `${reviewsItem.siteurl}#blogPost`,
+        headline: `Download ${reviewsItem.name} | Movies Magazine.`,
+        datePublished: reviewsItem.datePublished,
+        dateModified: reviewsItem.dateModified,
         articleSection: 'Other Software',
         author: {
-          '@id': 'https://moviesmagazine.onrender.com/author/Movies Magazine./'
+          '@id': 'https://moviesmagazine.onrender.com/author/moviesmagazine./'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
-        description: moviesItem.synopsis,
-        image: moviesItem.image,
-        name: `Download ${moviesItem.name} | Movies Magazine.`,
-        '@id': `${moviesItem.siteurl}#richSnippet`,
+        description: reviewsItem.synopsis,
+        image: reviewsItem.image,
+        name: `Download ${reviewsItem.name} | Movies Magazine.`,
+        '@id': `${reviewsItem.siteurl}#richSnippet`,
         isPartOf: {
-          '@id': `${moviesItem.siteurl}#webpage`
+          '@id': `${reviewsItem.siteurl}#webpage`
         },
         inLanguage: 'en-US',
         mainEntityOfPage: {
-          '@id': `${moviesItem.siteurl}#webpage`
+          '@id': `${reviewsItem.siteurl}#webpage`
         }
       }
     ]
@@ -197,23 +201,23 @@ const moviesDetail = ({ moviesItem }) => {
   const newsArticleSchema = {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
-    '@id': `${moviesItem.siteurl}#webpage`, // Add a comma here
-    name: moviesItem.title,
-    url: moviesItem.siteurl,
-    description: moviesItem.synopsis,
-    image: moviesItem.image,
-    datePublished: moviesItem.startDate,
+    '@id': `${reviewsItem.siteurl}#webpage`, // Add a comma here
+    name: reviewsItem.title,
+    url: reviewsItem.siteurl,
+    description: reviewsItem.synopsis,
+    image: reviewsItem.image,
+    datePublished: reviewsItem.startDate,
     potentialAction: {
       '@type': 'WatchAction',
       target: {
         '@type': 'EntryPoint',
-        name: moviesItem.title,
-        urlTemplate: moviesItem.siteurl
+        name: reviewsItem.title,
+        urlTemplate: reviewsItem.siteurl
       }
     },
     locationCreated: {
       '@type': 'Place',
-      name: moviesItem.country
+      name: reviewsItem.country
     },
     author: {
       '@type': 'Person',
@@ -241,18 +245,18 @@ const moviesDetail = ({ moviesItem }) => {
   const ldJsonData = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Movie',
-    '@id': `${moviesItem.siteurl}`,
-    name: moviesItem.title,
-    url: moviesItem.siteurl,
-    description: moviesItem.synopsis,
-    image: moviesItem.image,
-    genre: moviesItem.genre,
-    datePublished: moviesItem.datePublished,
+    '@id': `${reviewsItem.siteurl}`,
+    name: reviewsItem.title,
+    url: reviewsItem.siteurl,
+    description: reviewsItem.synopsis,
+    image: reviewsItem.image,
+    genre: reviewsItem.genre,
+    datePublished: reviewsItem.datePublished,
     director: {
       '@type': 'Person',
-      name: moviesItem.director
+      name: reviewsItem.director
     },
-    actor: moviesItem.starring.map(actor => ({
+    actor: reviewsItem.starring.map(actor => ({
       '@type': 'Person',
       name: actor
     })),
@@ -260,13 +264,13 @@ const moviesDetail = ({ moviesItem }) => {
       '@type': 'WatchAction',
       target: {
         '@type': 'EntryPoint',
-        name: moviesItem.title,
-        urlTemplate: moviesItem.siteurl
+        name: reviewsItem.title,
+        urlTemplate: reviewsItem.siteurl
       }
     },
     locationCreated: {
       '@type': 'Place',
-      name: moviesItem.country
+      name: reviewsItem.country
     },
 
     author: {
@@ -289,6 +293,17 @@ const moviesDetail = ({ moviesItem }) => {
     }
   })
 
+  const trailerSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: reviewsItem.title,
+    description: reviewsItem.text,
+    uploadDate: reviewsItem.datePublished,
+    thumbnailUrl: reviewsItem.backimage,
+    duration: 'P34S', // Replace with the actual duration if it's different
+    embedUrl: reviewsItem.videourl
+  })
+
   return (
     <div>
       <Head>
@@ -298,33 +313,33 @@ const moviesDetail = ({ moviesItem }) => {
         />
         <title>
           {' '}
-          Review {moviesItem && moviesItem.name} | Movies Magazine.
+          Review {reviewsItem && reviewsItem.name} | Movies Magazine.
         </title>
-        <link rel='canonical' href={moviesItem && moviesItem.siteurl} />
+        <link rel='canonical' href={reviewsItem && reviewsItem.siteurl} />
         <meta name='robots' content='index, follow' />
         <meta name='googlebot' content='index,follow' />
         <meta name='revisit-after' content='1 days' />
         <meta property='og:locale' content='en_US' />
-        <meta property='og:type' content='website' />
+        <meta property="og:type" content="video.other" />
         <meta
           property='og:title'
-          content={`${moviesItem && moviesItem.name} - Movies Magazine.`}
+          content={`${reviewsItem && reviewsItem.name} - Movies Magazine.`}
         />
         <meta
           property='og:description'
-          content='Explore. Discover. Connect. - Discover your next favorite movie today!'
+          content='Explore the world of cinema with Movies Magazine: Captivating reviews, top picks, and the latest news.'
         />
 
-        <meta property='og:url' content={`${moviesItem && moviesItem.url}`} />
+        <meta property='og:url' content={`${reviewsItem && reviewsItem.url}`} />
         <meta
           name='keywords'
-          content={`${moviesItem && moviesItem.keywords}`}
+          content={`${reviewsItem && reviewsItem.keywords}`}
         />
         <meta property='og:site_name' content='Movies Magazine.' />
         <meta property='og:type' content='article' />
         <meta
           property=' og:image:alt'
-          content={`${moviesItem && moviesItem.group}`}
+          content={`${reviewsItem && reviewsItem.group}`}
         />
         <meta name='mobile-web-app-capable' content='yes' />
         <meta property='article:section' content='Movies Review' />
@@ -335,7 +350,7 @@ const moviesDetail = ({ moviesItem }) => {
         />
         <meta
           property='og:image'
-          content={`${moviesItem && moviesItem.backimage}`}
+          content={`${reviewsItem && reviewsItem.backimage}`}
         />
 
         <meta property='og:image:width' content='1280px' />
@@ -375,7 +390,10 @@ const moviesDetail = ({ moviesItem }) => {
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: newsArticleJson }}
         />
-
+    <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: trailerSchema }}
+        />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
@@ -430,7 +448,7 @@ const moviesDetail = ({ moviesItem }) => {
             marginBottom: '12px'
           }}
         >
-          {moviesItem.name}
+          {reviewsItem.name}
         </h1>
 
         {/* <p
@@ -464,181 +482,74 @@ const moviesDetail = ({ moviesItem }) => {
           backgroundColor: '#D3D3D3'
         }}
       >
-        {/* <div
-            className='shadow-lg flex items-center justify-center '
-            role='navigation'
-            style={{
-              justifyContent: 'center',
-              alignItems: 'center',
-
-              fontFamily: 'Poppins, sans-serif',
-              fontWeight: 'bold',
-              textAlign: 'center',
-              marginBottom: '15px'
-            }}
+                <div
+          className='shadow-lg flex items-center justify-center'
+          role='navigation'
+        >
+          <ul
+            id='menu-header-menu'
+            className='menu flex flex-wrap justify-center'
           >
-            <ul
-              id='menu-header-menu'
-              className='menu flex flex-wrap justify-center'
-            >
-              <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-                <li id='menu-item-35' className='menu-home active'>
-                  <a
-                    href='/'
-                    className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                  >
-                    Home<span className='p'></span>
-                  </a>
-                </li>
-              </button>
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-35' className='menu-home active'>
+                <a
+                  href='/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Home<span className='p'></span>
+                </a>
+              </li>
+            </button>
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-194' className='menu-tutorials'>
+                <a
+                  href='../trailer/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Movies Trailers<span className='p'></span>
+                </a>
+              </li>
+            </button>
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-194' className='menu-tutorials'>
+                <a
+                  href='../reviews/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Movies Reviews<span className='p'></span>
+                </a>
+              </li>
+            </button>
+           
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-11606' className='menu-security'>
+                <a
+                  href='../recaps/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Movies Recaps<span className='p'></span>
+                </a>
+              </li>
+            </button> 
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-194' className='menu-tutorials'>
+                <a
+                  href='../latest/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Movies Post<span className='p'></span>
+                </a>
+              </li>
+            </button>
+          </ul>
+        </div>
 
-              <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-                <li id='menu-item-284913' className='menu-softwarecategories'>
-                  <a href='../browsers/'>
-                    <h3 className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'>
-                      Browser<span className='p'></span>
-                    </h3>
-                  </a>
-                </li>
-              </button>
-              <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-                <li id='menu-item-248' className='menu-operating-systems'>
-                  <a
-                    href='../desktop/'
-                    className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                  >
-                    Desktop<span className='p'></span>
-                  </a>
-                </li>
-              </button>
-              <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-                <li id='menu-item-11605' className='menu-3dcad'>
-                  <a
-                    href='../multimedia/'
-                    className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                  >
-                    Multimedia<span className='p'></span>
-                  </a>
-                </li>
-              </button>
-              <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-                <li id='menu-item-11610' className='menu-graphicdesign'>
-                  <a
-                    href='../graphic-design/'
-                    className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                  >
-                    Graphic Design<span className='p'></span>
-                  </a>
-                </li>
-              </button>
-              <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-                <li id='menu-item-196' className='menu-multimedia'>
-                  <a
-                    href='../network/'
-                    className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                  >
-                    Network<span className='p'></span>
-                  </a>
-                </li>
-              </button>
-              <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-                <li id='menu-item-161' className='menu-development'>
-                  <a
-                    href='../development/'
-                    className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                  >
-                    Development<span className='p'></span>
-                  </a>
-                </li>
-              </button>
-              <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-                <li id='menu-item-84' className='menu-antivirus'>
-                  <a
-                    href='../file-sharing/'
-                    className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                  >
-                    File Sharing<span className='p'></span>
-                  </a>
-                </li>
-              </button>
-              <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-                <li id='menu-item-84' className='menu-antivirus'>
-                  <a
-                    href='../security/'
-                    className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                  >
-                    Security<span className='p'></span>
-                  </a>
-                </li>
-              </button>
-              <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-                <li id='menu-item-11606' className='menu-education'>
-                  <a
-                    href='../games/'
-                    className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                  >
-                    Games<span className='p'></span>
-                  </a>
-                </li>
-              </button>
-              <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-                <li id='menu-item-35' className='menu-home active'>
-                  <a
-                    href='../education'
-                    className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                  >
-                    Education<span className='p'></span>
-                  </a>
-                </li>
-              </button>
-              <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-                <li id='menu-item-35' className='menu-home active'>
-                  <a
-                    href='../mobile'
-                    className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                  >
-                    Mobile<span className='p'></span>
-                  </a>
-                </li>
-              </button>
-              <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-                <li id='menu-item-11606' className='menu-education'>
-                  <a
-                    href='../utilities/'
-                    className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                  >
-                    Utilities<span className='p'></span>
-                  </a>
-                </li>
-              </button>
-              <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-                <li id='menu-item-194' className='menu-tutorials'>
-                  <a
-                    href='../movies/'
-                    className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                  >
-                    Movies<span className='p'></span>
-                  </a>
-                </li>
-              </button>
-              <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-                <li id='menu-item-194' className='menu-tutorials'>
-                  <a
-                    href='../latest/'
-                    className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                  >
-                    Blog Post<span className='p'></span>
-                  </a>
-                </li>
-              </button>
-            </ul>
-          </div> */}
 
         <div className='flex-container'>
           <div className='category-container'>
             <Image
-              src={moviesItem.channelposter}
-              alt={moviesItem.title}
+              src={reviewsItem.channelposter}
+              alt={reviewsItem.title}
               width={300}
               height={300}
               quality={90}
@@ -651,10 +562,12 @@ const moviesDetail = ({ moviesItem }) => {
                 marginBottom: '20px',
                 borderRadius: '50px',
                 boxShadow: '0 0 10px 0 #fff',
+                marginTop: '50px',
                 filter:
-                  'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
+                  'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
               }}
             />
+         
             <div
               style={{ maxWidth: '800px', width: '100%', marginBottom: '20px' }}
             >
@@ -667,7 +580,7 @@ const moviesDetail = ({ moviesItem }) => {
                     marginBottom: '12px'
                   }}
                 >
-                  {moviesItem.title}
+                  {reviewsItem.title}
                 </h2>
               </div>
 
@@ -679,7 +592,7 @@ const moviesDetail = ({ moviesItem }) => {
                   textShadow: '2px 1px 1px #000000'
                 }}
               >
-                Genre: {moviesItem.genre}
+                Genre: {reviewsItem.genre}
               </p>
               <p
                 className='text-black text-2xl font-semibold mt-2'
@@ -689,7 +602,7 @@ const moviesDetail = ({ moviesItem }) => {
                   textShadow: '2px 1px 1px #000000'
                 }}
               >
-                Director: {moviesItem.directorname}
+                Director: {reviewsItem.directorname}
               </p>
               <p
                 className='text-black text-2xl font-semibold mt-2'
@@ -699,7 +612,7 @@ const moviesDetail = ({ moviesItem }) => {
                   textShadow: '2px 1px 1px #000000'
                 }}
               >
-                Starring: {moviesItem.starring}
+                Starring: {reviewsItem.starring}
               </p>
               <p
                 className='text-black text-2xl font-semibold mt-2'
@@ -709,7 +622,7 @@ const moviesDetail = ({ moviesItem }) => {
                   textShadow: '2px 1px 1px #000000'
                 }}
               >
-                Origin Country: {moviesItem.country}
+                Origin Country: {reviewsItem.country}
               </p>
               <p
                 className='text-black text-2xl font-semibold mt-2'
@@ -719,20 +632,20 @@ const moviesDetail = ({ moviesItem }) => {
                   textShadow: '2px 1px 1px #000000'
                 }}
               >
-                Language: {moviesItem.language}
+                Language: {reviewsItem.language}
               </p>
 
               <div className={`${HomeStyles.imageGrid} mt-5`}>
                 <img
                   className={`${HomeStyles.image} img-fluid lazyload `}
-                  src={moviesItem.directorimg}
-                  alt={moviesItem.directorname}
-                  title={moviesItem.directorname}
+                  src={reviewsItem.directorimg}
+                  alt={reviewsItem.directorname}
+                  title={reviewsItem.directorname}
                   style={{
                     width: '200px',
                     height: '200px',
                     objectFit: 'cover',
-                    filter: 'contrast(1.2) saturate(1.2)',
+                    filter: 'contrast(1.1) saturate(1.2) brightness(1.2) hue-rotate(5deg)',
                     boxShadow: '0 0 10px 0 #C0C0C0' // Shadow effect with black color
                   }}
                   loading='lazy'
@@ -740,75 +653,75 @@ const moviesDetail = ({ moviesItem }) => {
                 />
                 <img
                   className={`${HomeStyles.image} img-fluid lazyload`}
-                  src={moviesItem.actor1img}
-                  alt={moviesItem.actor1}
-                  title={moviesItem.actor1}
+                  src={reviewsItem.actor1img}
+                  alt={reviewsItem.actor1}
+                  title={reviewsItem.actor1}
                   style={{
                     width: '200px',
                     height: '200px',
                     objectFit: 'cover',
                     boxShadow: '0 0 10px 0 #C0C0C0', // Shadow effect with black color
-                    filter: 'contrast(1.2) saturate(1.2)'
+                    filter: 'contrast(1.1) saturate(1.2) brightness(1.2) hue-rotate(5deg)'
                   }}
                   loading='lazy'
                   layout='responsive'
                 />
                 <img
                   className={`${HomeStyles.image} img-fluid lazyload`}
-                  src={moviesItem.actor2img}
-                  alt={moviesItem.actor2}
-                  title={moviesItem.actor2}
+                  src={reviewsItem.actor2img}
+                  alt={reviewsItem.actor2}
+                  title={reviewsItem.actor2}
                   style={{
                     width: '200px',
                     height: '200px',
                     objectFit: 'cover',
                     boxShadow: '0 0 10px 0 #C0C0C0', // Shadow effect with black color
-                    filter: 'contrast(1.2) saturate(1.2)'
+                    filter: 'contrast(1.1) saturate(1.2) brightness(1.2) hue-rotate(5deg)'
                   }}
                   loading='lazy'
                   layout='responsive'
                 />
                 <img
                   className={`${HomeStyles.image} img-fluid lazyload`}
-                  src={moviesItem.actor3img}
-                  alt={moviesItem.actor3}
-                  title={moviesItem.actor3}
+                  src={reviewsItem.actor3img}
+                  alt={reviewsItem.actor3}
+                  title={reviewsItem.actor3}
                   style={{
                     width: '200px',
                     height: '200px',
                     objectFit: 'cover',
                     boxShadow: '0 0 10px 0 #C0C0C0', // Shadow effect with black color
-                    filter: 'contrast(1.2) saturate(1.2)'
+                    filter: 'contrast(1.1) saturate(1.2) brightness(1.2) hue-rotate(5deg)'
                   }}
                   loading='lazy'
                   layout='responsive'
                 />
                 <img
                   className={`${HomeStyles.image} img-fluid lazyload`}
-                  src={moviesItem.actor4img}
-                  alt={moviesItem.actor4}
-                  title={moviesItem.actor4}
+                  src={reviewsItem.actor4img}
+                  alt={reviewsItem.actor4}
+                  title={reviewsItem.actor4}
                   style={{
                     width: '200px',
                     height: '200px',
                     objectFit: 'cover',
                     boxShadow: '0 0 10px 0 #C0C0C0', // Shadow effect with black color
-                    filter: 'contrast(1.2) saturate(1.2)'
+                    filter: 'contrast(1.1) saturate(1.2) brightness(1.2) hue-rotate(5deg)'
                   }}
                   loading='lazy'
                   layout='responsive'
                 />
                 <img
                   className={`${HomeStyles.image} img-fluid lazyload`}
-                  src={moviesItem.actor5img}
-                  alt={moviesItem.actor5}
-                  title={moviesItem.actor5}
+                  src={reviewsItem.actor5img}
+                  alt={reviewsItem.actor5}
+                  title={reviewsItem.actor5}
                   style={{
                     width: '200px',
                     height: '200px',
                     objectFit: 'cover',
                     boxShadow: '0 0 10px 0 #C0C0C0', // Shadow effect with black color
-                    filter: 'contrast(1.2) saturate(1.2)'
+                    filter: 'contrast(1.1) saturate(1.2) brightness(1.2) hue-rotate(5deg)'
                   }}
                   loading='lazy'
                   layout='responsive'
@@ -821,7 +734,7 @@ const moviesDetail = ({ moviesItem }) => {
                   marginTop: '50px',
                   marginBottom: '50px',
                   filter:
-                    'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
+                    'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                 }}
               >
                 {!showTimer ? (
@@ -867,35 +780,21 @@ const moviesDetail = ({ moviesItem }) => {
                 }}
                 className='rounded-xl mr-8 flex border-1 border-blue-600 bg-gray-600 p-2 '
               >
-                <div
-                  itemscope
-                  itemtype='https://schema.org/VideoObject'
-                  style={{ display: 'none' }}
-                >
-                  <meta itemprop='name' content={moviesItem.title} />
-                  <meta itemprop='description' content={moviesItem.text} />
-                  <meta
-                    itemprop='uploadDate'
-                    content={moviesItem.datePublished}
-                  />
-                  <meta
-                    itemprop='thumbnailUrl'
-                    content={moviesItem.backimage}
-                  />
-                  <meta itemprop='duration' content='P34S' />
-                  <meta itemprop='embedUrl' content={moviesItem.videourl} />
-                </div>
+                
                 <iframe
                   frameborder='0'
                   type='text/html'
                   // ref={audioIframeRef}
                   // id='audioIframe'
-                  src={`https://geo.dailymotion.com/player/xkdl0.html?video=${moviesItem.videoitem}&mute=true&Autoquality=1080p`}
+                  src={`https://geo.dailymotion.com/player/xkdl0.html?video=${reviewsItem.videoitem}&mute=true&Autoquality=1080p`}
                   width='100%'
                   height='100%'
                   allowfullscreen
                   title='Dailymotion Video Player'
                   allow='autoplay; encrypted-media'
+                  style={{
+                    filter: 'contrast(1.2) saturate(1.3) brightness(1.1) hue-rotate(15deg)'
+                  }}
                 ></iframe>
               </div>
               <div className='flex flex-col items-center justify-center'>
@@ -911,11 +810,14 @@ const moviesDetail = ({ moviesItem }) => {
                  Listen to Podcast
                 </h2> */}
               </div>
-              {moviesItem.mp3player && <MP3Player mp3Url={moviesItem.mp3player} />}
+              {reviewsItem.mp3player && (
+                <MP3Player mp3Url={reviewsItem.mp3player} />
+              )}
+
               <Pagination
                 currentPage={currentPage}
                 totalPages={totalPages}
-                route='movies'
+                route='reviews'
                 style={{
                   marginTop: '50px',
                   marginBottom: '50px',
@@ -925,10 +827,13 @@ const moviesDetail = ({ moviesItem }) => {
                     'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
                 }}
               />
+
+         
+           
               {/* {showTimer && seconds <= 0 && (
                       <div>
-                        {moviesItem.downloadlink && (
-                          <Link href={moviesItem.downloadlink} target='_blank'>
+                        {reviewsItem.downloadlink && (
+                          <Link href={reviewsItem.downloadlink} target='_blank'>
                             <div
                               className='bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
                               style={{
@@ -956,8 +861,8 @@ const moviesDetail = ({ moviesItem }) => {
                             </div>
                           </Link>
                         )}
-                        {moviesItem.downloadlink1 && (
-                          <Link href={moviesItem.downloadlink1} target='_blank'>
+                        {reviewsItem.downloadlink1 && (
+                          <Link href={reviewsItem.downloadlink1} target='_blank'>
                             <div
                               className='bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
                               style={{
@@ -973,7 +878,7 @@ const moviesDetail = ({ moviesItem }) => {
                             </div>
                           </Link>
                         )}
-                        {moviesItem.additionalLinks?.map((link, index) => (
+                        {reviewsItem.additionalLinks?.map((link, index) => (
                           <Link key={index} href={link.url} target='_blank'>
                             <div
                               className='bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
@@ -995,7 +900,7 @@ const moviesDetail = ({ moviesItem }) => {
                   </>
                 )}
               </div> */}
-            
+ 
               <div className='flex flex-col items-center justify-center'>
                 <p
                   className='bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300  text-bg text-black text-bg  mt-2 text-3xl mb-2 items-center justify-center '
@@ -1003,12 +908,12 @@ const moviesDetail = ({ moviesItem }) => {
                     marginTop: '50px'
                   }}
                 >
-                  <strong> {moviesItem.head1} </strong>
+                  <strong> {reviewsItem.head1} </strong>
                 </p>
               </div>
               <Image
-                src={moviesItem.image1}
-                alt={moviesItem.name}
+                src={reviewsItem.image1}
+                alt={reviewsItem.name}
                 width={1280}
                 height={720}
                 quality={90}
@@ -1022,10 +927,10 @@ const moviesDetail = ({ moviesItem }) => {
                   borderRadius: '50px',
                   boxShadow: '0 0 10px 0 #fff',
                   filter:
-                    'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
+                    'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                 }}
               />
-              {moviesItem.news1.split('\n\n').map((paragraph, idx) => (
+              {reviewsItem.news1.split('\n\n').map((paragraph, idx) => (
                 <p
                   key={idx}
                   className='description text-black font-bold mt-2 text-xl'
@@ -1037,17 +942,19 @@ const moviesDetail = ({ moviesItem }) => {
                   {paragraph}
                 </p>
               ))}
+              
+      
               <div className='flex flex-col items-center justify-center'>
-                {moviesItem.head2 && (
+                {reviewsItem.head2 && (
                   <p className='bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300 text-bg text-black text-bg mt-2 text-3xl mb-2 items-center justify-center'>
-                    <strong>{moviesItem.head2}</strong>
+                    <strong>{reviewsItem.head2}</strong>
                   </p>
                 )}
 
-                {moviesItem.image2 && (
+                {reviewsItem.image2 && (
                   <Image
-                    src={moviesItem.image2}
-                    alt={moviesItem.name}
+                    src={reviewsItem.image2}
+                    alt={reviewsItem.name}
                     width={1280}
                     height={720}
                     quality={90}
@@ -1061,15 +968,15 @@ const moviesDetail = ({ moviesItem }) => {
                       borderRadius: '50px',
                       boxShadow: '0 0 10px 0 #fff',
                       filter:
-                        'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
+                        'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                     }}
                   />
                 )}
 
-                {moviesItem.image3 && (
+                {reviewsItem.image3 && (
                   <Image
-                    src={moviesItem.image3}
-                    alt={moviesItem.name}
+                    src={reviewsItem.image3}
+                    alt={reviewsItem.name}
                     width={1280}
                     height={720}
                     quality={90}
@@ -1083,15 +990,15 @@ const moviesDetail = ({ moviesItem }) => {
                       borderRadius: '50px',
                       boxShadow: '0 0 10px 0 #fff',
                       filter:
-                        'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
+                        'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                     }}
                   />
                 )}
 
-                {moviesItem.image4 && (
+                {reviewsItem.image4 && (
                   <Image
-                    src={moviesItem.image4}
-                    alt={moviesItem.name}
+                    src={reviewsItem.image4}
+                    alt={reviewsItem.name}
                     width={1280}
                     height={720}
                     quality={90}
@@ -1105,15 +1012,15 @@ const moviesDetail = ({ moviesItem }) => {
                       borderRadius: '50px',
                       boxShadow: '0 0 10px 0 #fff',
                       filter:
-                        'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
+                        'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                     }}
                   />
                 )}
 
-                {moviesItem.image5 && (
+                {reviewsItem.image5 && (
                   <Image
-                    src={moviesItem.image5}
-                    alt={moviesItem.name}
+                    src={reviewsItem.image5}
+                    alt={reviewsItem.name}
                     width={1280}
                     height={720}
                     quality={90}
@@ -1127,15 +1034,15 @@ const moviesDetail = ({ moviesItem }) => {
                       borderRadius: '50px',
                       boxShadow: '0 0 10px 0 #fff',
                       filter:
-                        'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
+                        'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                     }}
                   />
                 )}
 
-                {moviesItem.image6 && (
+                {reviewsItem.image6 && (
                   <Image
-                    src={moviesItem.image6}
-                    alt={moviesItem.name}
+                    src={reviewsItem.image6}
+                    alt={reviewsItem.name}
                     width={1280}
                     height={720}
                     quality={90}
@@ -1149,15 +1056,15 @@ const moviesDetail = ({ moviesItem }) => {
                       borderRadius: '50px',
                       boxShadow: '0 0 10px 0 #fff',
                       filter:
-                        'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
+                        'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                     }}
                   />
                 )}
 
-                {moviesItem.image7 && (
+                {reviewsItem.image7 && (
                   <Image
-                    src={moviesItem.image7}
-                    alt={moviesItem.name}
+                    src={reviewsItem.image7}
+                    alt={reviewsItem.name}
                     width={1280}
                     height={720}
                     quality={90}
@@ -1171,15 +1078,15 @@ const moviesDetail = ({ moviesItem }) => {
                       borderRadius: '50px',
                       boxShadow: '0 0 10px 0 #fff',
                       filter:
-                        'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
+                        'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                     }}
                   />
                 )}
 
-                {moviesItem.image8 && (
+                {reviewsItem.image8 && (
                   <Image
-                    src={moviesItem.image8}
-                    alt={moviesItem.name}
+                    src={reviewsItem.image8}
+                    alt={reviewsItem.name}
                     width={1280}
                     height={720}
                     quality={90}
@@ -1193,7 +1100,7 @@ const moviesDetail = ({ moviesItem }) => {
                       borderRadius: '50px',
                       boxShadow: '0 0 10px 0 #fff',
                       filter:
-                        'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
+                        'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                     }}
                   />
                 )}
@@ -1213,7 +1120,7 @@ const moviesDetail = ({ moviesItem }) => {
                 textShadow: '1px 2px 2px #000'
               }}
             >
-              LATEST MOVIES NEWS.
+              LATEST reviews NEWS.
             </p>
             <div className='categorylatest-container'>
               <div className='cardlatest-container'>
@@ -1232,7 +1139,7 @@ const moviesDetail = ({ moviesItem }) => {
                             width: '300px', // Ensures the image is displayed at this width
                             height: '300px', // Ensures the image is displayed at this height
                             filter:
-                              'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
+                              'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                           }}
                         />
                         <p className='text-black text-lg font-semibold mt-2'>
@@ -1246,7 +1153,9 @@ const moviesDetail = ({ moviesItem }) => {
                   </div>
                 ))}
               </div>
+           
             </div>
+         
           </div>
         </div>
 
@@ -1362,7 +1271,7 @@ const moviesDetail = ({ moviesItem }) => {
 }
 
 export async function getStaticPaths () {
-  const paths = moviesData.map(item => ({
+  const paths = reviewsData.map(item => ({
     params: { id: item.id }
   }))
 
@@ -1370,7 +1279,7 @@ export async function getStaticPaths () {
 }
 
 export async function getStaticProps ({ params }) {
-  const moviesItem = moviesData.find(item => item.id === params.id)
-  return { props: { moviesItem } }
+  const reviewsItem = reviewsData.find(item => item.id === params.id)
+  return { props: { reviewsItem } }
 }
-export default moviesDetail
+export default reviewsDetail

@@ -21,7 +21,7 @@ export default function Home() {
               SoftwareBay.
             </h1> */}
               <p className='px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent'>
-              Explore. Discover. Connect.
+              Explore. Discover. Watch.
             </p>
             </div>
             <div className="flex justify-center mt-4">

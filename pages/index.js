@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react'
 // import securityData from '../public/security.json'
 import latestData from '../public/latest.json'
-import moviesData from '../public/movies.json'
-// import multimediaData from '../public/multimedia.json'
+import reviewsData from '../public/reviews.json'
+import trailerData from '../public/trailer.json'
 // import graphicdesignData from '../public/graphicdesign.json'
-// import gamesData from '../public/games.json'
+// import recapsData from '../public/recaps.json'
 // import Marquee from '../components/Marquee';
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+
+
 
 // Function to shuffle an array and return the first few items
 function getRandomItems (array, numberOfItems) {
@@ -23,34 +25,34 @@ const HomePage = () => {
 
   // Initial state with a consistent set of data
   // const [security, setsecurity] = useState(securityData.slice(0, 2))
-  const [movies, setmovies] = useState(moviesData.slice(0, 8))
-  // const [multimedia, setmultimedia] = useState(multimediaData.slice(0, 2))
+  const [reviews, setreviews] = useState(reviewsData.slice(0, 4))
+  const [trailer, settrailer] = useState(trailerData.slice(0, 4))
   // const [graphicdesign, setgraphicdesign] = useState(
   //   graphicdesignData.slice(0, 2))
-  //   const [games, setgames] = useState(gamesData.slice(0, 2))
+    // const [recaps, setrecaps] = useState(recapsData.slice(0, 4))
 
   // // Update the state with random items after the component mounts
   useEffect(() => {
   //   const shuffledsecurityData = getRandomItems(securityData, 2)
-    const shuffledmoviesData = getRandomItems(moviesData, 8)
-  //   const shuffledmultimediaData = getRandomItems(multimediaData, 2)
+    const shuffledreviewsData = getRandomItems(reviewsData, 4)
+    const shuffledtrailerData = getRandomItems(trailerData, 2)
   //   const shuffledgraphicdesignData = getRandomItems(graphicdesignData, 2)
-  //   const shuffledgamesData = getRandomItems(gamesData, 2)
+    // const shuffledrecapsData = getRandomItems(recapsData, 4)
 
   //   setsecurity(shuffledsecurityData)
-    setmovies(shuffledmoviesData)
-  //   setmultimedia(shuffledmultimediaData)
+    setreviews(shuffledreviewsData)
+    settrailer(shuffledtrailerData)
   //   setgraphicdesign(shuffledgraphicdesignData)
-  //   setgames(shuffledgamesData)
+    // setrecaps(shuffledrecapsData)
   }, [])
 
-  const pageTitle = 'Movies Magazine. - Explore. Discover. Connect'
+  const pageTitle = 'Movies Magazine. - Explore. Discover. Watch.'
 
   const uwatchfreeSchema = JSON.stringify([
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'Movies Magazine. - Explore. Discover. Connect',
+      name: 'Movies Magazine. - Explore. Discover. Watch.',
       url: 'https://moviesmagazine.onrender.com/',
       image: ['https://moviesmagazine.onrender.com/favicon.ico'],
       logo: {
@@ -95,14 +97,14 @@ const HomePage = () => {
       {
         '@type': 'Organization',
         '@id': 'https://moviesmagazine.onrender.com/#organization',
-        name: 'Movies Magazine - Explore. Discover. Connect',
-        url: 'https://moviesmagazine.onrender.com'
+        name: 'Movies Magazine - Explore. Discover. Watch.',
+        url: 'https://moviesmagazine.onrender.com/'
       },
       {
         '@type': 'WebSite',
         '@id': 'https://moviesmagazine.onrender.com/#website',
-        url: 'https://moviesmagazine.onrender.com',
-        name: 'Movies Magazine - Explore. Discover. Connect',
+        url: 'https://moviesmagazine.onrender.com/',
+        name: 'Movies Magazine - Explore. Discover. Watch.',
         publisher: {
           '@type': 'Organization',
           '@id': 'https://moviesmagazine.onrender.com/#organization'
@@ -142,7 +144,7 @@ const HomePage = () => {
             '@type': 'Article',
             '@id': 'https://moviesmagazine.onrender.com/',
             url: 'https://moviesmagazine.onrender.com/',
-            headline: 'Movies Magazine - Explore. Discover. Connect',
+            headline: 'Movies Magazine - Explore. Discover. Watch.',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
@@ -161,15 +163,15 @@ const HomePage = () => {
             publisher: {
               '@type': 'Organization',
               '@id': 'https://moviesmagazine.onrender.com/#organization',
-              name: 'Movies Magazine - Explore. Discover. Connect',
-              url: 'https://moviesmagazine.onrender.com'
+              name: 'Movies Magazine - Explore. Discover. Watch.',
+              url: 'https://moviesmagazine.onrender.com/'
             }
           },
           {
             '@type': 'Article',
             '@id': 'https://moviesmagazine.onrender.com/',
             url: 'https://moviesmagazine.onrender.com/',
-            headline: 'Movies Magazine. - Explore. Discover. Connect',
+            headline: 'Movies Magazine. - Explore. Discover. Watch.',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
@@ -188,15 +190,15 @@ const HomePage = () => {
             publisher: {
               '@type': 'Organization',
               '@id': 'https://moviesmagazine.onrender.com/#organization',
-              name: 'Movies Magazine.™ - Explore. Discover. Connect',
-              url: 'https://moviesmagazine.onrender.com'
+              name: 'Movies Magazine.™ - Explore. Discover. Watch.',
+              url: 'https://moviesmagazine.onrender.com/'
             }
           },
           {
             '@type': 'Article',
             '@id': 'https://moviesmagazine.onrender.com/',
             url: 'https://moviesmagazine.onrender.com/',
-            headline: 'Movies Magazine.™ - Explore. Discover. Connect',
+            headline: 'Movies Magazine.™ - Explore. Discover. Watch.',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
@@ -215,8 +217,8 @@ const HomePage = () => {
             publisher: {
               '@type': 'Organization',
               '@id': 'https://moviesmagazine.onrender.com/#organization',
-              name: 'Movies Magazine. - Explore. Discover. Connect',
-              url: 'https://moviesmagazine.onrender.com'
+              name: 'Movies Magazine. - Explore. Discover. Watch.',
+              url: 'https://moviesmagazine.onrender.com/'
             }
           }
         ]
@@ -270,14 +272,14 @@ const HomePage = () => {
           />
           {/* <meta
             name='description'
-            content='Explore. Discover. Connect'
+            content='Explore. Discover. Watch.'
           /> */}
           {/* <link rel='canonical' href='https://moviesmagazine.onrender.com/' /> */}
           <meta property='og:locale' content='en_US' />
-          <meta property='og:type' content='website' />
+          <meta property="og:type" content="video.other" />
           <meta
             property='og:title'
-            content='Movies Magazine.™ - Explore. Discover. Connect'
+            content='Movies Magazine.™ - Explore. Discover. Watch.'
           />
           <meta
             property='og:description'
@@ -286,7 +288,7 @@ const HomePage = () => {
           <meta property='og:url' content='https://moviesmagazine.onrender.com/' />
           <meta
             property='og:site_name'
-            content='Movies Magazine.™ - Explore. Discover. Connect'
+            content='Movies Magazine.™ - Explore. Discover. Watch.'
           />
           <meta
             property='og:image'
@@ -297,7 +299,7 @@ const HomePage = () => {
           <meta property='og:image:type' content='image/jpeg' />
           <meta
             name='application-name'
-            content='Movies Magazine™ - Explore. Discover. Connect'
+            content='Movies Magazine™ - Explore. Discover. Watch.'
           />
           <meta
             property='article:modified_time'
@@ -379,7 +381,7 @@ const HomePage = () => {
           }}
         >
           {' '}
-          Explore. Discover. Connect{' '}
+          Explore. Discover. Watch.{' '}
         </p>
 
         {/* <p
@@ -397,7 +399,7 @@ const HomePage = () => {
         >
           Select Categories.{' '}
         </p> */}
-        {/* <div
+        <div
           className='shadow-lg flex items-center justify-center'
           role='navigation'
         >
@@ -415,148 +417,49 @@ const HomePage = () => {
                 </a>
               </li>
             </button>
-
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-284913' className='menu-softwarecategories'>
-                <a href='../browsers/'>
-                  <h3 className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'>
-                    Browser<span className='p'></span>
-                  </h3>
-                </a>
-              </li>
-            </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-248' className='menu-operating-systems'>
+              <li id='menu-item-194' className='menu-tutorials'>
                 <a
-                  href='../desktop/'
+                  href='/../trailer'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Desktop<span className='p'></span>
-                </a>
-              </li>
-            </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-11605' className='menu-3dcad'>
-                <a
-                  href='../multimedia/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                  Multimedia<span className='p'></span>
-                </a>
-              </li>
-            </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-11610' className='menu-graphicdesign'>
-                <a
-                  href='../graphic-design/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                  Graphic Design<span className='p'></span>
-                </a>
-              </li>
-            </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-196' className='menu-multimedia'>
-                <a
-                  href='../network/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                  Network<span className='p'></span>
-                </a>
-              </li>
-            </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-161' className='menu-development'>
-                <a
-                  href='../development/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                  Development<span className='p'></span>
-                </a>
-              </li>
-            </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-84' className='menu-antivirus'>
-                <a
-                  href='../file-sharing/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                  File Sharing<span className='p'></span>
-                </a>
-              </li>
-            </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-84' className='menu-antivirus'>
-                <a
-                  href='../security/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                  Security<span className='p'></span>
-                </a>
-              </li>
-            </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-11606' className='menu-security'>
-                <a
-                  href='../games/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                  Games<span className='p'></span>
-                </a>
-              </li>
-            </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-35' className='menu-home active'>
-                <a
-                  href='../education'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                  Education<span className='p'></span>
-                </a>
-              </li>
-            </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-35' className='menu-home active'>
-                <a
-                  href='../mobile'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                  Mobile<span className='p'></span>
-                </a>
-              </li>
-            </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-11606' className='menu-security'>
-                <a
-                  href='../utilities/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                  Utilities<span className='p'></span>
+                  Movies Trailers<span className='p'></span>
                 </a>
               </li>
             </button>
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a
-                  href='../movies/'
+                  href='../reviews'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Movies<span className='p'></span>
+                  Movies Reviews<span className='p'></span>
                 </a>
               </li>
             </button>
+           
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-11606' className='menu-security'>
+                <a
+                  href='../recaps/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Movies Recaps<span className='p'></span>
+                </a>
+              </li>
+            </button> 
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a
                   href='../latest/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Blog Post<span className='p'></span>
+                  Movies Post<span className='p'></span>
                 </a>
               </li>
             </button>
           </ul>
-        </div> */}
+        </div>
 
         {/* <h3
           className='px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent  font-bold hover:text-blue-800 text-3xl  mt-2'
@@ -570,19 +473,19 @@ const HomePage = () => {
           <div className='flex-container'>
             <div className='category-container'>
               <div className='card-container'>
-                {/* {games.map(gamesItem => (
-                  <div key={gamesItem.id} className='card'>
-                    <a href={`/games/${gamesItem.id}`}>
+              {trailer.map(trailerItem => (
+                  <div key={trailerItem.id} className='card'>
+                    <a href={`/trailer/${trailerItem.id}`}>
                       <p
                         className='text-black text-xl bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
                         style={{ marginBottom: '20px' }}
                       >
-                        {gamesItem.name}
+                        {trailerItem.name}
                       </p>
                       <div className='relative'>
                         <Image
-                          src={gamesItem.image}
-                          alt={gamesItem.title}
+                          src={trailerItem.image}
+                          alt={trailerItem.title}
                           className='rounded-lg '
                           width={140} // Specify the desired width
                           height={140} // Specify the desired height
@@ -591,15 +494,15 @@ const HomePage = () => {
                             width: '200px', // Ensures the image is displayed at this width
                             height: '300px', // Ensures the image is displayed at this height
                             filter:
-                              'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
+                              'contrast(1.1) saturate(1.2) brightness(1.2) hue-rotate(5deg)'
                           }}
                         />
 
                         <div className='bg-gradient-to-r from-pink-700 to-blue-700 bg-clip-text text-transparent text-black text-lg font-semibold mt-2'>
-                          {gamesItem.text}
+                          {trailerItem.text}
                         </div>
                         <div className='badge bg-gradient-to-r from-pink-500 to-amber-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'>
-                          {gamesItem.badge}
+                          {trailerItem.badge}
                         </div>
                       </div>
                     </a>
@@ -615,20 +518,20 @@ const HomePage = () => {
                   }}
                 >
                   Many More Coming Soon...
-                </p> */}
-                {movies.map(moviesItem => (
-                  <div key={moviesItem.id} className='card'>
-                    <a href={`/movies/${moviesItem.id}`}>
+                </p>
+             {/* {recaps.map(recapsItem => (
+                  <div key={recapsItem.id} className='card'>
+                    <a href={`/recaps/${recapsItem.id}`}>
                       <p
                         className='text-black text-xl bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
                         style={{ marginBottom: '20px' }}
                       >
-                        {moviesItem.name}
+                        {recapsItem.name}
                       </p>
                       <div className='relative'>
                         <Image
-                          src={moviesItem.image}
-                          alt={moviesItem.title}
+                          src={recapsItem.image}
+                          alt={recapsItem.title}
                           className='rounded-lg '
                           width={140} // Specify the desired width
                           height={140} // Specify the desired height
@@ -637,15 +540,61 @@ const HomePage = () => {
                             width: '200px', // Ensures the image is displayed at this width
                             height: '300px', // Ensures the image is displayed at this height
                             filter:
-                              'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
+                              'contrast(1.1) saturate(1.2) brightness(1.2) hue-rotate(5deg)'
                           }}
                         />
 
                         <div className='bg-gradient-to-r from-pink-700 to-blue-700 bg-clip-text text-transparent text-black text-lg font-semibold mt-2'>
-                          {moviesItem.text}
+                          {recapsItem.text}
                         </div>
                         <div className='badge bg-gradient-to-r from-pink-500 to-amber-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'>
-                          {moviesItem.badge}
+                          {recapsItem.badge}
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                ))}
+                <p
+                  className=' animate-pulse text-black text-2xl font-semibold mt-2'
+                  style={{
+                    marginTop: '15px',
+                    color: '#000',
+                    font: 'bold',
+                    textShadow: '1px 2px 2px #000 '
+                  }}
+                >
+                  Many More Coming Soon...
+                </p>  */}
+                {reviews.map(reviewsItem => (
+                  <div key={reviewsItem.id} className='card'>
+                    <a href={`/reviews/${reviewsItem.id}`}>
+                      <p
+                        className='text-black text-xl bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
+                        style={{ marginBottom: '20px' }}
+                      >
+                        {reviewsItem.name}
+                      </p>
+                      <div className='relative'>
+                        <Image
+                          src={reviewsItem.image}
+                          alt={reviewsItem.title}
+                          className='rounded-lg '
+                          width={140} // Specify the desired width
+                          height={140} // Specify the desired height
+                          quality={90}
+                          style={{
+                            width: '200px', // Ensures the image is displayed at this width
+                            height: '300px', // Ensures the image is displayed at this height
+                            filter:
+                              'contrast(1.1) saturate(1.2) brightness(1.2) hue-rotate(5deg)'
+                          }}
+                        />
+
+                        <div className='bg-gradient-to-r from-pink-700 to-blue-700 bg-clip-text text-transparent text-black text-lg font-semibold mt-2'>
+                          {reviewsItem.text}
+                        </div>
+                        <div className='badge bg-gradient-to-r from-pink-500 to-amber-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'>
+                          {reviewsItem.badge}
                         </div>
                       </div>
                     </a>
@@ -663,53 +612,8 @@ const HomePage = () => {
                   Many More Coming Soon...
                 </p>
 
-                {/* {multimedia.map(multimediaItem => (
-                  <div key={multimediaItem.id} className='card'>
-                    <a href={`/multimedia/${multimediaItem.id}`}>
-                      <p
-                        className='text-black text-xl bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
-                        style={{ marginBottom: '20px' }}
-                      >
-                        {multimediaItem.name}
-                      </p>
-                      <div className='relative'>
-                        <Image
-                          src={multimediaItem.image}
-                          alt={multimediaItem.title}
-                          className='rounded-lg '
-                          width={140} // Specify the desired width
-                          height={140} // Specify the desired height
-                          quality={90}
-                          style={{
-                            width: '200px', // Ensures the image is displayed at this width
-                            height: '300px', // Ensures the image is displayed at this height
-                            filter:
-                              'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
-                          }}
-                        />
-
-                        <div className='bg-gradient-to-r from-pink-700 to-blue-700 bg-clip-text text-transparent text-black text-lg font-semibold mt-2'>
-                          {multimediaItem.text}
-                        </div>
-                        <div className='badge bg-gradient-to-r from-pink-500 to-amber-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'>
-                          {multimediaItem.badge}
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                ))}
-                <p
-                  className=' animate-pulse text-black text-2xl font-semibold mt-2'
-                  style={{
-                    marginTop: '15px',
-                    color: '#000',
-                    font: 'bold',
-                    textShadow: '1px 2px 2px #000 '
-                  }}
-                >
-                  Many More Coming Soon...
-                </p>
-                {graphicdesign.map(graphicdesignItem => (
+                
+                {/* {graphicdesign.map(graphicdesignItem => (
                   <div key={graphicdesignItem.id} className='card'>
                     <a href={`/graphic-design/${graphicdesignItem.id}`}>
                       <p
@@ -776,7 +680,7 @@ const HomePage = () => {
                             width: '200px', // Ensures the image is displayed at this width
                             height: '300px', // Ensures the image is displayed at this height
                             filter:
-                              'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
+                              'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                           }}
                         />
 
@@ -832,7 +736,7 @@ const HomePage = () => {
                               width: '300px', // Ensures the image is displayed at this width
                               height: '300px', // Ensures the image is displayed at this height
                               filter:
-                                'contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)'
+                                'contrast(1.1) saturate(1.2) brightness(1.2) hue-rotate(5deg)'
                             }}
                           />
                           <p className='text-black text-lg font-semibold mt-2'>

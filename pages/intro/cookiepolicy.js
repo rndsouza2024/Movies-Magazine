@@ -36,9 +36,9 @@ const cookiepolicy = () => {
     '@graph': [
       {
         '@type': 'Person',
-        '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
+        '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
         name: 'Dr Trailer',
-        url: 'https://moviesmagazine.onrender.com/author/ytmag/',
+        url: 'https://youtubemagazine.vercel.app/author/ytmag/',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -49,37 +49,37 @@ const cookiepolicy = () => {
       },
       {
         '@type': 'Organization',
-        '@id': 'https://moviesmagazine.onrender.com/#organization',
-        name: 'Movies Magazine - Explore. Discover. Connect.',
-        url: 'https://moviesmagazine.onrender.com'
+        '@id': 'https://youtubemagazine.vercel.app/#organization',
+        name: 'Youtube Magazine - Explore. Discover. Connect..',
+        url: 'https://youtubemagazine.vercel.app'
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://moviesmagazine.onrender.com/#website',
-        url: 'https://moviesmagazine.onrender.com',
-        name: 'Movies Magazine - Explore. Discover. Connect.',
+        '@id': 'https://youtubemagazine.vercel.app/#website',
+        url: 'https://youtubemagazine.vercel.app',
+        name: 'Youtube Magazine - Explore. Discover. Connect..',
         publisher: {
           '@type': 'Organization',
-          '@id': 'https://moviesmagazine.onrender.com/#organization'
+          '@id': 'https://youtubemagazine.vercel.app/#organization'
         },
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://moviesmagazine.onrender.com/?s={search_term_string}',
+          target: 'https://youtubemagazine.vercel.app/?s={search_term_string}',
           'query-input': 'required name=search_term_string'
         }
       },
       {
         '@type': 'WebPage',
-        '@id': 'https://moviesmagazine.onrender.com/#webpage',
-        url: 'https://moviesmagazine.onrender.com/',
+        '@id': 'https://youtubemagazine.vercel.app/#webpage',
+        url: 'https://youtubemagazine.vercel.app/',
         name: 'Movie',
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         about: {
           '@type': 'Person',
-          '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
+          '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
           name: 'Dr Trailer',
-          url: 'https://moviesmagazine.onrender.com/author/ytmag/',
+          url: 'https://youtubemagazine.vercel.app/author/ytmag/',
           image: {
             '@type': 'ImageObject',
             '@id': 'https://gravatar.com/drtrailer2022',
@@ -89,22 +89,22 @@ const cookiepolicy = () => {
           }
         },
         isPartOf: {
-          '@id': 'https://moviesmagazine.onrender.com/#website'
+          '@id': 'https://youtubemagazine.vercel.app/#website'
         },
         inLanguage: 'en-US',
         mainEntity: [
           {
             '@type': 'Article',
-            '@id': 'https://moviesmagazine.onrender.com/',
-            url: 'https://moviesmagazine.onrender.com/',
+            '@id': 'https://youtubemagazine.vercel.app/',
+            url: 'https://youtubemagazine.vercel.app/',
             headline: 'Movie',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
+              '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
               name: 'Dr Trailer',
-              url: 'https://moviesmagazine.onrender.com/author/ytmag/',
+              url: 'https://youtubemagazine.vercel.app/author/ytmag/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -115,23 +115,23 @@ const cookiepolicy = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://moviesmagazine.onrender.com/#organization',
-              name: 'Movies Magazine - Explore. Discover. Connect.',
-              url: 'https://moviesmagazine.onrender.com'
+              '@id': 'https://youtubemagazine.vercel.app/#organization',
+              name: 'Youtube Magazine - Explore. Discover. Connect..',
+              url: 'https://youtubemagazine.vercel.app'
             }
           },
           {
             '@type': 'Article',
-            '@id': 'https://moviesmagazine.onrender.com/',
-            url: 'https://moviesmagazine.onrender.com/',
+            '@id': 'https://youtubemagazine.vercel.app/',
+            url: 'https://youtubemagazine.vercel.app/',
             headline: 'Tvshow',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
+              '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
               name: 'Dr Trailer',
-              url: 'https://moviesmagazine.onrender.com/author/ytmag/',
+              url: 'https://youtubemagazine.vercel.app/author/ytmag/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -142,23 +142,23 @@ const cookiepolicy = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://moviesmagazine.onrender.com/#organization',
-              name: 'Movies Magazine - Explore. Discover. Connect.',
-              url: 'https://moviesmagazine.onrender.com'
+              '@id': 'https://youtubemagazine.vercel.app/#organization',
+              name: 'Youtube Magazine - Explore. Discover. Connect..',
+              url: 'https://youtubemagazine.vercel.app'
             }
           },
           {
             '@type': 'Article',
-            '@id': 'https://moviesmagazine.onrender.com/',
-            url: 'https://moviesmagazine.onrender.com/',
+            '@id': 'https://youtubemagazine.vercel.app/',
+            url: 'https://youtubemagazine.vercel.app/',
             headline: 'Adult',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
+              '@id': 'https://youtubemagazine.vercel.app/author/ytmag/',
               name: 'Dr Trailer',
-              url: 'https://moviesmagazine.onrender.com/author/ytmag/',
+              url: 'https://youtubemagazine.vercel.app/author/ytmag/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -169,9 +169,9 @@ const cookiepolicy = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://moviesmagazine.onrender.com/#organization',
-              name: 'Movies Magazine - Explore. Discover. Connect.',
-              url: 'https://moviesmagazine.onrender.com'
+              '@id': 'https://youtubemagazine.vercel.app/#organization',
+              name: 'Youtube Magazine - Explore. Discover. Connect..',
+              url: 'https://youtubemagazine.vercel.app'
             }
           }
         ]
@@ -183,18 +183,18 @@ const cookiepolicy = () => {
   return (
     <div>
       <Head>
-        <title>Movies Magazine | Cookie Policy</title>
+        <title>Youtube Magazine | Cookie Policy</title>
         <link
           rel='sitemap'
           type='application/xml'
           title='Sitemap'
-          href='https://moviesmagazine.onrender.com/sitemap.xml'
+          href='https://youtubemagazine.vercel.app/sitemap.xml'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <link
           rel='icon'
           type='image/x-icon'
-          href='/favicon.ico'
+          href='wp-content/uploads/2023/05/favicon.ico'
         />
         <link
           rel='apple-touch-icon'
@@ -222,36 +222,36 @@ const cookiepolicy = () => {
         />
         <meta
           name='keywords'
-          content='download, software, freeware, shareware, trial versions, program, utilities, security, network, multimedia, movies, mobile, games, graphic design, file sharing, education, development, desktop, browser'
+          content=', software, freeware, shareware, trial versions, program, utilities, security, network, multimedia, movies, mobile, games, graphic design, file sharing, education, development, desktop, browser'
         />
         <meta
           name='description'
-          content='Explore. Discover. Download - Free Your Desired Software.'
+          content='Explore. Discover. Connect. - Free Your Desired Software.'
         />
         <link
           rel='canonical'
-          href='https://moviesmagazine.onrender.com/intro/tearms'
+          href='https://youtubemagazine.vercel.app/intro/tearms'
         />
         <meta property='og:locale' content='en_US' />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content='Movies Magazine ' />
+        <meta property='og:title' content='Youtube Magazine ' />
         <meta
           property='og:description'
-          content='Movies Magazine is the top platform for exploring and downloading software,the premier platform for the latest releases and secure downloads.'
+          content='Youtube Magazine is the top platform for exploring and ing software,the premier platform for the latest releases and secure s.'
         />
         <meta
           property='og:url'
-          content='https://moviesmagazine.onrender.com/intro/tearms/'
+          content='https://youtubemagazine.vercel.app/intro/tearms/'
         />
-        <meta property='og:site_name' content='Movies Magazine ' />
+        <meta property='og:site_name' content='Youtube Magazine ' />
         <meta
           property='og:image'
-          content='https://moviesmagazine.onrender.com/og_image.jpg'
+          content='https://youtubemagazine.vercel.app/og_image.webp'
         />
         <meta property='og:image:width' content='1280' />
         <meta property='og:image:height' content='720' />
         <meta property='og:image:type' content='image/jpg' />
-        <meta name='application-name' content='Movies Magazine ' />
+        <meta name='application-name' content='Youtube Magazine ' />
         <meta
           property='article:modified_time'
           content='2024-01-01T13:13:13+00:00'
@@ -260,12 +260,12 @@ const cookiepolicy = () => {
           rel='sitemap'
           type='application/xml'
           title='Sitemap'
-          href='https://moviesmagazine.onrender.com/sitemap.xml'
+          href='https://youtubemagazine.vercel.app/sitemap.xml'
         />
         <meta name='twitter:card' content='summary_large_image' />
         <meta
           name='google-site-verification'
-          content='29ovWU8qJ15jdW0kAcuES-LaJKM1Dsk3neAuZEBz5gs'
+          content='BZNZaUyoS1nXyRfa99f4VJ3ABKZUZhkKB0pZ3DU3L8s'
         />
         <meta
           name='facebook-domain-verification'
@@ -273,7 +273,7 @@ const cookiepolicy = () => {
         />
         <meta
           name='dailymotion-domain-verification'
-          content='dmdzuqt3p027t2adn'
+          content='dm0zffs8dj8pcb3gd'
         />
         <meta name='monetag' content='35a75bbdeae678c82776e64fb78cdac5' />
         <script
@@ -292,10 +292,15 @@ const cookiepolicy = () => {
               fjs.parentNode.appendChild(js);
             }(window, document, 'script', 'webpushr-jssdk'));
 
-            webpushr('setup', { 'key': ''BNg0bEcTYIGpkB8PxFaYCZPLChz2m-TV2OIusYmW5TNE_cPdi2qSKLueUYe9NlkG2q6ZgvwZKzcvSYKVYZanPVY'' });
+            webpushr('setup', { 'key': 'BBQBh9BNi-dtzrb7ayxfk3Kuh11sEA0hiPlNpdyHX0pueAdWd4lxPInWWXC3bcc5EsZTx8jDnZeDiJCRKkA91Lo' });
           `
           }}
         />
+            <script
+            async
+            src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5527677677744511'
+            crossorigin='anonymous'
+          ></script>
       </Head>
       <Script src='../../propler/ads.js' defer />
       <Script src='../../propler/ads2.js' defer />
@@ -315,14 +320,14 @@ const cookiepolicy = () => {
             >
               <h1 style={headingStyle}>Cookie Policy</h1>
               <p style={{ color: '#666', marginBottom: '24px' }}>
-                This is the Cookie Policy for Movies Magazine, accessible from
-                https://moviesmagazine.onrender.com and its subdomains.
+                This is the Cookie Policy for Youtube Magazine, accessible from
+                https://youtubemagazine.vercel.app and its subdomains.
               </p>
 
               <h2 style={headingStyle}>What Are Cookies</h2>
               <p style={{ color: '#666', marginBottom: '24px' }}>
                 As is common practice with nearly all professional websites,
-                this site uses cookies, which are small files downloaded to your
+                this site uses cookies, which are small files ed to your
                 computer, to enhance your browsing experience. This page
                 explains the information they collect, their purpose, and why we
                 occasionally need to store these cookies. We'll also outline how

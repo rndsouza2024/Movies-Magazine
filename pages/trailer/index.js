@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import latestData from '../../public/latest.json'
+import trailerData from '../../public/trailer.json'
 // import Marquee from '../../components/Marquee'
+
 import Pagination from '../../components/Pagination'
 import Head from 'next/head'
 import Script from 'next/script'
@@ -11,7 +13,7 @@ const uwatchfreeSchema = JSON.stringify([
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Movies Magazine - Explore. Discover. Watch..',
+    name: 'Movies Magazine. - Explore. Discover. Watch..',
     url: 'https://moviesmagazine.onrender.com/',
     image: ['https://moviesmagazine.onrender.com/favicon.ico'],
     logo: {
@@ -29,8 +31,7 @@ const uwatchfreeSchema = JSON.stringify([
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate:
-          'https://moviesmagazine.onrender.com/search?q={search_term_string}'
+        urlTemplate: 'https://moviesmagazine.onrender.com/search?q={search_term_string}'
       },
       'query-input': 'required name=search_term_string'
     }
@@ -40,12 +41,12 @@ const uwatchfreeSchema = JSON.stringify([
 const softwareSchema = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://moviesmagazine.onrender.com/latest/',
-  headline: 'Download Latest | Movies Magazine™',
-  url: 'https://moviesmagazine.onrender.com/latest/',
+  '@id': 'https://moviesmagazine.onrender.com/movies/',
+  headline: 'Movies Review Website | Movies Magazine.™',
+  url: 'https://moviesmagazine.onrender.com/movies/',
   description:
-    'Movies Magazine is the top platform for exploring and downloading software,the premier platform for the latest releases and secure downloads.',
-  image: 'https://moviesmagazine.onrender.com/wp-content/uploads/browser.webp',
+    'Explore the world of cinema with Movies Magazine: Captivating trailer, top picks, and the latest news.',
+  image: 'https://moviesmagazine.onrender.com/wp-content/uploads/movies.webp',
   author: {
     '@type': 'Person',
     name: 'DrTrailer',
@@ -53,7 +54,7 @@ const softwareSchema = JSON.stringify({
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Movies Magazine - Explore. Discover. Watch..',
+    name: 'Movies Magazine. - Explore. Discover. Watch..',
     logo: {
       '@type': 'ImageObject',
       url: 'https://moviesmagazine.onrender.com/og_image.jpg'
@@ -63,7 +64,7 @@ const softwareSchema = JSON.stringify({
   dateModified: '2024-06-02',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://moviesmagazine.onrender.com/latest/'
+    '@id': 'https://moviesmagazine.onrender.com/movies/'
   },
   additionalProperty: {
     '@type': 'PropertyValue',
@@ -79,19 +80,19 @@ const breadcrumbSchema = JSON.stringify({
     {
       '@type': 'ListItem',
       position: 1,
-      name: 'Windows',
+      name: 'Movies Magazine.',
       item: 'https://moviesmagazine.onrender.com/'
     },
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'Latest Blog',
-      item: 'https://moviesmagazine.onrender.com/latest/'
+      name: 'Movies.',
+      item: 'https://moviesmagazine.onrender.com/movies/'
     }
   ]
 })
 
-const latestPage = ({ items }) => {
+const moviesPage = ({ items }) => {
   const [latest, setLatest] = useState(latestData)
 
   // const [currentPage, setCurrentPage] = useState(1)
@@ -104,8 +105,8 @@ const latestPage = ({ items }) => {
   return (
     <div className='w-full' style={{ backgroundColor: '#D3D3D3' }}>
       <Head>
-        <title> Latest Movies News | Movies Magazine™</title>
-        <link rel='canonical' href='https://moviesmagazine.onrender.com/latest/' />
+        <title> Official Movies Trailer | Movies Magazine.</title>
+        <link rel='canonical' href='https://moviesmagazine.onrender.com/movies/' />
         <meta
           name='robots'
           content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
@@ -115,29 +116,25 @@ const latestPage = ({ items }) => {
         <meta name='revisit-after' content='1 days' />
         <meta property='og:locale' content='en_US' />
         <meta property="og:type" content="video.other" />
-        <meta property='og:title' content=' Latest Blog | Movies Magazine' />
+        <meta
+          property='og:title'
+          content='  Movies Review | Movies Magazine.'
+        />
         <meta
           property='og:description'
-          content='Movies Magazine is the top platform for exploring and downloading software,the premier platform for the Latest Blog releases and secure downloads.'
+          content='Explore the world of cinema with Movies Magazine: Captivating trailer, top picks, and the latest news.'
         />
 
-        <meta
-          property='og:url'
-          content='https://moviesmagazine.onrender.com/latest'
-        />
+        <meta property='og:url' content='https://moviesmagazine.onrender.com/movies' />
 
-        <meta
-          name='keywords'
-          content='download, software, freeware, shareware, trial versions, program, utilities, security, network, multimedia, movies, mobile, games, graphic design, file sharing, education, development, desktop, browser'
-        />
-        <meta property='og:site_name' content='Movies Magazine' />
+        <meta property='og:site_name' content='Movies Magazine.' />
         <meta property='og:type' content='article' />
         <meta
           property=' og:image:alt'
-          content='https://moviesmagazine.onrender.com/og_image.jpg'
+          content='https://moviesmagazine.onrender.com/wp-content/uploads/og_image.jpg'
         />
         <meta name='mobile-web-app-capable' content='yes' />
-        <meta property='article:section' content='Latest Blog' />
+        <meta property='article:section' content='Movies' />
         <meta name='author' content='admin' />
         <meta
           property='article:modified_time'
@@ -145,11 +142,11 @@ const latestPage = ({ items }) => {
         />
         <meta
           name='keywords'
-          content='download, software, freeware, shareware, trial versions, program, utilities'
+          content='movie review sites,movie magazine,movie magazines uk,movie magazines us,movie magazines in,the film magazine,thefilmmagazine,movie news websites,film trailer,film trailer uk,film trailer us,film trailer in,film magazine online'
         />
         <meta
           property='og:image'
-        content='https://moviesmagazine.onrender.com/og_image.jpg'
+          content='https://moviesmagazine.onrender.com/wp-content/uploads/og_image.jpg'
         />
         <meta property='og:image:width' content='1280px' />
         <meta property='og:image:height' content='720px' />
@@ -212,7 +209,6 @@ const latestPage = ({ items }) => {
       <Script src='../../propler/ads.js' defer />
       <Script src='../../propler/ads2.js' defer />
 
-      {/* <div className='container'> */}
       <h1
         className='badge bg-gradient-to-r from-pink-500 to-amber-500 font-bold py-3 px-6  shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
         style={{
@@ -226,25 +222,10 @@ const latestPage = ({ items }) => {
           marginBottom: '15px'
         }}
       >
-        Welcome to Latest Movies News Section.
+        Movies Magazine - Official Movies Trailer Section.
       </h1>
-      {/* <Marquee /> */}
-      {/* <p
-        className='px-0 text-black font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl hover:text-blue-800 mt-2'
-        style={{
-          justifyContent: 'center',
-          alignItems: 'center',
-          padding: '10px',
-          fontSize: '35px',
-          fontFamily: 'Poppins, sans-serif',
-          fontWeight: 'bold',
-          textAlign: 'center',
-          marginBottom: '15px'
-        }}
-      >
-        Select Categories.{' '}
-      </p> */}
-                  <div
+
+      <div
           className='shadow-lg flex items-center justify-center'
           role='navigation'
         >
@@ -307,29 +288,28 @@ const latestPage = ({ items }) => {
         </div>
 
 
-      {/* </div> */}
-    
-      <div className='container'>
-     
+
+      <div className='container' >
+        {/* <h1  className='px-0 font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent'>movies Section</h1> */}
         <div className='flex-container'>
           <div className='main-content'>
-            <div className='card-container'>
-              {latestData.map(item => (
+            <div className='card-container' >
+              {trailerData.map(item => (
                 <div key={item.id}>
                   {/* <div key={item.id} className='card'> */}
-                  <Link href={`/latest/${item.id}`}>
-                    <div className=' flex flex-col items-center justify-center'>
+                  <Link href={`/trailer/${item.id}`}>
+                    <div className='relative'>
                       <Image
                         src={item.image}
                         alt={item.title}
-                        loading='lazy'
                         className='rounded-lg'
-                        width={200} // Specify the desired width
-                        height={300} // Specify the desired height
+                        width={140} // Specify the desired width
+                        height={140} // Specify the desired height
                         quality={90}
                         style={{
-                          width: '400px', // Ensures the image is displayed at this width
+                          width: '200px', // Ensures the image is displayed at this width
                           height: '300px', // Ensures the image is displayed at this height
+
                           filter:
                             'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                         }}
@@ -338,39 +318,17 @@ const latestPage = ({ items }) => {
                         {item.name}
                       </p>
                       <p className='text-black text-bg font-semibold mt-2'>
-                        Publish Date: {item.license}
+                      Genre: {item.genre}, Directed by: {item.directorname}
                       </p>
-                      <h2 className='text-black font-bold mt-2 text-sm mb-2 items-center justify-center '>
-              {' '}
-              Author: {item.group}.
-            </h2>
-             <Image
-                src={item.directorimg}
-                alt={item.group}
-                width={100}
-                height={100}
-                quality={90}
-                objectFit='cover'
-                loading='lazy'
-                style={{
-                  width: '50px', // Ensures the image is displayed at this width
-                  height: '50px', // Ensures the image is displayed at this height
-                  margin: 'auto',
-                  marginBottom: '20px',
-                  borderRadius: '80px',
-                  boxShadow: '0 0 10px 0 #fff',
-                  filter:
-                    'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
-                }}
-              />
-
-
+                      <p className='text-black text-bg font-semibold mt-2'>
+                      Country of origin: {item.country} Original language: {item.language}
+                      </p>
                       <div className='bg-gradient-to-r from-pink-700 to-blue-700 bg-clip-text text-transparent text-black text-lg font-semibold mt-2'>
                         {item.text}
                       </div>
-                      {/* <div className='animate-pulse badge bg-gradient-to-r from-pink-500 to-amber-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'>
+                      <div className='animate-pulse badge bg-gradient-to-r from-pink-500 to-amber-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'>
                         {item.badge}
-                      </div> */}
+                      </div>
                     </div>
                   </Link>
                 </div>
@@ -387,11 +345,55 @@ const latestPage = ({ items }) => {
                 Many More Coming Soon...
               </p>
             </div>
-           
-            {/* <Pagination currentPage={currentPage} totalPages={totalPages} route="latest" /> */}
+            {/* <Pagination currentPage={currentPage} totalPages={totalPages} route="movies" /> */}
           </div>
+
+          <div className='sidebar'>
+            <p
+              className='text-black text-2xl font-bold mt-2'
+              style={{
+                marginTop: '15px',
+                color: '#000',
+                font: 'bold',
+                textShadow: '1px 2px 2px #000'
+              }}
+            >
+              LATEST SOFTWARE NEWS
+            </p>
+            <div className='categorylatest-container'>
+              <div className='cardlatest-container'>
+                {latest.map(latestItem => (
+                  <div key={latestItem.id} className='cardlatest'>
+                    <a href={`/latest/${latestItem.id}`}>
+                      <div className='relative'>
+                        <Image
+                          src={latestItem.image}
+                          alt={latestItem.title}
+                          className='rounded-lg mx-auto'
+                          width={140} // Specify the desired width
+                          height={140} // Specify the desired height
+                          quality={90}
+                          style={{
+                            width: '300px', // Ensures the image is displayed at this width
+                            height: '300px', // Ensures the image is displayed at this height
+                            filter:
+                             'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
+                          }}
+                        />
+                        <p className='text-black text-lg font-semibold mt-2'>
+                          {latestItem.name}
+                        </p>
+                        <div className='bg-gradient-to-r from-pink-700 to-blue-700 bg-clip-text text-transparent text-sm font-semibold mt-2'>
+                          {latestItem.text}
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-       
+        </div>
 
         <style jsx>{`
           /* Global styles */
@@ -506,7 +508,7 @@ const latestPage = ({ items }) => {
 
 export async function getStaticProps () {
   try {
-    const res = await fetch('https://moviesmagazine.onrender.com/latest.json')
+    const res = await fetch('https://moviesmagazine.onrender.com/trailer.json')
     const data = await res.json()
 
     return {
@@ -524,4 +526,4 @@ export async function getStaticProps () {
   }
 }
 
-export default latestPage
+export default moviesPage

@@ -12,7 +12,7 @@ const MP3Player = ({ mp3Url }) => {
             <style jsx>{`
                 /* Basic styles for responsiveness and sizing */
                 .audio-player {
-                    max-width: 350px; /* Medium size, adjust as needed */
+                    max-width: 450px; /* Medium size, adjust as needed */
                     width: 100%;
                     margin: auto;
                     padding: 20px;

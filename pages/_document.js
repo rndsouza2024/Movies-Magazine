@@ -53,10 +53,10 @@ class MyDocument extends Document {
             href='https://moviesmagazine.onrender.com/'
           />
           <meta property='og:locale' content='en_US' />
-          <meta property='og:type' content='website' />
+          <meta property="og:type" content="video.other" />
           <meta
             property='og:title'
-            content='Movies Magazine.™ - Explore. Discover. Connect.'
+            content='Movies Magazine.™ - Explore. Discover. Watch..'
           />
           <meta
             property='og:description'
@@ -68,7 +68,7 @@ class MyDocument extends Document {
           />  
           <meta
             property='og:site_name'
-            content='Movies Magazine. - Explore. Discover. Connect.'
+            content='Movies Magazine. - Explore. Discover. Watch..'
           />
           <meta
             property='og:image'
@@ -79,7 +79,7 @@ class MyDocument extends Document {
           <meta property='og:image:type' content='image/webp' />
           <meta
             name='application-name'
-            content='Movies Magazine. - Explore. Discover. Connect.'
+            content='Movies Magazine. - Explore. Discover. Watch..'
           />
           <meta
             property='article:modified_time'
@@ -111,11 +111,7 @@ class MyDocument extends Document {
           />
           <meta name='monetag' content='35a75bbdeae678c82776e64fb78cdac5' />
           
-          {/* <script
-            dangerouslySetInnerHTML={{
-              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W62BF3BQ');`,
-            }}
-          /> */}
+        
         </Head>
 
         <body>

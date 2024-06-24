@@ -10,7 +10,7 @@ export default function Footer() {
               <img src="/logo.png" alt="Logo" width={500} height={150} className="rounded-3xl" />
             </a>
             <p className="text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent mt-2 text-center text-sm" >
-              Explore. Discover. Connect.
+              Explore. Discover. Watch.
             </p>
             
             <div className="flex justify-center mt-4">
@@ -33,47 +33,47 @@ export default function Footer() {
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
     {/* <nav className="list-none mb-10">
       <li>
-        <a href="https://softwarebay.vercel.app/desktop" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Desktop</a>
+        <a href="https://Movies Magazine.vercel.app/desktop" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Desktop</a>
       </li>
       <li>
-        <a href="https://softwarebay.vercel.app/browsers" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Browser</a>
+        <a href="https://Movies Magazine.vercel.app/browsers" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Browser</a>
       </li>
       <li>
-        <a href="https://softwarebay.vercel.app/multimedia" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Multimedia</a>
+        <a href="https://Movies Magazine.vercel.app/multimedia" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Multimedia</a>
       </li>
       <li>
-        <a href="https://softwarebay.vercel.app/network" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Network</a>
+        <a href="https://Movies Magazine.vercel.app/network" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Network</a>
       </li>
       <li>
-        <a href="https://softwarebay.vercel.app/graphicdesign" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Graphic Design</a>
+        <a href="https://Movies Magazine.vercel.app/graphicdesign" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Graphic Design</a>
       </li>
       <li>
-        <a href="https://softwarebay.vercel.app/development" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Development</a>
+        <a href="https://Movies Magazine.vercel.app/development" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Development</a>
       </li>
     </nav> */}
     
     {/* <nav className="list-none mb-10">
      
       <li>
-        <a href="https://softwarebay.vercel.app/filesharing" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">File Sharing</a>
+        <a href="https://Movies Magazine.vercel.app/filesharing" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">File Sharing</a>
       </li>
       <li>
-        <a href="https://softwarebay.vercel.app/games" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Security</a>
+        <a href="https://Movies Magazine.vercel.app/games" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Security</a>
       </li>
       <li>
-        <a href="https://softwarebay.vercel.app/" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Games</a>
+        <a href="https://Movies Magazine.vercel.app/" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Games</a>
       </li>
       <li>
-        <a href="https://softwarebay.vercel.app/education" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Education</a>
+        <a href="https://Movies Magazine.vercel.app/education" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Education</a>
       </li>
       <li>
-        <a href="https://softwarebay.vercel.app/mobile" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Mobile</a>
+        <a href="https://Movies Magazine.vercel.app/mobile" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Mobile</a>
       </li>
       <li>
-        <a href="https://softwarebay.vercel.app/utilities" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Utilities</a>
+        <a href="https://Movies Magazine.vercel.app/utilities" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Utilities</a>
       </li>
       <li>
-        <a href="https://softwarebay.vercel.app/othersoftware" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Other Software</a>
+        <a href="https://Movies Magazine.vercel.app/othersoftware" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800">Other Software</a>
       </li>
     </nav> */}
   </div>
@@ -107,9 +107,9 @@ export default function Footer() {
         <div className="bg-black">
           <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
             <p className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800  text-center sm:text-left">
-              © 2024 Softwarebay™ —{' '}
+              © 2024 Movies Magazine™ —{' '}
               <a href="https://twitter.com/MxplayerMovies" rel="noopener noreferrer" className="px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl font-bold hover:text-blue-800 ml-1" target="_blank">
-                Explore. Discover. Connect. All rights reserved.
+                Explore. Discover. Watch. All rights reserved.
               </a>
             </p>
           </div>
