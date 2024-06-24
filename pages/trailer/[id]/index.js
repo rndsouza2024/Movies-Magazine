@@ -728,40 +728,7 @@ const trailerDetail = ({ trailerItem }) => {
                 />
               </div>
               <Rating />
-              {/* <div
-                className='flex flex-col items-center justify-center'
-                style={{
-                  marginTop: '50px',
-                  marginBottom: '50px',
-                  filter:
-                    'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
-                }}
-              >
-                {!showTimer ? (
-                  <button
-                    onClick={() => setShowTimer(true)}
-                    className='animate-pulse bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
-                  >
-                    Download Now
-                  </button>
-                ) : (
-                  <>
-                    <p className='text-3xl font-bold mb-4'>
-                      Password is 123
-                      <br />
-                      Your download link will be ready in {seconds} seconds...
-                    </p>
-                    <Script src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js'></Script>
-                    <lottie-player
-                      src='https://lottie.host/291e7548-c65f-43a1-87ce-f573feab96b4/o7Ax3jP795.json'
-                      background='##FFFFFF'
-                      speed='1'
-                      style={{ width: '150px', height: '150px' }}
-                      loop
-                      autoplay
-                      direction='1'
-                      mode='normal'
-                    ></lottie-player> */}
+           
               <p
                 className='text-4xl font-bold mb-4'
                 style={{
@@ -798,17 +765,7 @@ const trailerDetail = ({ trailerItem }) => {
                 ></iframe>
               </div>
               <div className='flex flex-col items-center justify-center'>
-                {/* <h2
-                  className='text-black bg-gradient-to-r from-pink-500 to-amber-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300 text-2xl'
-                  style={{
-                    fontFamily: 'Poppins, sans-serif',
-                    fontWeight: 'bold',
-                      marginTop: '15px',
-                    marginBottom: '12px'
-                  }}
-                >
-                 Listen to Podcast
-                </h2> */}
+           
               </div>
               {trailerItem.mp3player && (
                 <MP3Player mp3Url={trailerItem.mp3player} />
@@ -827,89 +784,11 @@ const trailerDetail = ({ trailerItem }) => {
                     'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
                 }}
               />
-
-         
-           
-              {/* {showTimer && seconds <= 0 && (
-                      <div>
-                        {trailerItem.downloadlink && (
-                          <Link href={trailerItem.downloadlink} target='_blank'>
-                            <div
-                              className='bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
-                              style={{
-                                marginTop: '50px',
-                                marginBottom: '10px',
-                                borderRadius: '50px',
-                                boxShadow: '0 0 10px 0 #fff',
-                                filter:
-                                  'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
-                              }}
-                            >
-                              <span
-                                style={{
-                                  color: '#0efa06',
-                                  fontSize: '24px',
-                                  textShadow: '3px 5px 5px #000'
-                                }}
-                              >
-                                <i
-                                  className='fa fa-download'
-                                  aria-hidden='true'
-                                ></i>{' '}
-                              </span>
-                              Click Here to Download
-                            </div>
-                          </Link>
-                        )}
-                        {trailerItem.downloadlink1 && (
-                          <Link href={trailerItem.downloadlink1} target='_blank'>
-                            <div
-                              className='bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
-                              style={{
-                                margin: 'auto',
-                                marginBottom: '50px',
-                                borderRadius: '50px',
-                                boxShadow: '0 0 10px 0 #fff',
-                                filter:
-                                  'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
-                              }}
-                            >
-                              Click Here to Download
-                            </div>
-                          </Link>
-                        )}
-                        {trailerItem.additionalLinks?.map((link, index) => (
-                          <Link key={index} href={link.url} target='_blank'>
-                            <div
-                              className='bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
-                              style={{
-                                margin: 'auto',
-                                marginBottom: '50px',
-                                borderRadius: '50px',
-                                boxShadow: '0 0 10px 0 #fff',
-                                filter:
-                                  'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
-                              }}
-                            >
-                              Click Here to Download {index + 3}
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                )}
-              </div> */}
  
               <div className='flex flex-col items-center justify-center'>
-                <p
-                  className='bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300  text-bg text-black text-bg  mt-2 text-3xl mb-2 items-center justify-center '
-                  style={{
-                    marginTop: '50px'
-                  }}
-                >
-                  <strong> {trailerItem.head1} </strong>
-                </p>
+              <p className='bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300 text-bg text-black text-bg mt-2 text-3xl mb-2 items-center justify-center'>
+                    <strong>{trailerItem.head2}</strong>
+                  </p>
               </div>
               <Image
                 src={trailerItem.image1}
@@ -930,26 +809,10 @@ const trailerDetail = ({ trailerItem }) => {
                     'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                 }}
               />
-              {trailerItem.news1.split('\n\n').map((paragraph, idx) => (
-                <p
-                  key={idx}
-                  className='description text-black font-bold mt-2 text-xl'
-                  style={{
-                    marginBottom: '10px',
-                    fontFamily: 'Poppins, sans-serif'
-                  }}
-                >
-                  {paragraph}
-                </p>
-              ))}
+           
               
       
               <div className='flex flex-col items-center justify-center'>
-                {trailerItem.head2 && (
-                  <p className='bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300 text-bg text-black text-bg mt-2 text-3xl mb-2 items-center justify-center'>
-                    <strong>{trailerItem.head2}</strong>
-                  </p>
-                )}
 
                 {trailerItem.image2 && (
                   <Image
