@@ -721,40 +721,7 @@ const recapsDetail = ({ recapsItem }) => {
                 />
               </div>
               <Rating />
-              {/* <div
-                className='flex flex-col items-center justify-center'
-                style={{
-                  marginTop: '50px',
-                  marginBottom: '50px',
-                  filter:
-                    'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
-                }}
-              >
-                {!showTimer ? (
-                  <button
-                    onClick={() => setShowTimer(true)}
-                    className='animate-pulse bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
-                  >
-                    Download Now
-                  </button>
-                ) : (
-                  <>
-                    <p className='text-3xl font-bold mb-4'>
-                      Password is 123
-                      <br />
-                      Your download link will be ready in {seconds} seconds...
-                    </p>
-                    <Script src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js'></Script>
-                    <lottie-player
-                      src='https://lottie.host/291e7548-c65f-43a1-87ce-f573feab96b4/o7Ax3jP795.json'
-                      background='##FFFFFF'
-                      speed='1'
-                      style={{ width: '150px', height: '150px' }}
-                      loop
-                      autoplay
-                      direction='1'
-                      mode='normal'
-                    ></lottie-player> */}
+             
               <p
                 className='text-4xl font-bold mb-4'
                 style={{
@@ -763,7 +730,7 @@ const recapsDetail = ({ recapsItem }) => {
                   textShadow: '2px 1px 1px #000000'
                 }}
               >
-                Official Trailer With Review.
+                Watch Movies Recap.
               </p>
               <div
                 style={{
