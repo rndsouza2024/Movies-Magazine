@@ -107,8 +107,8 @@ const reviewsDetail = ({ reviewsItem }) => {
     '@graph': [
       {
         '@type': ['Person', 'Organization'],
-        '@id': 'https://gravatar.com/drtrailer2022/#person',
-        name: 'Dr Trailer'
+        '@id': 'https://gravatar.com/drreviews2022/#person',
+        name: 'Dr reviews'
       },
       {
         '@type': 'WebSite',
@@ -116,7 +116,7 @@ const reviewsDetail = ({ reviewsItem }) => {
         url: 'https://moviesmagazine.onrender.com/',
         name: 'Movies Magazine.',
         publisher: {
-          '@id': 'https://gravatar.com/drtrailer2022/#person'
+          '@id': 'https://gravatar.com/drreviews2022/#person'
         },
         inLanguage: 'en-US'
       },
@@ -135,13 +135,13 @@ const reviewsDetail = ({ reviewsItem }) => {
       {
         '@type': 'Person',
         '@id': 'https://moviesmagazine.onrender.com/author/moviesmagazine./',
-        name: 'Dr Trailer',
+        name: 'Dr reviews',
         url: 'https://moviesmagazine.onrender.com/author/moviesmagazine./',
         image: {
           '@type': 'ImageObject',
-          '@id': 'https://gravatar.com/drtrailer2022',
-          url: 'https://gravatar.com/drtrailer2022',
-          caption: 'Dr Trailer',
+          '@id': 'https://gravatar.com/drreviews2022',
+          url: 'https://gravatar.com/drreviews2022',
+          caption: 'Dr reviews',
           inLanguage: 'en-US'
         },
         sameAs: ['https://moviesmagazine.onrender.com/']
@@ -152,12 +152,12 @@ const reviewsDetail = ({ reviewsItem }) => {
         headline: `Download ${reviewsItem.name} | Movies Magazine.`,
         datePublished: reviewsItem.datePublished,
         dateModified: reviewsItem.dateModified,
-        articleSection: 'Movies Reviews',
+        articleSection: 'Movies reviews',
         author: {
           '@id': 'https://moviesmagazine.onrender.com/author/reviewsItem/'
         },
         publisher: {
-          '@id': 'https://gravatar.com/drtrailer2022/#person'
+          '@id': 'https://gravatar.com/drreviews2022/#person'
         },
         description: reviewsItem.synopsis,
         image: reviewsItem.image,
@@ -181,7 +181,7 @@ const reviewsDetail = ({ reviewsItem }) => {
           '@id': 'https://moviesmagazine.onrender.com/author/moviesmagazine./'
         },
         publisher: {
-          '@id': 'https://gravatar.com/drtrailer2022/#person'
+          '@id': 'https://gravatar.com/drreviews2022/#person'
         },
         description: reviewsItem.synopsis,
         image: reviewsItem.image,
@@ -221,8 +221,8 @@ const reviewsDetail = ({ reviewsItem }) => {
     },
     author: {
       '@type': 'Person',
-      name: 'DrTrailer',
-      url: 'https://gravatar.com/drtrailer2022'
+      name: 'Drreviews',
+      url: 'https://gravatar.com/drreviews2022'
     },
     publisher: {
       '@type': 'Organization',
@@ -275,8 +275,8 @@ const reviewsDetail = ({ reviewsItem }) => {
 
     author: {
       '@type': 'Person',
-      name: 'DrTrailer',
-      url: 'https://gravatar.com/drtrailer2022'
+      name: 'Drreviews',
+      url: 'https://gravatar.com/drreviews2022'
     },
     publisher: {
       '@type': 'Organization',
@@ -293,7 +293,7 @@ const reviewsDetail = ({ reviewsItem }) => {
     }
   })
 
-  const trailerSchema = JSON.stringify({
+  const reviewsSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'VideoObject',
     name: reviewsItem.title,
@@ -392,7 +392,7 @@ const reviewsDetail = ({ reviewsItem }) => {
         />
     <script
           type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: trailerSchema }}
+          dangerouslySetInnerHTML={{ __html: reviewsSchema }}
         />
         <script
           type='application/ld+json'
@@ -451,21 +451,7 @@ const reviewsDetail = ({ reviewsItem }) => {
           {reviewsItem.name}
         </h1>
 
-        {/* <p
-          className='px-0 text-black font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl hover:text-blue-800 mt-2'
-          style={{
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: '10px',
-            fontSize: '35px',
-            fontFamily: 'Poppins, sans-serif',
-            fontWeight: 'bold',
-            textAlign: 'center',
-            marginBottom: '15px'
-          }}
-        >
-          Select Categories.{' '}
-        </p> */}
+     
       </div>
       <div
         className={`w-full`}
@@ -482,7 +468,7 @@ const reviewsDetail = ({ reviewsItem }) => {
           backgroundColor: '#D3D3D3'
         }}
       >
-          <div
+  <div
           className='shadow-lg flex items-center justify-center'
           role='navigation'
         >
@@ -543,6 +529,7 @@ const reviewsDetail = ({ reviewsItem }) => {
             </button>
           </ul>
         </div>
+
 
         <div className='flex-container'>
           <div className='category-container'>
@@ -726,41 +713,9 @@ const reviewsDetail = ({ reviewsItem }) => {
                   layout='responsive'
                 />
               </div>
+            
               <Rating />
-              {/* <div
-                className='flex flex-col items-center justify-center'
-                style={{
-                  marginTop: '50px',
-                  marginBottom: '50px',
-                  filter:
-                    'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
-                }}
-              >
-                {!showTimer ? (
-                  <button
-                    onClick={() => setShowTimer(true)}
-                    className='animate-pulse bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
-                  >
-                    Download Now
-                  </button>
-                ) : (
-                  <>
-                    <p className='text-3xl font-bold mb-4'>
-                      Password is 123
-                      <br />
-                      Your download link will be ready in {seconds} seconds...
-                    </p>
-                    <Script src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js'></Script>
-                    <lottie-player
-                      src='https://lottie.host/291e7548-c65f-43a1-87ce-f573feab96b4/o7Ax3jP795.json'
-                      background='##FFFFFF'
-                      speed='1'
-                      style={{ width: '150px', height: '150px' }}
-                      loop
-                      autoplay
-                      direction='1'
-                      mode='normal'
-                    ></lottie-player> */}
+          
               <p
                 className='text-4xl font-bold mb-4'
                 style={{
@@ -769,7 +724,7 @@ const reviewsDetail = ({ reviewsItem }) => {
                   textShadow: '2px 1px 1px #000000'
                 }}
               >
-                Official Trailer With Review.
+                Official reviews With Review.
               </p>
               <div
                 style={{
@@ -797,17 +752,10 @@ const reviewsDetail = ({ reviewsItem }) => {
                 ></iframe>
               </div>
               <div className='flex flex-col items-center justify-center'>
-                {/* <h2
-                  className='text-black bg-gradient-to-r from-pink-500 to-amber-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300 text-2xl'
-                  style={{
-                    fontFamily: 'Poppins, sans-serif',
-                    fontWeight: 'bold',
-                      marginTop: '15px',
-                    marginBottom: '12px'
-                  }}
-                >
-                 Listen to Podcast
-                </h2> */}
+           
+           
+
+           
               </div>
               {reviewsItem.mp3player && (
                 <MP3Player mp3Url={reviewsItem.mp3player} />
@@ -826,89 +774,14 @@ const reviewsDetail = ({ reviewsItem }) => {
                     'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
                 }}
               />
-
-         
-           
-              {/* {showTimer && seconds <= 0 && (
-                      <div>
-                        {reviewsItem.downloadlink && (
-                          <Link href={reviewsItem.downloadlink} target='_blank'>
-                            <div
-                              className='bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
-                              style={{
-                                marginTop: '50px',
-                                marginBottom: '10px',
-                                borderRadius: '50px',
-                                boxShadow: '0 0 10px 0 #fff',
-                                filter:
-                                  'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
-                              }}
-                            >
-                              <span
-                                style={{
-                                  color: '#0efa06',
-                                  fontSize: '24px',
-                                  textShadow: '3px 5px 5px #000'
-                                }}
-                              >
-                                <i
-                                  className='fa fa-download'
-                                  aria-hidden='true'
-                                ></i>{' '}
-                              </span>
-                              Click Here to Download
-                            </div>
-                          </Link>
-                        )}
-                        {reviewsItem.downloadlink1 && (
-                          <Link href={reviewsItem.downloadlink1} target='_blank'>
-                            <div
-                              className='bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
-                              style={{
-                                margin: 'auto',
-                                marginBottom: '50px',
-                                borderRadius: '50px',
-                                boxShadow: '0 0 10px 0 #fff',
-                                filter:
-                                  'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
-                              }}
-                            >
-                              Click Here to Download
-                            </div>
-                          </Link>
-                        )}
-                        {reviewsItem.additionalLinks?.map((link, index) => (
-                          <Link key={index} href={link.url} target='_blank'>
-                            <div
-                              className='bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
-                              style={{
-                                margin: 'auto',
-                                marginBottom: '50px',
-                                borderRadius: '50px',
-                                boxShadow: '0 0 10px 0 #fff',
-                                filter:
-                                  'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
-                              }}
-                            >
-                              Click Here to Download {index + 3}
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                )}
-              </div> */}
  
               <div className='flex flex-col items-center justify-center'>
-                <p
-                  className='bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300  text-bg text-black text-bg  mt-2 text-3xl mb-2 items-center justify-center '
-                  style={{
-                    marginTop: '50px'
-                  }}
-                >
-                  <strong> {reviewsItem.head1} </strong>
-                </p>
+              {reviewsItem.head2 && (
+                  <p className='bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300 text-bg text-black text-bg mt-2 text-3xl mb-2 items-center justify-center'>
+                    <strong>{reviewsItem.head2}</strong>
+                  </p>
+                )}
+
               </div>
               <Image
                 src={reviewsItem.image1}
@@ -944,12 +817,7 @@ const reviewsDetail = ({ reviewsItem }) => {
               
       
               <div className='flex flex-col items-center justify-center'>
-                {reviewsItem.head2 && (
-                  <p className='bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300 text-bg text-black text-bg mt-2 text-3xl mb-2 items-center justify-center'>
-                    <strong>{reviewsItem.head2}</strong>
-                  </p>
-                )}
-
+           
                 {reviewsItem.image2 && (
                   <Image
                     src={reviewsItem.image2}
