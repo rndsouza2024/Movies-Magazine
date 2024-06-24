@@ -13,7 +13,7 @@ const uwatchfreeSchema = JSON.stringify([
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Movies Magazine. - Explore. Discover. Watch..',
+    name: 'Movies Magazine. - Explore. Discover. Watch.',
     url: 'https://moviesmagazine.onrender.com/',
     image: ['https://moviesmagazine.onrender.com/favicon.ico'],
     logo: {
@@ -54,7 +54,7 @@ const softwareSchema = JSON.stringify({
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Movies Magazine. - Explore. Discover. Watch..',
+    name: 'Movies Magazine. - Explore. Discover. Watch.',
     logo: {
       '@type': 'ImageObject',
       url: 'https://moviesmagazine.onrender.com/og_image.jpg'

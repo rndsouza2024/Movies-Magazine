@@ -51,14 +51,14 @@ const Tearms = () => {
       {
         '@type': 'Organization',
         '@id': 'https://moviesmagazine.onrender.com/#organization',
-        name: 'Youtube Magazine - Explore. Discover. Connect..',
+        name: 'Movies Magazine - Explore. Discover. Connect..',
         url: 'https://moviesmagazine.onrender.com'
       },
       {
         '@type': 'WebSite',
         '@id': 'https://moviesmagazine.onrender.com/#website',
         url: 'https://moviesmagazine.onrender.com',
-        name: 'Youtube Magazine - Explore. Discover. Connect..',
+        name: 'Movies Magazine - Explore. Discover. Connect..',
         publisher: {
           '@type': 'Organization',
           '@id': 'https://moviesmagazine.onrender.com/#organization'
@@ -117,7 +117,7 @@ const Tearms = () => {
             publisher: {
               '@type': 'Organization',
               '@id': 'https://moviesmagazine.onrender.com/#organization',
-              name: 'Youtube Magazine - Explore. Discover. Connect..',
+              name: 'Movies Magazine - Explore. Discover. Connect..',
               url: 'https://moviesmagazine.onrender.com'
             }
           },
@@ -144,7 +144,7 @@ const Tearms = () => {
             publisher: {
               '@type': 'Organization',
               '@id': 'https://moviesmagazine.onrender.com/#organization',
-              name: 'Youtube Magazine - Explore. Discover. Connect..',
+              name: 'Movies Magazine - Explore. Discover. Connect..',
               url: 'https://moviesmagazine.onrender.com'
             }
           },
@@ -171,7 +171,7 @@ const Tearms = () => {
             publisher: {
               '@type': 'Organization',
               '@id': 'https://moviesmagazine.onrender.com/#organization',
-              name: 'Youtube Magazine - Explore. Discover. Connect..',
+              name: 'Movies Magazine - Explore. Discover. Connect..',
               url: 'https://moviesmagazine.onrender.com'
             }
           }
@@ -185,7 +185,7 @@ const Tearms = () => {
   return (
     <div>
         <Head>
-        <title>Youtube Magazine | Terms of Use</title>
+        <title>Movies Magazine | Terms of Use</title>
         <link
             rel='sitemap'
             type='application/xml'
@@ -227,27 +227,27 @@ const Tearms = () => {
           />
           <meta
             name='keywords'
-            content=', software, freeware, shareware, trial versions, program, utilities, security, network, multimedia, movies, mobile, games, graphic design, file sharing, education, development, desktop, browser'
+            content='movie review sites,movie magazine,movie magazines uk,movie magazines us,movie magazines in,the film magazine,thefilmmagazine,movie news websites,film reviews,film reviews uk,film reviews us,film reviews in,film magazine online'
           />
           <meta
             name='description'
-            content='Explore. Discover. Connect. - Free Your Desired Software.'
+            content='Explore the world of cinema with Movies Magazine: Captivating reviews, top picks, and the latest news.'
           />
           <link rel='canonical' href='https://moviesmagazine.onrender.com/intro/tearms' />
           <meta property='og:locale' content='en_US' />
           <meta property='og:type' content='website' />
           <meta
             property='og:title'
-            content='Youtube Magazine '
+            content='Movies Magazine '
           />
           <meta
             property='og:description'
-            content='Youtube Magazine is the top platform for exploring and ing software,the premier platform for the latest releases and secure s.'
+            content='Movies Magazine is the top platform for exploring and ing software,the premier platform for the latest releases and secure s.'
           />
           <meta property='og:url' content='https://moviesmagazine.onrender.com/intro/tearms/' />
           <meta
             property='og:site_name'
-            content='Youtube Magazine '
+            content='Movies Magazine '
           />
           <meta
             property='og:image'
@@ -258,7 +258,7 @@ const Tearms = () => {
           <meta property='og:image:type' content='image/jpg' />
           <meta
             name='application-name'
-            content='Youtube Magazine '
+            content='Movies Magazine '
           />
           <meta
             property='article:modified_time'

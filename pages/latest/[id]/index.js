@@ -25,7 +25,7 @@ const latestDetail = ({ latest }) => {
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'Movies Magazine™ - Explore. Discover. Watch..',
+      name: 'Movies Magazine™ - Explore. Discover. Watch.',
       url: 'https://moviesmagazine.onrender.com/',
       image: [
         'https://moviesmagazine.onrender.com/wp-content/uploads/2023/05/favicon.ico'

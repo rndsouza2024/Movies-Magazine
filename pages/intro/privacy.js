@@ -26,14 +26,14 @@ const Privacy = () => {
       {
         '@type': 'Organization',
         '@id': 'https://moviesmagazine.onrender.com/#organization',
-        name: 'Youtube Magazine - Explore. Discover. Connect..',
+        name: 'Movies Magazine - Explore. Discover. Connect..',
         url: 'https://moviesmagazine.onrender.com'
       },
       {
         '@type': 'WebSite',
         '@id': 'https://moviesmagazine.onrender.com/#website',
         url: 'https://moviesmagazine.onrender.com',
-        name: 'Youtube Magazine - Explore. Discover. Connect..',
+        name: 'Movies Magazine - Explore. Discover. Connect..',
         publisher: {
           '@type': 'Organization',
           '@id': 'https://moviesmagazine.onrender.com/#organization'
@@ -92,7 +92,7 @@ const Privacy = () => {
             publisher: {
               '@type': 'Organization',
               '@id': 'https://moviesmagazine.onrender.com/#organization',
-              name: 'Youtube Magazine - Explore. Discover. Connect..',
+              name: 'Movies Magazine - Explore. Discover. Connect..',
               url: 'https://moviesmagazine.onrender.com'
             }
           },
@@ -119,7 +119,7 @@ const Privacy = () => {
             publisher: {
               '@type': 'Organization',
               '@id': 'https://moviesmagazine.onrender.com/#organization',
-              name: 'Youtube Magazine - Explore. Discover. Connect..',
+              name: 'Movies Magazine - Explore. Discover. Connect..',
               url: 'https://moviesmagazine.onrender.com'
             }
           },
@@ -146,7 +146,7 @@ const Privacy = () => {
             publisher: {
               '@type': 'Organization',
               '@id': 'https://moviesmagazine.onrender.com/#organization',
-              name: 'Youtube Magazine - Explore. Discover. Connect..',
+              name: 'Movies Magazine - Explore. Discover. Connect..',
               url: 'https://moviesmagazine.onrender.com'
             }
           }
@@ -160,7 +160,7 @@ const Privacy = () => {
   return (
     <div>
        <Head>
-        <title>Youtube Magazine | Privacy Policy</title>
+        <title>Movies Magazine | Privacy Policy</title>
       
         <link
             rel='sitemap'
@@ -203,27 +203,27 @@ const Privacy = () => {
           />
           <meta
             name='keywords'
-            content=', software, freeware, shareware, trial versions, program, utilities, security, network, multimedia, movies, mobile, games, graphic design, file sharing, education, development, desktop, browser'
+            content='movie review sites,movie magazine,movie magazines uk,movie magazines us,movie magazines in,the film magazine,thefilmmagazine,movie news websites,film reviews,film reviews uk,film reviews us,film reviews in,film magazine online'
           />
           <meta
             name='description'
-            content='Explore. Discover. Connect. - Free Your Desired Software.'
+            content='Explore the world of cinema with Movies Magazine: Captivating reviews, top picks, and the latest news.'
           />
           <link rel='canonical' href='https://moviesmagazine.onrender.com/intro/privacy' />
           <meta property='og:locale' content='en_US' />
           <meta property='og:type' content='website' />
           <meta
             property='og:title'
-            content='Youtube Magazine '
+            content='Movies Magazine '
           />
           <meta
             property='og:description'
-            content='Youtube Magazine is the top platform for exploring and ing software,the premier platform for the latest releases and secure s.'
+            content='Movies Magazine is the top platform for exploring and ing software,the premier platform for the latest releases and secure s.'
           />
           <meta property='og:url' content='https://moviesmagazine.onrender.com/intro/privacy/' />
           <meta
             property='og:site_name'
-            content='Youtube Magazine '
+            content='Movies Magazine '
           />
           <meta
             property='og:image'
@@ -234,7 +234,7 @@ const Privacy = () => {
           <meta property='og:image:type' content='image/jpg' />
           <meta
             name='application-name'
-            content='Youtube Magazine '
+            content='Movies Magazine '
           />
           <meta
             property='article:modified_time'
@@ -296,15 +296,15 @@ const Privacy = () => {
   <div className="flex flex-wrap">
     <div className="grow-0 shrink-0 basis-auto mb-12 md:mb-0 w-full  px-3 lg:px-6">
       <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
-      <p className="font-bold mb-2">Youtube Magazine </p>
+      <p className="font-bold mb-2">Movies Magazine </p>
       <p className="text-gray-500 mb-6">
-      Youtube Magazine International(Youtube Magazine) is committed to protecting your privacy. This Privacy Policy applies only to the Web Sites and applications published by Youtube Magazine International.
+      Movies Magazine International(Movies Magazine) is committed to protecting your privacy. This Privacy Policy applies only to the Web Sites and applications published by Movies Magazine International.
       </p>
       <p className="font-bold mb-2">Note: Use of Information</p>
       <p className="text-gray-500 mb-6">
       Information that we collect  </p>
       <p className="text-gray-500 mb-6">
-      Youtube Magazine may collect information from its users in three different ways: directly from the user, from traffic references of hostingservers and from cookies.
+      Movies Magazine may collect information from its users in three different ways: directly from the user, from traffic references of hostingservers and from cookies.
       </p>
       <p className="font-bold mb-2">We use the information we collect to:</p>
       <p className="text-gray-500 mb-6">
@@ -321,7 +321,7 @@ const Privacy = () => {
 
      
       <p className="text-gray-500">
-      We do not make warranties that this site will operate error free. If you see an error, please contact the <a className="font-bold text-blue-500 mb-6" href="mailto:SYoutube Magazine@outlook.com ">webmaster</a>. By entering this site you agree to hold the owners, employees, advertisers of Youtube Magazine  free from any and all liability.This site (Youtube Magazine ) do not offer any membership.If you have any questions please feel free to <a className="font-bold text-blue-500 mb-6" href="mailto:SYoutube Magazine@outlook.com">contact us</a>.
+      We do not make warranties that this site will operate error free. If you see an error, please contact the <a className="font-bold text-blue-500 mb-6" href="mailto:SMovies Magazine@outlook.com ">webmaster</a>. By entering this site you agree to hold the owners, employees, advertisers of Movies Magazine  free from any and all liability.This site (Movies Magazine ) do not offer any membership.If you have any questions please feel free to <a className="font-bold text-blue-500 mb-6" href="mailto:SMovies Magazine@outlook.com">contact us</a>.
       </p>
     </div>
 

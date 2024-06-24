@@ -11,7 +11,7 @@ const uwatchfreeSchema = JSON.stringify([
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Movies Magazine - Explore. Discover. Watch..',
+    name: 'Movies Magazine - Explore. Discover. Watch.',
     url: 'https://moviesmagazine.onrender.com/',
     image: ['https://moviesmagazine.onrender.com/favicon.ico'],
     logo: {
@@ -53,7 +53,7 @@ const softwareSchema = JSON.stringify({
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Movies Magazine - Explore. Discover. Watch..',
+    name: 'Movies Magazine - Explore. Discover. Watch.',
     logo: {
       '@type': 'ImageObject',
       url: 'https://moviesmagazine.onrender.com/og_image.jpg'
@@ -118,7 +118,7 @@ const latestPage = ({ items }) => {
         <meta property='og:title' content=' Latest Blog | Movies Magazine' />
         <meta
           property='og:description'
-          content='Movies Magazine is the top platform for exploring and downloading software,the premier platform for the Latest Blog releases and secure downloads.'
+          content='Explore the world of cinema with Movies Magazine: Captivating reviews, top picks, and the latest news.'
         />
 
         <meta
@@ -128,7 +128,7 @@ const latestPage = ({ items }) => {
 
         <meta
           name='keywords'
-          content='download, software, freeware, shareware, trial versions, program, utilities, security, network, multimedia, movies, mobile, games, graphic design, file sharing, education, development, desktop, browser'
+          content='movie review sites,movie magazine,movie magazines uk,movie magazines us,movie magazines in,the film magazine,thefilmmagazine,movie news websites,film reviews,film reviews uk,film reviews us,film reviews in,film magazine online'
         />
         <meta property='og:site_name' content='Movies Magazine' />
         <meta property='og:type' content='article' />

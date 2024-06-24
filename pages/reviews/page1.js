@@ -1,19 +1,18 @@
-import { useEffect, useState, useRef } from 'react'
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
 import Image from 'next/image'
 import latestData from '../../public/latest.json'
-import reviewsData from '../../public/reviews.json'
-// import Marquee from '../../components/Marquee'
-
-import Pagination from '../../components/Pagination'
+import moviesp1Data from '../../public/moviesp1.json'
+import Marquee from '../../components/Marquee'
 import Head from 'next/head'
 import Script from 'next/script'
+import Pagination from '../../components/Pagination';
 
 const uwatchfreeSchema = JSON.stringify([
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Movies Magazine. - Explore. Discover. Watch.',
+    name: 'Movies Magazine - Explore. Discover. Watch.',
     url: 'https://moviesmagazine.onrender.com/',
     image: ['https://moviesmagazine.onrender.com/favicon.ico'],
     logo: {
@@ -31,7 +30,8 @@ const uwatchfreeSchema = JSON.stringify([
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://moviesmagazine.onrender.com/search?q={search_term_string}'
+        urlTemplate:
+          'https://moviesmagazine.onrender.com/search?q={search_term_string}'
       },
       'query-input': 'required name=search_term_string'
     }
@@ -41,11 +41,11 @@ const uwatchfreeSchema = JSON.stringify([
 const softwareSchema = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://moviesmagazine.onrender.com/movies/',
-  headline: 'Movies Review Website | Movies Magazine.™',
-  url: 'https://moviesmagazine.onrender.com/movies/',
+  '@id': 'https://moviesmagazine.onrender.com/movies-page1/',
+  headline: 'Download movies | Movies Magazine™',
+  url: 'https://moviesmagazine.onrender.com/movies-page1/',
   description:
-    'Explore the world of cinema with Movies Magazine: Captivating reviews, top picks, and the latest news.',
+    'Movies Magazine is the top platform for exploring and downloading software,the premier platform for the latest releases and secure downloads.',
   image: 'https://moviesmagazine.onrender.com/wp-content/uploads/movies.webp',
   author: {
     '@type': 'Person',
@@ -54,7 +54,7 @@ const softwareSchema = JSON.stringify({
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Movies Magazine. - Explore. Discover. Watch.',
+    name: 'Movies Magazine - Explore. Discover. Watch.',
     logo: {
       '@type': 'ImageObject',
       url: 'https://moviesmagazine.onrender.com/og_image.jpg'
@@ -64,12 +64,12 @@ const softwareSchema = JSON.stringify({
   dateModified: '2024-06-02',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://moviesmagazine.onrender.com/movies/'
+    '@id': 'https://moviesmagazine.onrender.com/movies-page1/'
   },
   additionalProperty: {
     '@type': 'PropertyValue',
     name: 'Action Platform',
-    value: ['Desktop Web Platform', 'iOS Platform', 'Android Platform']
+    'value': ['Desktop Web Platform', 'iOS Platform', 'Android Platform']
   }
 })
 
@@ -80,33 +80,34 @@ const breadcrumbSchema = JSON.stringify({
     {
       '@type': 'ListItem',
       position: 1,
-      name: 'Movies Magazine.',
+      name: 'Windows',
       item: 'https://moviesmagazine.onrender.com/'
     },
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'Movies.',
+      name: 'Movies',
       item: 'https://moviesmagazine.onrender.com/movies/'
+    },
+     {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Movies Page 1',
+      item: 'https://moviesmagazine.onrender.com/movies-page1/'
     }
   ]
 })
-
-const moviesPage = ({ items }) => {
+const moviesp1 = ({ items }) => {
   const [latest, setLatest] = useState(latestData)
+  const [currentPage, setCurrentPage] = useState(1)
+  const totalPages = 0 // Assume there are 3 pages
 
-  // const [currentPage, setCurrentPage] = useState(1)
-  // const totalPages = 0 // Assume there are 3 pages
-
-  // useEffect(() => {
-  //   // Logic to fetch browsers for the current page
-  // }, [currentPage])
 
   return (
     <div className='w-full' style={{ backgroundColor: '#D3D3D3' }}>
       <Head>
-        <title> Movies Review Website | Movies Magazine.</title>
-        <link rel='canonical' href='https://moviesmagazine.onrender.com/movies/' />
+        <title> Download Movies | Movies Magazine™</title>
+        <link rel='canonical' href='https://moviesmagazine.onrender.com/movies-page1/' />
         <meta
           name='robots'
           content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
@@ -116,24 +117,28 @@ const moviesPage = ({ items }) => {
         <meta name='revisit-after' content='1 days' />
         <meta property='og:locale' content='en_US' />
         <meta property="og:type" content="video.other" />
-        <meta
-          property='og:title'
-          content='  Movies Review | Movies Magazine.'
-        />
+        <meta property='og:title' content=' Download Movies | Movies Magazine' />
         <meta
           property='og:description'
-          content='Explore the world of cinema with Movies Magazine: Captivating reviews, top picks, and the latest news.'
+          content='Movies Magazine is the top platform for exploring and downloading software,the premier platform for the latest releases and secure downloads.'
         />
 
-        <meta property='og:url' content='https://moviesmagazine.onrender.com/movies' />
+        <meta
+          property='og:url'
+          content='https://moviesmagazine.onrender.com/movies-page1'
+        />
 
-        <meta property='og:site_name' content='Movies Magazine.' />
+        <meta
+          name='keywords'
+          content='download, software, freeware, shareware, trial versions, program, utilities, security, network, multimedia, movies, movies, movies, graphic design, file sharing, movies, movies, movies, browser'
+        />
+        <meta property='og:site_name' content='Movies Magazine' />
         <meta property='og:type' content='article' />
         <meta
           property=' og:image:alt'
-          content='https://moviesmagazine.onrender.com/wp-content/uploads/og_image.jpg'
+          content='https://moviesmagazine.onrender.com/wp-content/uploads/movies.webp'
         />
-        <meta name='mobile-web-app-capable' content='yes' />
+        <meta name='movies-web-app-capable' content='yes' />
         <meta property='article:section' content='Movies' />
         <meta name='author' content='admin' />
         <meta
@@ -142,11 +147,11 @@ const moviesPage = ({ items }) => {
         />
         <meta
           name='keywords'
-          content='movie review sites,movie magazine,movie magazines uk,movie magazines us,movie magazines in,the film magazine,thefilmmagazine,movie news websites,film reviews,film reviews uk,film reviews us,film reviews in,film magazine online'
+          content='download, software, freeware, shareware, trial versions, program, utilities'
         />
         <meta
           property='og:image'
-          content='https://moviesmagazine.onrender.com/wp-content/uploads/og_image.jpg'
+          content='https://moviesmagazine.onrender.com/wp-content/uploads/movies.webp'
         />
         <meta property='og:image:width' content='1280px' />
         <meta property='og:image:height' content='720px' />
@@ -209,6 +214,7 @@ const moviesPage = ({ items }) => {
       <Script src='../../propler/ads.js' defer />
       <Script src='../../propler/ads2.js' defer />
 
+      {/* <div className='container'> */}
       <h1
         className='badge bg-gradient-to-r from-pink-500 to-amber-500 font-bold py-3 px-6  shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
         style={{
@@ -222,18 +228,33 @@ const moviesPage = ({ items }) => {
           marginBottom: '15px'
         }}
       >
-        Movies Magazine - Movies Review Section.
+        Movies Magazine Movies Section.
       </h1>
-
+      <Marquee />
+      {/* <p
+        className='px-0 text-black font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl hover:text-blue-800 mt-2'
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+          padding: '10px',
+          fontSize: '35px',
+          fontFamily: 'Poppins, sans-serif',
+          fontWeight: 'bold',
+          textAlign: 'center',
+          marginBottom: '15px'
+        }}
+      >
+        Select Categories.{' '}
+      </p> */}
       <div
-          className='shadow-lg flex items-center justify-center'
-          role='navigation'
+        className='shadow-lg flex items-center justify-center'
+        role='navigation'
+      >
+        <ul
+          id='menu-header-menu'
+          className='menu flex flex-wrap justify-center'
         >
-          <ul
-            id='menu-header-menu'
-            className='menu flex flex-wrap justify-center'
-          >
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+           <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-35' className='menu-home active'>
                 <a
                   href='/'
@@ -243,64 +264,164 @@ const moviesPage = ({ items }) => {
                 </a>
               </li>
             </button>
+
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-194' className='menu-tutorials'>
-                <a
-                  href='../trailer/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                  Movies Trailers<span className='p'></span>
+              <li id='menu-item-284913' className='menu-softwarecategories'>
+                <a href='../browsers/'>
+                  <h3 className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'>
+                    Browser<span className='p'></span>
+                  </h3>
                 </a>
               </li>
             </button>
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-194' className='menu-tutorials'>
+              <li id='menu-item-248' className='menu-operating-systems'>
                 <a
-                  href='../reviews/'
+                  href='../desktop/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Movies Reviews<span className='p'></span>
+                  Desktop<span className='p'></span>
                 </a>
               </li>
             </button>
-           
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-11605' className='menu-3dcad'>
+                <a
+                  href='../multimedia/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Multimedia<span className='p'></span>
+                </a>
+              </li>
+            </button>
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-11610' className='menu-graphicdesign'>
+                <a
+                  href='../graphic-design/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Graphic Design<span className='p'></span>
+                </a>
+              </li>
+            </button>
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-196' className='menu-multimedia'>
+                <a
+                  href='../network/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Network<span className='p'></span>
+                </a>
+              </li>
+            </button>
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-161' className='menu-development'>
+                <a
+                  href='../development/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Development<span className='p'></span>
+                </a>
+              </li>
+            </button>
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-84' className='menu-antivirus'>
+                <a
+                  href='../file-sharing/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  File Sharing<span className='p'></span>
+                </a>
+              </li>
+            </button>
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-84' className='menu-antivirus'>
+                <a
+                  href='../security/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Security<span className='p'></span>
+                </a>
+              </li>
+            </button>
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-11606' className='menu-security'>
                 <a
-                  href='../recaps/'
+                  href='../games/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Movies Recaps<span className='p'></span>
+                  Games<span className='p'></span>
                 </a>
               </li>
-            </button> 
+            </button>
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-35' className='menu-home active'>
+                <a
+                  href='../education'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Education<span className='p'></span>
+                </a>
+              </li>
+            </button>
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-35' className='menu-home active'>
+                <a
+                  href='../mobile'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Mobile<span className='p'></span>
+                </a>
+              </li>
+            </button>
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-11606' className='menu-security'>
+                <a
+                  href='../utilities/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Utilities<span className='p'></span>
+                </a>
+              </li>
+            </button>
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-194' className='menu-tutorials'>
+                <a
+                  href='../movies/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                  Movies<span className='p'></span>
+                </a>
+              </li>
+            </button>
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a
                   href='../latest/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Movies Post<span className='p'></span>
+                  Blog Post<span className='p'></span>
                 </a>
               </li>
             </button>
-          </ul>
-        </div>
-
-
-      <div className='container' >
-        {/* <h1  className='px-0 font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent'>movies Section</h1> */}
+        </ul>
+      </div>
+      {/* </div> */}
+    
+      <div className='container'>
+        {/* <h1  className='px-0 font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent'>moviesp1 Section</h1> */}
         <div className='flex-container'>
           <div className='main-content'>
-            <div className='card-container' >
-              {reviewsData.map(item => (
+            <div className='card-container'>
+              {moviesp1Data.map(item => (
                 <div key={item.id}>
                   {/* <div key={item.id} className='card'> */}
-                  <Link href={`/reviews/${item.id}`}>
+                  <Link href={`/movies-page1/${item.id}`}>
                     <div className='relative'>
                       <Image
                         src={item.image}
                         alt={item.title}
+                        loading='lazy'
                         className='rounded-lg'
                         width={140} // Specify the desired width
                         height={140} // Specify the desired height
@@ -308,7 +429,6 @@ const moviesPage = ({ items }) => {
                         style={{
                           width: '200px', // Ensures the image is displayed at this width
                           height: '300px', // Ensures the image is displayed at this height
-
                           filter:
                             'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                         }}
@@ -317,10 +437,10 @@ const moviesPage = ({ items }) => {
                         {item.name}
                       </p>
                       <p className='text-black text-bg font-semibold mt-2'>
-                      Genre: {item.genre}, Directed by: {item.directorname}
+                        License: {item.license}, Version: {item.version}
                       </p>
                       <p className='text-black text-bg font-semibold mt-2'>
-                      Country of origin: {item.country} Original language: {item.language}
+                        Developers: {item.developers}
                       </p>
 
                       <div className='bg-gradient-to-r from-pink-700 to-blue-700 bg-clip-text text-transparent text-black text-lg font-semibold mt-2'>
@@ -345,9 +465,9 @@ const moviesPage = ({ items }) => {
                 Many More Coming Soon...
               </p>
             </div>
-            {/* <Pagination currentPage={currentPage} totalPages={totalPages} route="movies" /> */}
+            <Pagination currentPage={currentPage} totalPages={totalPages} route="movies" />
           </div>
-
+        
           <div className='sidebar'>
             <p
               className='text-black text-2xl font-bold mt-2'
@@ -501,6 +621,8 @@ const moviesPage = ({ items }) => {
             }
           }
         `}</style>
+
+
       </div>
     </div>
   )
@@ -508,7 +630,7 @@ const moviesPage = ({ items }) => {
 
 export async function getStaticProps () {
   try {
-    const res = await fetch('https://moviesmagazine.onrender.com/reviews.json')
+    const res = await fetch('https://moviesmagazine.onrender.com/moviesp1.json')
     const data = await res.json()
 
     return {
@@ -526,4 +648,4 @@ export async function getStaticProps () {
   }
 }
 
-export default moviesPage
+export default moviesp1

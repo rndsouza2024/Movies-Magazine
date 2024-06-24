@@ -56,7 +56,7 @@ class MyDocument extends Document {
           <meta property="og:type" content="video.other" />
           <meta
             property='og:title'
-            content='Movies Magazine.™ - Explore. Discover. Watch..'
+            content='Movies Magazine.™ - Explore. Discover. Watch.'
           />
           <meta
             property='og:description'
@@ -68,7 +68,7 @@ class MyDocument extends Document {
           />  
           <meta
             property='og:site_name'
-            content='Movies Magazine. - Explore. Discover. Watch..'
+            content='Movies Magazine. - Explore. Discover. Watch.'
           />
           <meta
             property='og:image'
@@ -79,7 +79,7 @@ class MyDocument extends Document {
           <meta property='og:image:type' content='image/webp' />
           <meta
             name='application-name'
-            content='Movies Magazine. - Explore. Discover. Watch..'
+            content='Movies Magazine. - Explore. Discover. Watch.'
           />
           <meta
             property='article:modified_time'
