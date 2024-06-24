@@ -9,7 +9,7 @@ class MyDocument extends Document {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://moviesmagazine.onrender.com/sitemap.xml'
+            href='https://moviesmagazine.vercel.app/sitemap.xml'
           />
           <link
             rel='icon'
@@ -50,7 +50,7 @@ class MyDocument extends Document {
           />
           <link
             rel='canonical'
-            href='https://moviesmagazine.onrender.com/'
+            href='https://moviesmagazine.vercel.app/'
           />
           <meta property='og:locale' content='en_US' />
           <meta property="og:type" content="video.other" />
@@ -64,7 +64,7 @@ class MyDocument extends Document {
           />
           <meta
             property='og:url'
-            content='https://moviesmagazine.onrender.com/'
+            content='https://moviesmagazine.vercel.app/'
           />  
           <meta
             property='og:site_name'
@@ -72,7 +72,7 @@ class MyDocument extends Document {
           />
           <meta
             property='og:image'
-            content='https://moviesmagazine.onrender.com/og_image.jpg'
+            content='https://moviesmagazine.vercel.app/og_image.jpg'
           />
           <meta property='og:image:width' content='1280' />
           <meta property='og:image:height' content='720' />
@@ -89,7 +89,7 @@ class MyDocument extends Document {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://moviesmagazine.onrender.com/sitemap.xml'
+            href='https://moviesmagazine.vercel.app/sitemap.xml'
           />
           <meta name='twitter:card' content='summary_large_image' />
       

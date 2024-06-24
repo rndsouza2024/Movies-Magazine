@@ -14,11 +14,11 @@ const uwatchfreeSchema = JSON.stringify([
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Movies Magazine. - Explore. Discover. Watch.',
-    url: 'https://moviesmagazine.onrender.com/',
-    image: ['https://moviesmagazine.onrender.com/favicon.ico'],
+    url: 'https://moviesmagazine.vercel.app/',
+    image: ['https://moviesmagazine.vercel.app/favicon.ico'],
     logo: {
       '@type': 'ImageObject',
-      url: 'https://moviesmagazine.onrender.com/logo.png',
+      url: 'https://moviesmagazine.vercel.app/logo.png',
       width: 280,
       height: 80
     }
@@ -26,12 +26,12 @@ const uwatchfreeSchema = JSON.stringify([
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    url: 'https://moviesmagazine.onrender.com/',
+    url: 'https://moviesmagazine.vercel.app/',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://moviesmagazine.onrender.com/search?q={search_term_string}'
+        urlTemplate: 'https://moviesmagazine.vercel.app/search?q={search_term_string}'
       },
       'query-input': 'required name=search_term_string'
     }
@@ -41,12 +41,12 @@ const uwatchfreeSchema = JSON.stringify([
 const softwareSchema = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://moviesmagazine.onrender.com/movies/',
+  '@id': 'https://moviesmagazine.vercel.app/movies/',
   headline: 'Movies Review Website | Movies Magazine.™',
-  url: 'https://moviesmagazine.onrender.com/movies/',
+  url: 'https://moviesmagazine.vercel.app/movies/',
   description:
     'Explore the world of cinema with Movies Magazine: Captivating trailer, top picks, and the latest news.',
-  image: 'https://moviesmagazine.onrender.com/wp-content/uploads/movies.webp',
+  image: 'https://moviesmagazine.vercel.app/wp-content/uploads/movies.webp',
   author: {
     '@type': 'Person',
     name: 'DrTrailer',
@@ -57,14 +57,14 @@ const softwareSchema = JSON.stringify({
     name: 'Movies Magazine. - Explore. Discover. Watch.',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://moviesmagazine.onrender.com/og_image.jpg'
+      url: 'https://moviesmagazine.vercel.app/og_image.jpg'
     }
   },
   datePublished: '2024-06-02',
   dateModified: '2024-06-02',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://moviesmagazine.onrender.com/movies/'
+    '@id': 'https://moviesmagazine.vercel.app/movies/'
   },
   additionalProperty: {
     '@type': 'PropertyValue',
@@ -81,13 +81,13 @@ const breadcrumbSchema = JSON.stringify({
       '@type': 'ListItem',
       position: 1,
       name: 'Movies Magazine.',
-      item: 'https://moviesmagazine.onrender.com/'
+      item: 'https://moviesmagazine.vercel.app/'
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Movies.',
-      item: 'https://moviesmagazine.onrender.com/movies/'
+      item: 'https://moviesmagazine.vercel.app/movies/'
     }
   ]
 })
@@ -106,7 +106,7 @@ const moviesPage = ({ items }) => {
     <div className='w-full' style={{ backgroundColor: '#D3D3D3' }}>
       <Head>
         <title> Movies Review Website | Movies Magazine.</title>
-        <link rel='canonical' href='https://moviesmagazine.onrender.com/movies/' />
+        <link rel='canonical' href='https://moviesmagazine.vercel.app/movies/' />
         <meta
           name='robots'
           content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
@@ -125,13 +125,13 @@ const moviesPage = ({ items }) => {
           content='Explore the world of cinema with Movies Magazine: Captivating trailer, top picks, and the latest news.'
         />
 
-        <meta property='og:url' content='https://moviesmagazine.onrender.com/movies' />
+        <meta property='og:url' content='https://moviesmagazine.vercel.app/movies' />
 
         <meta property='og:site_name' content='Movies Magazine.' />
         <meta property='og:type' content='article' />
         <meta
           property=' og:image:alt'
-          content='https://moviesmagazine.onrender.com/wp-content/uploads/og_image.jpg'
+          content='https://moviesmagazine.vercel.app/wp-content/uploads/og_image.jpg'
         />
         <meta name='mobile-web-app-capable' content='yes' />
         <meta property='article:section' content='Movies' />
@@ -146,7 +146,7 @@ const moviesPage = ({ items }) => {
         />
         <meta
           property='og:image'
-          content='https://moviesmagazine.onrender.com/wp-content/uploads/og_image.jpg'
+          content='https://moviesmagazine.vercel.app/wp-content/uploads/og_image.jpg'
         />
         <meta property='og:image:width' content='1280px' />
         <meta property='og:image:height' content='720px' />
@@ -201,7 +201,7 @@ const moviesPage = ({ items }) => {
               fjs.parentNode.appendChild(js);
             }(window, document, 'script', 'webpushr-jssdk'));
 
-            webpushr('setup', { 'key': ''BNg0bEcTYIGpkB8PxFaYCZPLChz2m-TV2OIusYmW5TNE_cPdi2qSKLueUYe9NlkG2q6ZgvwZKzcvSYKVYZanPVY'' });
+            webpushr('setup', { 'key': 'BI-sQqJzN6CXj_u_Vn0Gtcs-ZM3jmQjpvYR60DLPkKjckBirPbWK-OhdlXMjOL9i6BZTY9Ll8RiOllEmRw6HxGY' });
           `
           }}
         />
@@ -509,7 +509,7 @@ const moviesPage = ({ items }) => {
 
 export async function getStaticProps () {
   try {
-    const res = await fetch('https://moviesmagazine.onrender.com/trailer.json')
+    const res = await fetch('https://moviesmagazine.vercel.app/trailer.json')
     const data = await res.json()
 
     return {

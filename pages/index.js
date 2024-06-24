@@ -53,11 +53,11 @@ const HomePage = () => {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Movies Magazine. - Explore. Discover. Watch.',
-      url: 'https://moviesmagazine.onrender.com/',
-      image: ['https://moviesmagazine.onrender.com/favicon.ico'],
+      url: 'https://moviesmagazine.vercel.app/',
+      image: ['https://moviesmagazine.vercel.app/favicon.ico'],
       logo: {
         '@type': 'ImageObject',
-        url: 'https://moviesmagazine.onrender.com/logo.png',
+        url: 'https://moviesmagazine.vercel.app/logo.png',
         width: 280,
         height: 80
       }
@@ -65,13 +65,13 @@ const HomePage = () => {
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      url: 'https://moviesmagazine.onrender.com/',
+      url: 'https://moviesmagazine.vercel.app/',
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
           urlTemplate:
-            'https://moviesmagazine.onrender.com/search?q={search_term_string}'
+            'https://moviesmagazine.vercel.app/search?q={search_term_string}'
         },
         'query-input': 'required name=search_term_string'
       }
@@ -83,9 +83,9 @@ const HomePage = () => {
     '@graph': [
       {
         '@type': 'Person',
-        '@id': 'https://moviesmagazine.onrender.com/author/moviesmagazine/',
+        '@id': 'https://moviesmagazine.vercel.app/author/moviesmagazine/',
         name: 'Dr Trailer',
-        url: 'https://moviesmagazine.onrender.com/author/moviesmagazine/',
+        url: 'https://moviesmagazine.vercel.app/author/moviesmagazine/',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -96,37 +96,37 @@ const HomePage = () => {
       },
       {
         '@type': 'Organization',
-        '@id': 'https://moviesmagazine.onrender.com/#organization',
+        '@id': 'https://moviesmagazine.vercel.app/#organization',
         name: 'Movies Magazine - Explore. Discover. Watch.',
-        url: 'https://moviesmagazine.onrender.com/'
+        url: 'https://moviesmagazine.vercel.app/'
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://moviesmagazine.onrender.com/#website',
-        url: 'https://moviesmagazine.onrender.com/',
+        '@id': 'https://moviesmagazine.vercel.app/#website',
+        url: 'https://moviesmagazine.vercel.app/',
         name: 'Movies Magazine - Explore. Discover. Watch.',
         publisher: {
           '@type': 'Organization',
-          '@id': 'https://moviesmagazine.onrender.com/#organization'
+          '@id': 'https://moviesmagazine.vercel.app/#organization'
         },
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://moviesmagazine.onrender.com/?s={search_term_string}',
+          target: 'https://moviesmagazine.vercel.app/?s={search_term_string}',
           'query-input': 'required name=search_term_string'
         }
       },
       {
         '@type': 'WebPage',
-        '@id': 'https://moviesmagazine.onrender.com/#webpage',
-        url: 'https://moviesmagazine.onrender.com/',
+        '@id': 'https://moviesmagazine.vercel.app/#webpage',
+        url: 'https://moviesmagazine.vercel.app/',
         name: 'Movie',
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         about: {
           '@type': 'Person',
-          '@id': 'https://moviesmagazine.onrender.com/author/moviesmagazine/',
+          '@id': 'https://moviesmagazine.vercel.app/author/moviesmagazine/',
           name: 'Dr Trailer',
-          url: 'https://moviesmagazine.onrender.com/author/moviesmagazine/',
+          url: 'https://moviesmagazine.vercel.app/author/moviesmagazine/',
           image: {
             '@type': 'ImageObject',
             '@id': 'https://gravatar.com/drtrailer2022',
@@ -136,22 +136,22 @@ const HomePage = () => {
           }
         },
         isPartOf: {
-          '@id': 'https://moviesmagazine.onrender.com/#website'
+          '@id': 'https://moviesmagazine.vercel.app/#website'
         },
         inLanguage: 'en-US',
         mainEntity: [
           {
             '@type': 'Article',
-            '@id': 'https://moviesmagazine.onrender.com/',
-            url: 'https://moviesmagazine.onrender.com/',
+            '@id': 'https://moviesmagazine.vercel.app/',
+            url: 'https://moviesmagazine.vercel.app/',
             headline: 'Movies Magazine - Explore. Discover. Watch.',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://moviesmagazine.onrender.com/author/moviesmagazine./',
+              '@id': 'https://moviesmagazine.vercel.app/author/moviesmagazine./',
               name: 'Dr Trailer',
-              url: 'https://moviesmagazine.onrender.com/author/moviesmagazine/',
+              url: 'https://moviesmagazine.vercel.app/author/moviesmagazine/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -162,23 +162,23 @@ const HomePage = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://moviesmagazine.onrender.com/#organization',
+              '@id': 'https://moviesmagazine.vercel.app/#organization',
               name: 'Movies Magazine - Explore. Discover. Watch.',
-              url: 'https://moviesmagazine.onrender.com/'
+              url: 'https://moviesmagazine.vercel.app/'
             }
           },
           {
             '@type': 'Article',
-            '@id': 'https://moviesmagazine.onrender.com/',
-            url: 'https://moviesmagazine.onrender.com/',
+            '@id': 'https://moviesmagazine.vercel.app/',
+            url: 'https://moviesmagazine.vercel.app/',
             headline: 'Movies Magazine. - Explore. Discover. Watch.',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://moviesmagazine.onrender.com/author/moviesmagazine/',
+              '@id': 'https://moviesmagazine.vercel.app/author/moviesmagazine/',
               name: 'Dr Trailer',
-              url: 'https://moviesmagazine.onrender.com/author/moviesmagazine/',
+              url: 'https://moviesmagazine.vercel.app/author/moviesmagazine/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -189,23 +189,23 @@ const HomePage = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://moviesmagazine.onrender.com/#organization',
+              '@id': 'https://moviesmagazine.vercel.app/#organization',
               name: 'Movies Magazine.™ - Explore. Discover. Watch.',
-              url: 'https://moviesmagazine.onrender.com/'
+              url: 'https://moviesmagazine.vercel.app/'
             }
           },
           {
             '@type': 'Article',
-            '@id': 'https://moviesmagazine.onrender.com/',
-            url: 'https://moviesmagazine.onrender.com/',
+            '@id': 'https://moviesmagazine.vercel.app/',
+            url: 'https://moviesmagazine.vercel.app/',
             headline: 'Movies Magazine.™ - Explore. Discover. Watch.',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://moviesmagazine.onrender.com/author/moviesmagazine/',
+              '@id': 'https://moviesmagazine.vercel.app/author/moviesmagazine/',
               name: 'Dr Trailer',
-              url: 'https://moviesmagazine.onrender.com/author/moviesmagazine/',
+              url: 'https://moviesmagazine.vercel.app/author/moviesmagazine/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -216,9 +216,9 @@ const HomePage = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://moviesmagazine.onrender.com/#organization',
+              '@id': 'https://moviesmagazine.vercel.app/#organization',
               name: 'Movies Magazine. - Explore. Discover. Watch.',
-              url: 'https://moviesmagazine.onrender.com/'
+              url: 'https://moviesmagazine.vercel.app/'
             }
           }
         ]
@@ -235,7 +235,7 @@ const HomePage = () => {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://moviesmagazine.onrender.com/sitemap.xml'
+            href='https://moviesmagazine.vercel.app/sitemap.xml'
           />
           <meta
             name='viewport'
@@ -274,7 +274,7 @@ const HomePage = () => {
             name='description'
             content='Explore. Discover. Watch.'
           /> */}
-          {/* <link rel='canonical' href='https://moviesmagazine.onrender.com/' /> */}
+          {/* <link rel='canonical' href='https://moviesmagazine.vercel.app/' /> */}
           <meta property='og:locale' content='en_US' />
           <meta property="og:type" content="video.other" />
           <meta
@@ -285,14 +285,14 @@ const HomePage = () => {
             property='og:description'
             content='Explore the world of cinema with Movies Magazine: Captivating reviews, top picks, and the latest news.'
           />
-          <meta property='og:url' content='https://moviesmagazine.onrender.com/' />
+          <meta property='og:url' content='https://moviesmagazine.vercel.app/' />
           <meta
             property='og:site_name'
             content='Movies Magazine.™ - Explore. Discover. Watch.'
           />
           <meta
             property='og:image'
-            content='https://moviesmagazine.onrender.com/og_image.jpg'
+            content='https://moviesmagazine.vercel.app/og_image.jpg'
           />
           <meta property='og:image:width' content='1280' />
           <meta property='og:image:height' content='720' />
@@ -309,7 +309,7 @@ const HomePage = () => {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://moviesmagazine.onrender.com/sitemap.xml'
+            href='https://moviesmagazine.vercel.app/sitemap.xml'
           />
           <meta name='twitter:card' content='summary_large_image' />
           <meta
@@ -353,7 +353,7 @@ const HomePage = () => {
               fjs.parentNode.appendChild(js);
             }(window, document, 'script', 'webpushr-jssdk'));
 
-            webpushr('setup', { 'key': ''BNg0bEcTYIGpkB8PxFaYCZPLChz2m-TV2OIusYmW5TNE_cPdi2qSKLueUYe9NlkG2q6ZgvwZKzcvSYKVYZanPVY'' });
+            webpushr('setup', { 'key': 'BI-sQqJzN6CXj_u_Vn0Gtcs-ZM3jmQjpvYR60DLPkKjckBirPbWK-OhdlXMjOL9i6BZTY9Ll8RiOllEmRw6HxGY' });
           `
             }}
           />

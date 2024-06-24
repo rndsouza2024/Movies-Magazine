@@ -12,9 +12,9 @@ const Privacy = () => {
     '@graph': [
       {
         '@type': 'Person',
-        '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
+        '@id': 'https://moviesmagazine.vercel.app/author/ytmag/',
         name: 'Dr Trailer',
-        url: 'https://moviesmagazine.onrender.com/author/ytmag/',
+        url: 'https://moviesmagazine.vercel.app/author/ytmag/',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -25,37 +25,37 @@ const Privacy = () => {
       },
       {
         '@type': 'Organization',
-        '@id': 'https://moviesmagazine.onrender.com/#organization',
+        '@id': 'https://moviesmagazine.vercel.app/#organization',
         name: 'Movies Magazine - Explore. Discover. Connect..',
-        url: 'https://moviesmagazine.onrender.com'
+        url: 'https://moviesmagazine.vercel.app'
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://moviesmagazine.onrender.com/#website',
-        url: 'https://moviesmagazine.onrender.com',
+        '@id': 'https://moviesmagazine.vercel.app/#website',
+        url: 'https://moviesmagazine.vercel.app',
         name: 'Movies Magazine - Explore. Discover. Connect..',
         publisher: {
           '@type': 'Organization',
-          '@id': 'https://moviesmagazine.onrender.com/#organization'
+          '@id': 'https://moviesmagazine.vercel.app/#organization'
         },
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://moviesmagazine.onrender.com/?s={search_term_string}',
+          target: 'https://moviesmagazine.vercel.app/?s={search_term_string}',
           'query-input': 'required name=search_term_string'
         }
       },
       {
         '@type': 'WebPage',
-        '@id': 'https://moviesmagazine.onrender.com/#webpage',
-        url: 'https://moviesmagazine.onrender.com/',
+        '@id': 'https://moviesmagazine.vercel.app/#webpage',
+        url: 'https://moviesmagazine.vercel.app/',
         name: 'Movie',
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         about: {
           '@type': 'Person',
-          '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
+          '@id': 'https://moviesmagazine.vercel.app/author/ytmag/',
           name: 'Dr Trailer',
-          url: 'https://moviesmagazine.onrender.com/author/ytmag/',
+          url: 'https://moviesmagazine.vercel.app/author/ytmag/',
           image: {
             '@type': 'ImageObject',
             '@id': 'https://gravatar.com/drtrailer2022',
@@ -65,22 +65,22 @@ const Privacy = () => {
           }
         },
         isPartOf: {
-          '@id': 'https://moviesmagazine.onrender.com/#website'
+          '@id': 'https://moviesmagazine.vercel.app/#website'
         },
         inLanguage: 'en-US',
         mainEntity: [
           {
             '@type': 'Article',
-            '@id': 'https://moviesmagazine.onrender.com/',
-            url: 'https://moviesmagazine.onrender.com/',
+            '@id': 'https://moviesmagazine.vercel.app/',
+            url: 'https://moviesmagazine.vercel.app/',
             headline: 'Movie',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
+              '@id': 'https://moviesmagazine.vercel.app/author/ytmag/',
               name: 'Dr Trailer',
-              url: 'https://moviesmagazine.onrender.com/author/ytmag/',
+              url: 'https://moviesmagazine.vercel.app/author/ytmag/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -91,23 +91,23 @@ const Privacy = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://moviesmagazine.onrender.com/#organization',
+              '@id': 'https://moviesmagazine.vercel.app/#organization',
               name: 'Movies Magazine - Explore. Discover. Connect..',
-              url: 'https://moviesmagazine.onrender.com'
+              url: 'https://moviesmagazine.vercel.app'
             }
           },
           {
             '@type': 'Article',
-            '@id': 'https://moviesmagazine.onrender.com/',
-            url: 'https://moviesmagazine.onrender.com/',
+            '@id': 'https://moviesmagazine.vercel.app/',
+            url: 'https://moviesmagazine.vercel.app/',
             headline: 'Tvshow',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
+              '@id': 'https://moviesmagazine.vercel.app/author/ytmag/',
               name: 'Dr Trailer',
-              url: 'https://moviesmagazine.onrender.com/author/ytmag/',
+              url: 'https://moviesmagazine.vercel.app/author/ytmag/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -118,23 +118,23 @@ const Privacy = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://moviesmagazine.onrender.com/#organization',
+              '@id': 'https://moviesmagazine.vercel.app/#organization',
               name: 'Movies Magazine - Explore. Discover. Connect..',
-              url: 'https://moviesmagazine.onrender.com'
+              url: 'https://moviesmagazine.vercel.app'
             }
           },
           {
             '@type': 'Article',
-            '@id': 'https://moviesmagazine.onrender.com/',
-            url: 'https://moviesmagazine.onrender.com/',
+            '@id': 'https://moviesmagazine.vercel.app/',
+            url: 'https://moviesmagazine.vercel.app/',
             headline: 'Adult',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://moviesmagazine.onrender.com/author/ytmag/',
+              '@id': 'https://moviesmagazine.vercel.app/author/ytmag/',
               name: 'Dr Trailer',
-              url: 'https://moviesmagazine.onrender.com/author/ytmag/',
+              url: 'https://moviesmagazine.vercel.app/author/ytmag/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -145,9 +145,9 @@ const Privacy = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://moviesmagazine.onrender.com/#organization',
+              '@id': 'https://moviesmagazine.vercel.app/#organization',
               name: 'Movies Magazine - Explore. Discover. Connect..',
-              url: 'https://moviesmagazine.onrender.com'
+              url: 'https://moviesmagazine.vercel.app'
             }
           }
         ]
@@ -166,7 +166,7 @@ const Privacy = () => {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://moviesmagazine.onrender.com/sitemap.xml'
+            href='https://moviesmagazine.vercel.app/sitemap.xml'
           />
           <meta
             name='viewport'
@@ -209,7 +209,7 @@ const Privacy = () => {
             name='description'
             content='Explore the world of cinema with Movies Magazine: Captivating reviews, top picks, and the latest news.'
           />
-          <link rel='canonical' href='https://moviesmagazine.onrender.com/intro/privacy' />
+          <link rel='canonical' href='https://moviesmagazine.vercel.app/intro/privacy' />
           <meta property='og:locale' content='en_US' />
           <meta property='og:type' content='website' />
           <meta
@@ -220,14 +220,14 @@ const Privacy = () => {
             property='og:description'
             content='Movies Magazine is the top platform for exploring and ing software,the premier platform for the latest releases and secure s.'
           />
-          <meta property='og:url' content='https://moviesmagazine.onrender.com/intro/privacy/' />
+          <meta property='og:url' content='https://moviesmagazine.vercel.app/intro/privacy/' />
           <meta
             property='og:site_name'
             content='Movies Magazine '
           />
           <meta
             property='og:image'
-            content='https://moviesmagazine.onrender.com/og_image.webp'
+            content='https://moviesmagazine.vercel.app/og_image.webp'
           />
           <meta property='og:image:width' content='1280' />
           <meta property='og:image:height' content='720' />
@@ -244,7 +244,7 @@ const Privacy = () => {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://moviesmagazine.onrender.com/sitemap.xml'
+            href='https://moviesmagazine.vercel.app/sitemap.xml'
           />
           <meta name='twitter:card' content='summary_large_image' />
           <meta
