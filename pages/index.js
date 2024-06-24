@@ -35,7 +35,7 @@ const HomePage = () => {
   useEffect(() => {
   //   const shuffledsecurityData = getRandomItems(securityData, 2)
     const shuffledreviewsData = getRandomItems(reviewsData, 4)
-    const shuffledtrailerData = getRandomItems(trailerData, 2)
+    const shuffledtrailerData = getRandomItems(trailerData, 4)
   //   const shuffledgraphicdesignData = getRandomItems(graphicdesignData, 2)
     // const shuffledrecapsData = getRandomItems(recapsData, 4)
 
