@@ -4,7 +4,7 @@ import latestData from '../public/latest.json'
 import reviewsData from '../public/reviews.json'
 import trailerData from '../public/trailer.json'
 // import graphicdesignData from '../public/graphicdesign.json'
-// import recapsData from '../public/recaps.json'
+import recapsData from '../public/recaps.json'
 // import Marquee from '../components/Marquee';
 import Head from 'next/head'
 import Image from 'next/image'
@@ -29,7 +29,7 @@ const HomePage = () => {
   const [trailer, settrailer] = useState(trailerData.slice(0, 4))
   // const [graphicdesign, setgraphicdesign] = useState(
   //   graphicdesignData.slice(0, 2))
-    // const [recaps, setrecaps] = useState(recapsData.slice(0, 4))
+    const [recaps, setrecaps] = useState(recapsData.slice(0, 4))
 
   // // Update the state with random items after the component mounts
   useEffect(() => {
@@ -37,13 +37,13 @@ const HomePage = () => {
     const shuffledreviewsData = getRandomItems(reviewsData, 4)
     const shuffledtrailerData = getRandomItems(trailerData, 4)
   //   const shuffledgraphicdesignData = getRandomItems(graphicdesignData, 2)
-    // const shuffledrecapsData = getRandomItems(recapsData, 4)
+    const shuffledrecapsData = getRandomItems(recapsData, 4)
 
   //   setsecurity(shuffledsecurityData)
     setreviews(shuffledreviewsData)
     settrailer(shuffledtrailerData)
   //   setgraphicdesign(shuffledgraphicdesignData)
-    // setrecaps(shuffledrecapsData)
+    setrecaps(shuffledrecapsData)
   }, [])
 
   const pageTitle = 'Movies Magazine. - Explore. Discover. Watch.'
@@ -519,7 +519,7 @@ const HomePage = () => {
                 >
                   Many More Coming Soon...
                 </p>
-             {/* {recaps.map(recapsItem => (
+             {recaps.map(recapsItem => (
                   <div key={recapsItem.id} className='card'>
                     <a href={`/recaps/${recapsItem.id}`}>
                       <p
@@ -564,7 +564,7 @@ const HomePage = () => {
                   }}
                 >
                   Many More Coming Soon...
-                </p>  */}
+                </p> 
                 {reviews.map(reviewsItem => (
                   <div key={reviewsItem.id} className='card'>
                     <a href={`/reviews/${reviewsItem.id}`}>

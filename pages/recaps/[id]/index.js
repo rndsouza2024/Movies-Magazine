@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import trailerData from '../../../public/trailer.json'
+import recapsData from '../../../public/recaps.json'
 import latestData from '../../../public/latest.json'
 import { useEffect, useState, useRef } from 'react'
 import Head from 'next/head'
@@ -8,19 +8,16 @@ import Rating from '../../../components/Rating'
 import Pagination from '../../../components/Pagination'
 import MP3Player from '../../../components/MP3Player'
 
-
 import Link from 'next/link'
 import HomeStyles from '@styles/styles.module.css'
 import Script from 'next/script'
 
-const trailerDetail = ({ trailerItem }) => {
+const recapsDetail = ({ recapsItem }) => {
   const router = useRouter()
   const { id } = router.query
   const [currentPage, setCurrentPage] = useState(1)
   const totalPages = 0 // Assume there are 3 pages
 
-
-  
   const [latest, setLatest] = useState(latestData)
   const [playerReady, setPlayerReady] = useState(false)
   const [showTimer, setShowTimer] = useState(false)
@@ -51,9 +48,7 @@ const trailerDetail = ({ trailerItem }) => {
       '@type': 'Organization',
       name: 'Movies Magazine.',
       url: 'https://moviesmagazine.onrender.com/',
-      image: [
-        'https://moviesmagazine.onrender.com/wp-content/uploads/2023/05/favicon.ico'
-      ],
+      image: ['https://moviesmagazine.onrender.com/wp-content/uploads/2023/05/favicon.ico'],
       logo: {
         '@type': 'ImageObject',
         url: 'https://moviesmagazine.onrender.com/logo.png',
@@ -69,8 +64,7 @@ const trailerDetail = ({ trailerItem }) => {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate:
-            'https://moviesmagazine.onrender.com/search?q={search_term_string}'
+          urlTemplate: 'https://moviesmagazine.onrender.com/search?q={search_term_string}'
         },
         'query-input': 'required name=search_term_string'
       }
@@ -90,14 +84,14 @@ const trailerDetail = ({ trailerItem }) => {
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'trailer',
-        item: trailerItem.baseurl
+        name: 'recaps',
+        item: recapsItem.baseurl
       },
       {
         '@type': 'ListItem',
         position: 3,
-        name: trailerItem.name,
-        item: trailerItem.siteurl
+        name: recapsItem.name,
+        item: recapsItem.siteurl
       }
     ]
   })
@@ -122,11 +116,11 @@ const trailerDetail = ({ trailerItem }) => {
       },
       {
         '@type': 'WebPage',
-        '@id': `${trailerItem.siteurl}#webpage`,
-        url: trailerItem.siteurl,
-        name: `${trailerItem.name} | Movies Magazine.`,
-        datePublished: trailerItem.datePublished,
-        dateModified: trailerItem.dateModified,
+        '@id': `${recapsItem.siteurl}#webpage`,
+        url: recapsItem.siteurl,
+        name: `${recapsItem.name} | Movies Magazine.`,
+        datePublished: recapsItem.datePublished,
+        dateModified: recapsItem.dateModified,
         isPartOf: {
           '@id': 'https://moviesmagazine.onrender.com/#website'
         },
@@ -148,34 +142,34 @@ const trailerDetail = ({ trailerItem }) => {
       },
       {
         '@type': 'Article',
-        '@id': `${trailerItem.siteurl}#article`,
-        headline: `Download ${trailerItem.name} | Movies Magazine.`,
-        datePublished: trailerItem.datePublished,
-        dateModified: trailerItem.dateModified,
-        articleSection: 'Movies trailer',
+        '@id': `${recapsItem.siteurl}#article`,
+        headline: `Download ${recapsItem.name} | Movies Magazine.`,
+        datePublished: recapsItem.datePublished,
+        dateModified: recapsItem.dateModified,
+        articleSection: 'Movies recaps',
         author: {
-          '@id': 'https://moviesmagazine.onrender.com/author/trailerItem/'
+          '@id': 'https://moviesmagazine.onrender.com/author/recapsItem/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
-        description: trailerItem.synopsis,
-        image: trailerItem.image,
-        name: `Download ${trailerItem.name} | Movies Magazine.`,
+        description: recapsItem.synopsis,
+        image: recapsItem.image,
+        name: `Download ${recapsItem.name} | Movies Magazine.`,
         isPartOf: {
-          '@id': `${trailerItem.siteurl}#webpage`
+          '@id': `${recapsItem.siteurl}#webpage`
         },
         inLanguage: 'en-US',
         mainEntityOfPage: {
-          '@id': `${trailerItem.siteurl}#webpage`
+          '@id': `${recapsItem.siteurl}#webpage`
         }
       },
       {
         '@type': 'BlogPosting',
-        '@id': `${trailerItem.siteurl}#blogPost`,
-        headline: `Download ${trailerItem.name} | Movies Magazine.`,
-        datePublished: trailerItem.datePublished,
-        dateModified: trailerItem.dateModified,
+        '@id': `${recapsItem.siteurl}#blogPost`,
+        headline: `Download ${recapsItem.name} | Movies Magazine.`,
+        datePublished: recapsItem.datePublished,
+        dateModified: recapsItem.dateModified,
         articleSection: 'Other Software',
         author: {
           '@id': 'https://moviesmagazine.onrender.com/author/moviesmagazine./'
@@ -183,16 +177,16 @@ const trailerDetail = ({ trailerItem }) => {
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
-        description: trailerItem.synopsis,
-        image: trailerItem.image,
-        name: `Download ${trailerItem.name} | Movies Magazine.`,
-        '@id': `${trailerItem.siteurl}#richSnippet`,
+        description: recapsItem.synopsis,
+        image: recapsItem.image,
+        name: `Download ${recapsItem.name} | Movies Magazine.`,
+        '@id': `${recapsItem.siteurl}#richSnippet`,
         isPartOf: {
-          '@id': `${trailerItem.siteurl}#webpage`
+          '@id': `${recapsItem.siteurl}#webpage`
         },
         inLanguage: 'en-US',
         mainEntityOfPage: {
-          '@id': `${trailerItem.siteurl}#webpage`
+          '@id': `${recapsItem.siteurl}#webpage`
         }
       }
     ]
@@ -201,23 +195,23 @@ const trailerDetail = ({ trailerItem }) => {
   const newsArticleSchema = {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
-    '@id': `${trailerItem.siteurl}#webpage`, // Add a comma here
-    name: trailerItem.title,
-    url: trailerItem.siteurl,
-    description: trailerItem.synopsis,
-    image: trailerItem.image,
-    datePublished: trailerItem.startDate,
+    '@id': `${recapsItem.siteurl}#webpage`, // Add a comma here
+    name: recapsItem.title,
+    url: recapsItem.siteurl,
+    description: recapsItem.synopsis,
+    image: recapsItem.image,
+    datePublished: recapsItem.startDate,
     potentialAction: {
       '@type': 'WatchAction',
       target: {
         '@type': 'EntryPoint',
-        name: trailerItem.title,
-        urlTemplate: trailerItem.siteurl
+        name: recapsItem.title,
+        urlTemplate: recapsItem.siteurl
       }
     },
     locationCreated: {
       '@type': 'Place',
-      name: trailerItem.country
+      name: recapsItem.country
     },
     author: {
       '@type': 'Person',
@@ -245,18 +239,18 @@ const trailerDetail = ({ trailerItem }) => {
   const ldJsonData = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Movie',
-    '@id': `${trailerItem.siteurl}`,
-    name: trailerItem.title,
-    url: trailerItem.siteurl,
-    description: trailerItem.synopsis,
-    image: trailerItem.image,
-    genre: trailerItem.genre,
-    datePublished: trailerItem.datePublished,
+    '@id': `${recapsItem.siteurl}`,
+    name: recapsItem.title,
+    url: recapsItem.siteurl,
+    description: recapsItem.synopsis,
+    image: recapsItem.image,
+    genre: recapsItem.genre,
+    datePublished: recapsItem.datePublished,
     director: {
       '@type': 'Person',
-      name: trailerItem.director
+      name: recapsItem.director
     },
-    actor: trailerItem.starring.map(actor => ({
+    actor: recapsItem.starring.map(actor => ({
       '@type': 'Person',
       name: actor
     })),
@@ -264,13 +258,13 @@ const trailerDetail = ({ trailerItem }) => {
       '@type': 'WatchAction',
       target: {
         '@type': 'EntryPoint',
-        name: trailerItem.title,
-        urlTemplate: trailerItem.siteurl
+        name: recapsItem.title,
+        urlTemplate: recapsItem.siteurl
       }
     },
     locationCreated: {
       '@type': 'Place',
-      name: trailerItem.country
+      name: recapsItem.country
     },
 
     author: {
@@ -296,12 +290,12 @@ const trailerDetail = ({ trailerItem }) => {
   const trailerSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'VideoObject',
-    name: trailerItem.title,
-    description: trailerItem.text,
-    uploadDate: trailerItem.datePublished,
-    thumbnailUrl: trailerItem.backimage,
+    name: recapsItem.title,
+    description: recapsItem.text,
+    uploadDate: recapsItem.datePublished,
+    thumbnailUrl: recapsItem.backimage,
     duration: 'P34S', // Replace with the actual duration if it's different
-    embedUrl: trailerItem.videourl
+    embedUrl: recapsItem.videourl
   })
 
   return (
@@ -313,9 +307,9 @@ const trailerDetail = ({ trailerItem }) => {
         />
         <title>
           {' '}
-          Review {trailerItem && trailerItem.name} | Movies Magazine.
+          Recaps {recapsItem && recapsItem.name} | Movies Magazine.
         </title>
-        <link rel='canonical' href={trailerItem && trailerItem.siteurl} />
+        <link rel='canonical' href={recapsItem && recapsItem.siteurl} />
         <meta name='robots' content='index, follow' />
         <meta name='googlebot' content='index,follow' />
         <meta name='revisit-after' content='1 days' />
@@ -323,23 +317,23 @@ const trailerDetail = ({ trailerItem }) => {
         <meta property="og:type" content="video.other" />
         <meta
           property='og:title'
-          content={`${trailerItem && trailerItem.name} - Movies Magazine.`}
+          content={`${recapsItem && recapsItem.name} - Movies Magazine.`}
         />
         <meta
           property='og:description'
-          content='Explore the world of cinema with Movies Magazine: Captivating trailer, top picks, and the latest news.'
+          content='Explore the world of cinema with Movies Magazine: Captivating recaps, top picks, and the latest news.'
         />
 
-        <meta property='og:url' content={`${trailerItem && trailerItem.url}`} />
+        <meta property='og:url' content={`${recapsItem && recapsItem.url}`} />
         <meta
           name='keywords'
-          content={`${trailerItem && trailerItem.keywords}`}
+          content={`${recapsItem && recapsItem.keywords}`}
         />
         <meta property='og:site_name' content='Movies Magazine.' />
         <meta property='og:type' content='article' />
         <meta
           property=' og:image:alt'
-          content={`${trailerItem && trailerItem.group}`}
+          content={`${recapsItem && recapsItem.group}`}
         />
         <meta name='mobile-web-app-capable' content='yes' />
         <meta property='article:section' content='Movies Review' />
@@ -350,7 +344,7 @@ const trailerDetail = ({ trailerItem }) => {
         />
         <meta
           property='og:image'
-          content={`${trailerItem && trailerItem.backimage}`}
+          content={`${recapsItem && recapsItem.backimage}`}
         />
 
         <meta property='og:image:width' content='1280px' />
@@ -390,7 +384,7 @@ const trailerDetail = ({ trailerItem }) => {
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: newsArticleJson }}
         />
-    <script
+        <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: trailerSchema }}
         />
@@ -448,7 +442,7 @@ const trailerDetail = ({ trailerItem }) => {
             marginBottom: '12px'
           }}
         >
-          {trailerItem.name}
+          {recapsItem.name}
         </h1>
 
         {/* <p
@@ -482,7 +476,7 @@ const trailerDetail = ({ trailerItem }) => {
           backgroundColor: '#D3D3D3'
         }}
       >
-               <div
+      <div
           className='shadow-lg flex items-center justify-center'
           role='navigation'
         >
@@ -544,12 +538,11 @@ const trailerDetail = ({ trailerItem }) => {
           </ul>
         </div>
 
-
         <div className='flex-container'>
           <div className='category-container'>
             <Image
-              src={trailerItem.channelposter}
-              alt={trailerItem.title}
+              src={recapsItem.channelposter}
+              alt={recapsItem.title}
               width={300}
               height={300}
               quality={90}
@@ -567,7 +560,7 @@ const trailerDetail = ({ trailerItem }) => {
                   'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
               }}
             />
-         
+
             <div
               style={{ maxWidth: '800px', width: '100%', marginBottom: '20px' }}
             >
@@ -580,7 +573,7 @@ const trailerDetail = ({ trailerItem }) => {
                     marginBottom: '12px'
                   }}
                 >
-                  {trailerItem.title}
+                  {recapsItem.title}
                 </h2>
               </div>
 
@@ -592,7 +585,7 @@ const trailerDetail = ({ trailerItem }) => {
                   textShadow: '2px 1px 1px #000000'
                 }}
               >
-                Genre: {trailerItem.genre}
+                Genre: {recapsItem.genre}
               </p>
               <p
                 className='text-black text-2xl font-semibold mt-2'
@@ -602,7 +595,7 @@ const trailerDetail = ({ trailerItem }) => {
                   textShadow: '2px 1px 1px #000000'
                 }}
               >
-                Director: {trailerItem.directorname}
+                Director: {recapsItem.directorname}
               </p>
               <p
                 className='text-black text-2xl font-semibold mt-2'
@@ -612,7 +605,7 @@ const trailerDetail = ({ trailerItem }) => {
                   textShadow: '2px 1px 1px #000000'
                 }}
               >
-                Starring: {trailerItem.starring}
+                Starring: {recapsItem.starring}
               </p>
               <p
                 className='text-black text-2xl font-semibold mt-2'
@@ -622,7 +615,7 @@ const trailerDetail = ({ trailerItem }) => {
                   textShadow: '2px 1px 1px #000000'
                 }}
               >
-                Origin Country: {trailerItem.country}
+                Origin Country: {recapsItem.country}
               </p>
               <p
                 className='text-black text-2xl font-semibold mt-2'
@@ -632,15 +625,15 @@ const trailerDetail = ({ trailerItem }) => {
                   textShadow: '2px 1px 1px #000000'
                 }}
               >
-                Language: {trailerItem.language}
+                Language: {recapsItem.language}
               </p>
 
               <div className={`${HomeStyles.imageGrid} mt-5`}>
                 <img
                   className={`${HomeStyles.image} img-fluid lazyload `}
-                  src={trailerItem.directorimg}
-                  alt={trailerItem.directorname}
-                  title={trailerItem.directorname}
+                  src={recapsItem.directorimg}
+                  alt={recapsItem.directorname}
+                  title={recapsItem.directorname}
                   style={{
                     width: '200px',
                     height: '200px',
@@ -653,9 +646,9 @@ const trailerDetail = ({ trailerItem }) => {
                 />
                 <img
                   className={`${HomeStyles.image} img-fluid lazyload`}
-                  src={trailerItem.actor1img}
-                  alt={trailerItem.actor1}
-                  title={trailerItem.actor1}
+                  src={recapsItem.actor1img}
+                  alt={recapsItem.actor1}
+                  title={recapsItem.actor1}
                   style={{
                     width: '200px',
                     height: '200px',
@@ -668,9 +661,9 @@ const trailerDetail = ({ trailerItem }) => {
                 />
                 <img
                   className={`${HomeStyles.image} img-fluid lazyload`}
-                  src={trailerItem.actor2img}
-                  alt={trailerItem.actor2}
-                  title={trailerItem.actor2}
+                  src={recapsItem.actor2img}
+                  alt={recapsItem.actor2}
+                  title={recapsItem.actor2}
                   style={{
                     width: '200px',
                     height: '200px',
@@ -683,9 +676,9 @@ const trailerDetail = ({ trailerItem }) => {
                 />
                 <img
                   className={`${HomeStyles.image} img-fluid lazyload`}
-                  src={trailerItem.actor3img}
-                  alt={trailerItem.actor3}
-                  title={trailerItem.actor3}
+                  src={recapsItem.actor3img}
+                  alt={recapsItem.actor3}
+                  title={recapsItem.actor3}
                   style={{
                     width: '200px',
                     height: '200px',
@@ -698,9 +691,9 @@ const trailerDetail = ({ trailerItem }) => {
                 />
                 <img
                   className={`${HomeStyles.image} img-fluid lazyload`}
-                  src={trailerItem.actor4img}
-                  alt={trailerItem.actor4}
-                  title={trailerItem.actor4}
+                  src={recapsItem.actor4img}
+                  alt={recapsItem.actor4}
+                  title={recapsItem.actor4}
                   style={{
                     width: '200px',
                     height: '200px',
@@ -713,9 +706,9 @@ const trailerDetail = ({ trailerItem }) => {
                 />
                 <img
                   className={`${HomeStyles.image} img-fluid lazyload`}
-                  src={trailerItem.actor5img}
-                  alt={trailerItem.actor5}
-                  title={trailerItem.actor5}
+                  src={recapsItem.actor5img}
+                  alt={recapsItem.actor5}
+                  title={recapsItem.actor5}
                   style={{
                     width: '200px',
                     height: '200px',
@@ -727,9 +720,41 @@ const trailerDetail = ({ trailerItem }) => {
                   layout='responsive'
                 />
               </div>
-            
               <Rating />
-          
+              {/* <div
+                className='flex flex-col items-center justify-center'
+                style={{
+                  marginTop: '50px',
+                  marginBottom: '50px',
+                  filter:
+                    'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
+                }}
+              >
+                {!showTimer ? (
+                  <button
+                    onClick={() => setShowTimer(true)}
+                    className='animate-pulse bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
+                  >
+                    Download Now
+                  </button>
+                ) : (
+                  <>
+                    <p className='text-3xl font-bold mb-4'>
+                      Password is 123
+                      <br />
+                      Your download link will be ready in {seconds} seconds...
+                    </p>
+                    <Script src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js'></Script>
+                    <lottie-player
+                      src='https://lottie.host/291e7548-c65f-43a1-87ce-f573feab96b4/o7Ax3jP795.json'
+                      background='##FFFFFF'
+                      speed='1'
+                      style={{ width: '150px', height: '150px' }}
+                      loop
+                      autoplay
+                      direction='1'
+                      mode='normal'
+                    ></lottie-player> */}
               <p
                 className='text-4xl font-bold mb-4'
                 style={{
@@ -748,13 +773,13 @@ const trailerDetail = ({ trailerItem }) => {
                 }}
                 className='rounded-xl mr-8 flex border-1 border-blue-600 bg-gray-600 p-2 '
               >
-                
+               
                 <iframe
                   frameborder='0'
                   type='text/html'
                   // ref={audioIframeRef}
                   // id='audioIframe'
-                  src={`https://geo.dailymotion.com/player/xkdl0.html?video=${trailerItem.videoitem}&mute=true&Autoquality=1080p`}
+                  src={`https://geo.dailymotion.com/player/xkdl0.html?video=${recapsItem.videoitem}&mute=true&Autoquality=1080p`}
                   width='100%'
                   height='100%'
                   allowfullscreen
@@ -766,19 +791,26 @@ const trailerDetail = ({ trailerItem }) => {
                 ></iframe>
               </div>
               <div className='flex flex-col items-center justify-center'>
-           
-           
-
-           
+                {/* <h2
+                  className='text-black bg-gradient-to-r from-pink-500 to-amber-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300 text-2xl'
+                  style={{
+                    fontFamily: 'Poppins, sans-serif',
+                    fontWeight: 'bold',
+                      marginTop: '15px',
+                    marginBottom: '12px'
+                  }}
+                >
+                 Listen to Podcast
+                </h2> */}
               </div>
-              {trailerItem.mp3player && (
-                <MP3Player mp3Url={trailerItem.mp3player} />
+              {recapsItem.mp3player && (
+                <MP3Player mp3Url={recapsItem.mp3player} />
               )}
 
               <Pagination
                 currentPage={currentPage}
                 totalPages={totalPages}
-                route='trailer'
+                route='recaps'
                 style={{
                   marginTop: '50px',
                   marginBottom: '50px',
@@ -788,18 +820,91 @@ const trailerDetail = ({ trailerItem }) => {
                     'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
                 }}
               />
- 
-              <div className='flex flex-col items-center justify-center'>
-              {trailerItem.head2 && (
-                  <p className='bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300 text-bg text-black text-bg mt-2 text-3xl mb-2 items-center justify-center'>
-                    <strong>{trailerItem.head2}</strong>
-                  </p>
-                )}
 
+              {/* {showTimer && seconds <= 0 && (
+                      <div>
+                        {recapsItem.downloadlink && (
+                          <Link href={recapsItem.downloadlink} target='_blank'>
+                            <div
+                              className='bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
+                              style={{
+                                marginTop: '50px',
+                                marginBottom: '10px',
+                                borderRadius: '50px',
+                                boxShadow: '0 0 10px 0 #fff',
+                                filter:
+                                  'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
+                              }}
+                            >
+                              <span
+                                style={{
+                                  color: '#0efa06',
+                                  fontSize: '24px',
+                                  textShadow: '3px 5px 5px #000'
+                                }}
+                              >
+                                <i
+                                  className='fa fa-download'
+                                  aria-hidden='true'
+                                ></i>{' '}
+                              </span>
+                              Click Here to Download
+                            </div>
+                          </Link>
+                        )}
+                        {recapsItem.downloadlink1 && (
+                          <Link href={recapsItem.downloadlink1} target='_blank'>
+                            <div
+                              className='bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
+                              style={{
+                                margin: 'auto',
+                                marginBottom: '50px',
+                                borderRadius: '50px',
+                                boxShadow: '0 0 10px 0 #fff',
+                                filter:
+                                  'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
+                              }}
+                            >
+                              Click Here to Download
+                            </div>
+                          </Link>
+                        )}
+                        {recapsItem.additionalLinks?.map((link, index) => (
+                          <Link key={index} href={link.url} target='_blank'>
+                            <div
+                              className='bg-gradient-to-r from-amber-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
+                              style={{
+                                margin: 'auto',
+                                marginBottom: '50px',
+                                borderRadius: '50px',
+                                boxShadow: '0 0 10px 0 #fff',
+                                filter:
+                                  'contrast(1.0) saturate(1.0) brightness(1.0) hue-rotate(0deg)'
+                              }}
+                            >
+                              Click Here to Download {index + 3}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                )}
+              </div> */}
+
+              <div className='flex flex-col items-center justify-center'>
+                <p
+                  className='bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300  text-bg text-black text-bg  mt-2 text-3xl mb-2 items-center justify-center '
+                  style={{
+                    marginTop: '50px'
+                  }}
+                >
+                  <strong> {recapsItem.head1} </strong>
+                </p>
               </div>
               <Image
-                src={trailerItem.image1}
-                alt={trailerItem.name}
+                src={recapsItem.image1}
+                alt={recapsItem.name}
                 width={1280}
                 height={720}
                 quality={90}
@@ -816,7 +921,7 @@ const trailerDetail = ({ trailerItem }) => {
                     'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                 }}
               />
-              {trailerItem.news1.split('\n\n').map((paragraph, idx) => (
+              {recapsItem.news1.split('\n\n').map((paragraph, idx) => (
                 <p
                   key={idx}
                   className='description text-black font-bold mt-2 text-xl'
@@ -828,14 +933,18 @@ const trailerDetail = ({ trailerItem }) => {
                   {paragraph}
                 </p>
               ))}
-              
-      
+
               <div className='flex flex-col items-center justify-center'>
-           
-                {trailerItem.image2 && (
+                {recapsItem.head2 && (
+                  <p className='bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300 text-bg text-black text-bg mt-2 text-3xl mb-2 items-center justify-center'>
+                    <strong>{recapsItem.head2}</strong>
+                  </p>
+                )}
+
+                {recapsItem.image2 && (
                   <Image
-                    src={trailerItem.image2}
-                    alt={trailerItem.name}
+                    src={recapsItem.image2}
+                    alt={recapsItem.name}
                     width={1280}
                     height={720}
                     quality={90}
@@ -854,10 +963,10 @@ const trailerDetail = ({ trailerItem }) => {
                   />
                 )}
 
-                {trailerItem.image3 && (
+                {recapsItem.image3 && (
                   <Image
-                    src={trailerItem.image3}
-                    alt={trailerItem.name}
+                    src={recapsItem.image3}
+                    alt={recapsItem.name}
                     width={1280}
                     height={720}
                     quality={90}
@@ -876,10 +985,10 @@ const trailerDetail = ({ trailerItem }) => {
                   />
                 )}
 
-                {trailerItem.image4 && (
+                {recapsItem.image4 && (
                   <Image
-                    src={trailerItem.image4}
-                    alt={trailerItem.name}
+                    src={recapsItem.image4}
+                    alt={recapsItem.name}
                     width={1280}
                     height={720}
                     quality={90}
@@ -898,10 +1007,10 @@ const trailerDetail = ({ trailerItem }) => {
                   />
                 )}
 
-                {trailerItem.image5 && (
+                {recapsItem.image5 && (
                   <Image
-                    src={trailerItem.image5}
-                    alt={trailerItem.name}
+                    src={recapsItem.image5}
+                    alt={recapsItem.name}
                     width={1280}
                     height={720}
                     quality={90}
@@ -920,10 +1029,10 @@ const trailerDetail = ({ trailerItem }) => {
                   />
                 )}
 
-                {trailerItem.image6 && (
+                {recapsItem.image6 && (
                   <Image
-                    src={trailerItem.image6}
-                    alt={trailerItem.name}
+                    src={recapsItem.image6}
+                    alt={recapsItem.name}
                     width={1280}
                     height={720}
                     quality={90}
@@ -942,10 +1051,10 @@ const trailerDetail = ({ trailerItem }) => {
                   />
                 )}
 
-                {trailerItem.image7 && (
+                {recapsItem.image7 && (
                   <Image
-                    src={trailerItem.image7}
-                    alt={trailerItem.name}
+                    src={recapsItem.image7}
+                    alt={recapsItem.name}
                     width={1280}
                     height={720}
                     quality={90}
@@ -964,10 +1073,10 @@ const trailerDetail = ({ trailerItem }) => {
                   />
                 )}
 
-                {trailerItem.image8 && (
+                {recapsItem.image8 && (
                   <Image
-                    src={trailerItem.image8}
-                    alt={trailerItem.name}
+                    src={recapsItem.image8}
+                    alt={recapsItem.name}
                     width={1280}
                     height={720}
                     quality={90}
@@ -1001,7 +1110,7 @@ const trailerDetail = ({ trailerItem }) => {
                 textShadow: '1px 2px 2px #000'
               }}
             >
-              LATEST trailer NEWS.
+              LATEST recaps NEWS.
             </p>
             <div className='categorylatest-container'>
               <div className='cardlatest-container'>
@@ -1034,9 +1143,7 @@ const trailerDetail = ({ trailerItem }) => {
                   </div>
                 ))}
               </div>
-           
             </div>
-         
           </div>
         </div>
 
@@ -1152,7 +1259,7 @@ const trailerDetail = ({ trailerItem }) => {
 }
 
 export async function getStaticPaths () {
-  const paths = trailerData.map(item => ({
+  const paths = recapsData.map(item => ({
     params: { id: item.id }
   }))
 
@@ -1160,7 +1267,7 @@ export async function getStaticPaths () {
 }
 
 export async function getStaticProps ({ params }) {
-  const trailerItem = trailerData.find(item => item.id === params.id)
-  return { props: { trailerItem } }
+  const recapsItem = recapsData.find(item => item.id === params.id)
+  return { props: { recapsItem } }
 }
-export default trailerDetail
+export default recapsDetail
