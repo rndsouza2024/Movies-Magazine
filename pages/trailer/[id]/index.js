@@ -50,13 +50,13 @@ const trailerDetail = ({ trailerItem }) => {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Movies Magazine.',
-      url: 'http://localhost:3000/',
+      url: 'https://moviesmagazine.vercel.app/',
       image: [
-        'http://localhost:3000/wp-content/uploads/2023/05/favicon.ico'
+        'https://moviesmagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'
       ],
       logo: {
         '@type': 'ImageObject',
-        url: 'http://localhost:3000/logo.png',
+        url: 'https://moviesmagazine.vercel.app/logo.png',
         width: 280,
         height: 100
       }
@@ -64,13 +64,13 @@ const trailerDetail = ({ trailerItem }) => {
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      url: 'http://localhost:3000/',
+      url: 'https://moviesmagazine.vercel.app/',
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
           urlTemplate:
-            'http://localhost:3000/search?q={search_term_string}'
+            'https://moviesmagazine.vercel.app/search?q={search_term_string}'
         },
         'query-input': 'required name=search_term_string'
       }
@@ -85,7 +85,7 @@ const trailerDetail = ({ trailerItem }) => {
         '@type': 'ListItem',
         position: 1,
         name: 'Movies Magazine.',
-        item: 'http://localhost:3000/'
+        item: 'https://moviesmagazine.vercel.app/'
       },
       {
         '@type': 'ListItem',
@@ -112,8 +112,8 @@ const trailerDetail = ({ trailerItem }) => {
       },
       {
         '@type': 'WebSite',
-        '@id': 'http://localhost:3000/#website',
-        url: 'http://localhost:3000/',
+        '@id': 'https://moviesmagazine.vercel.app/#website',
+        url: 'https://moviesmagazine.vercel.app/',
         name: 'Movies Magazine.',
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -128,15 +128,15 @@ const trailerDetail = ({ trailerItem }) => {
         datePublished: trailerItem.datePublished,
         dateModified: trailerItem.dateModified,
         isPartOf: {
-          '@id': 'http://localhost:3000/#website'
+          '@id': 'https://moviesmagazine.vercel.app/#website'
         },
         inLanguage: 'en-US'
       },
       {
         '@type': 'Person',
-        '@id': 'http://localhost:3000/author/moviesmagazine./',
+        '@id': 'https://moviesmagazine.vercel.app/author/moviesmagazine./',
         name: 'Dr Trailer',
-        url: 'http://localhost:3000/author/moviesmagazine./',
+        url: 'https://moviesmagazine.vercel.app/author/moviesmagazine./',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -144,7 +144,7 @@ const trailerDetail = ({ trailerItem }) => {
           caption: 'Dr Trailer',
           inLanguage: 'en-US'
         },
-        sameAs: ['http://localhost:3000/']
+        sameAs: ['https://moviesmagazine.vercel.app/']
       },
       {
         '@type': 'Article',
@@ -154,7 +154,7 @@ const trailerDetail = ({ trailerItem }) => {
         dateModified: trailerItem.dateModified,
         articleSection: 'Movies trailer',
         author: {
-          '@id': 'http://localhost:3000/author/trailerItem/'
+          '@id': 'https://moviesmagazine.vercel.app/author/trailerItem/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -178,7 +178,7 @@ const trailerDetail = ({ trailerItem }) => {
         dateModified: trailerItem.dateModified,
         articleSection: 'Other Software',
         author: {
-          '@id': 'http://localhost:3000/author/moviesmagazine./'
+          '@id': 'https://moviesmagazine.vercel.app/author/moviesmagazine./'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -229,7 +229,7 @@ const trailerDetail = ({ trailerItem }) => {
       name: 'Movies Magazine.',
       logo: {
         '@type': 'ImageObject',
-        url: 'http://localhost:3000/og_image.jpg'
+        url: 'https://moviesmagazine.vercel.app/og_image.jpg'
       }
     },
     additionalProperty: {
@@ -283,7 +283,7 @@ const trailerDetail = ({ trailerItem }) => {
       name: 'Movies Magazine.???',
       logo: {
         '@type': 'ImageObject',
-        url: 'http://localhost:3000/og_image.jpg'
+        url: 'https://moviesmagazine.vercel.app/og_image.jpg'
       }
     },
     additionalProperty: {

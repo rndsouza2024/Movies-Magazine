@@ -9,12 +9,12 @@ class MyDocument extends Document {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://youtubemagazine.vercel.app/sitemap.xml'
+            href='https://moviesmagazine.onrender.com/sitemap.xml'
           />
           <link
             rel='icon'
             type='image/x-icon'
-            href='wp-content/uploads/2023/05/favicon.ico'
+            href='/favicon.ico'
           />
           <link
             rel='apple-touch-icon'
@@ -42,44 +42,44 @@ class MyDocument extends Document {
           />
           <meta
             name='keywords'
-            content='youtube, explore, discover, connect, videos, entertainment, curated content, categories, channels,community, engagement'
+            content='movie review sites,movie magazine,movie magazines uk,movie magazines us,movie magazines in,the film magazine,thefilmmagazine,movie news websites,film reviews,film reviews uk,film reviews us,film reviews in,film magazine online'
           />
           <meta
             name='description'
-            content='Indulge in curated video content, all at your fingertips!'
+            content='Explore the world of cinema with Movies Magazine: Captivating reviews, top picks, and the latest news.'
           />
           <link
             rel='canonical'
-            href='https://youtubemagazine.vercel.app/'
+            href='https://moviesmagazine.onrender.com/'
           />
           <meta property='og:locale' content='en_US' />
-          <meta property='og:type' content='website' />
+          <meta property="og:type" content="video.other" />
           <meta
             property='og:title'
-            content='Youtube Magazine™ - Explore. Discover. Connect.'
+            content='Movies Magazine.™ - Explore. Discover. Watch..'
           />
           <meta
             property='og:description'
-            content='Indulge in curated video content, all at your fingertips!'
+            content='Explore the world of cinema with Movies Magazine: Captivating reviews, top picks, and the latest news.'
           />
           <meta
             property='og:url'
-            content='https://youtubemagazine.vercel.app/'
-          />
+            content='https://moviesmagazine.onrender.com/'
+          />  
           <meta
             property='og:site_name'
-            content='YouTube Magazine - Explore. Discover. Connect.'
+            content='Movies Magazine. - Explore. Discover. Watch..'
           />
           <meta
             property='og:image'
-            content='https://youtubemagazine.vercel.app/og_image.webp'
+            content='https://moviesmagazine.onrender.com/og_image.jpg'
           />
           <meta property='og:image:width' content='1280' />
           <meta property='og:image:height' content='720' />
           <meta property='og:image:type' content='image/webp' />
           <meta
             name='application-name'
-            content='Youtube Magazine - Explore. Discover. Connect.'
+            content='Movies Magazine. - Explore. Discover. Watch..'
           />
           <meta
             property='article:modified_time'
@@ -89,17 +89,17 @@ class MyDocument extends Document {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://youtubemagazine.vercel.app/sitemap.xml'
+            href='https://moviesmagazine.onrender.com/sitemap.xml'
           />
           <meta name='twitter:card' content='summary_large_image' />
-          <meta name="trustpilot-one-time-domain-verification-id" content="48b41bc7-60cf-4de8-9c3b-6a55be476696"/>
+      
           <meta
             name='google-adsense-account'
             content='ca-pub-5527677677744511'
           />
           <meta
             name='google-site-verification'
-            content='BZNZaUyoS1nXyRfa99f4VJ3ABKZUZhkKB0pZ3DU3L8s'
+            content='29ovWU8qJ15jdW0kAcuES-LaJKM1Dsk3neAuZEBz5gs'
           />
           <meta
             name='facebook-domain-verification'
@@ -107,14 +107,24 @@ class MyDocument extends Document {
           />
           <meta
             name='dailymotion-domain-verification'
-            content='dm0zffs8dj8pcb3gd'
+            content='dmdzuqt3p027t2adn'
           />
           <meta name='monetag' content='35a75bbdeae678c82776e64fb78cdac5' />
+          
+        
         </Head>
 
         <body>
           <Main />
           <NextScript />
+          {/* <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-W62BF3BQ"
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+            ></iframe>
+          </noscript> */}
         </body>
       </Html>
     )
