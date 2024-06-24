@@ -3,7 +3,8 @@ import { InlineReactionButtons } from 'sharethis-reactjs'
 
 const Rating = () => {
   return (
-    <div>
+    <div className='flex flex-col items-center justify-center'>
+      
       <h2
         className='text-white text-center font-bold'
         style={{
@@ -14,6 +15,7 @@ const Rating = () => {
       >
         Add Your Ratings.{' '}
       </h2>
+    
       <style
         dangerouslySetInnerHTML={{
           __html: `
