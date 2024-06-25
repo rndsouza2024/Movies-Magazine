@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import latestData from '../../public/latest.json'
-import reviewsData from '../../public/reviews.json'
+import moviesData from '../../public/movies.json'
 // import Marquee from '../../components/Marquee'
 
 import Pagination from '../../components/Pagination'
@@ -45,7 +45,7 @@ const softwareSchema = JSON.stringify({
   headline: 'Movies Review Website | Movies Magazine.™',
   url: 'https://moviesmagazine.vercel.app/movies/',
   description:
-    'Explore the world of cinema with Movies Magazine: Captivating reviews, top picks, and the latest news.',
+    'Explore the world of cinema with Movies Magazine: Captivating movies, top picks, and the latest news.',
   image: 'https://moviesmagazine.vercel.app/wp-content/uploads/movies.webp',
   author: {
     '@type': 'Person',
@@ -122,7 +122,7 @@ const moviesPage = ({ items }) => {
         />
         <meta
           property='og:description'
-          content='Explore the world of cinema with Movies Magazine: Captivating reviews, top picks, and the latest news.'
+          content='Explore the world of cinema with Movies Magazine: Captivating movies, top picks, and the latest news.'
         />
 
         <meta property='og:url' content='https://moviesmagazine.vercel.app/movies' />
@@ -142,7 +142,7 @@ const moviesPage = ({ items }) => {
         />
         <meta
           name='keywords'
-          content='movie review sites,movie magazine,movie magazines uk,movie magazines us,movie magazines in,the film magazine,thefilmmagazine,movie news websites,film reviews,film reviews uk,film reviews us,film reviews in,film magazine online'
+          content='movie review sites,movie magazine,movie magazines uk,movie magazines us,movie magazines in,the film magazine,thefilmmagazine,movie news websites,film movies,film movies uk,film movies us,film movies in,film magazine online'
         />
         <meta
           property='og:image'
@@ -222,7 +222,7 @@ const moviesPage = ({ items }) => {
           marginBottom: '15px'
         }}
       >
-        Movies Magazine - Movies Review Section.
+        Movies Magazine - Movies Section.
       </h1>
 
       <div
@@ -303,10 +303,10 @@ const moviesPage = ({ items }) => {
         <div className='flex-container'>
           <div className='main-content'>
             <div className='card-container' >
-              {reviewsData.map(item => (
+              {moviesData.map(item => (
                 <div key={item.id}>
                   {/* <div key={item.id} className='card'> */}
-                  <Link href={`/reviews/${item.id}`}>
+                  <Link href={`/movies/${item.id}`}>
                     <div className='relative'>
                       <Image
                         src={item.image}
@@ -368,7 +368,7 @@ const moviesPage = ({ items }) => {
                 textShadow: '1px 2px 2px #000'
               }}
             >
-            LATEST MOVIES NEWS.
+              LATEST MOVIES NEWS.
             </p>
             <div className='categorylatest-container'>
               <div className='cardlatest-container'>
@@ -518,7 +518,7 @@ const moviesPage = ({ items }) => {
 
 export async function getStaticProps () {
   try {
-    const res = await fetch('https://moviesmagazine.vercel.app/reviews.json')
+    const res = await fetch('https://moviesmagazine.vercel.app/movies.json')
     const data = await res.json()
 
     return {

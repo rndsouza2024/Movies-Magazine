@@ -482,7 +482,7 @@ const trailerDetail = ({ trailerItem }) => {
           backgroundColor: '#D3D3D3'
         }}
       >
-               <div
+          <div
           className='shadow-lg flex items-center justify-center'
           role='navigation'
         >
@@ -506,7 +506,7 @@ const trailerDetail = ({ trailerItem }) => {
                   href='../trailer/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Movies Trailers<span className='p'></span>
+                   Trailers<span className='p'></span>
                 </a>
               </li>
             </button>
@@ -516,7 +516,7 @@ const trailerDetail = ({ trailerItem }) => {
                   href='../reviews/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Movies Reviews<span className='p'></span>
+                   Reviews<span className='p'></span>
                 </a>
               </li>
             </button>
@@ -527,21 +527,31 @@ const trailerDetail = ({ trailerItem }) => {
                   href='../recaps/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Movies Recaps<span className='p'></span>
+                   Recaps<span className='p'></span>
                 </a>
               </li>
             </button> 
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a
-                  href='../latest/'
+                  href='../movies/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Movies Post<span className='p'></span>
+                  Movies <span className='p'></span>
                 </a>
               </li>
             </button>
-          </ul>
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-194' className='menu-tutorials'>
+                <a
+                  href='../latest/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                   Post<span className='p'></span>
+                </a>
+              </li>
+            </button>
+            </ul>
         </div>
 
 
@@ -1001,7 +1011,7 @@ const trailerDetail = ({ trailerItem }) => {
                 textShadow: '1px 2px 2px #000'
               }}
             >
-              LATEST trailer NEWS.
+              LATEST MOVIES NEWS.
             </p>
             <div className='categorylatest-container'>
               <div className='cardlatest-container'>

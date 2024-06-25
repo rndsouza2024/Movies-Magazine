@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-// import securityData from '../public/security.json'
+import moviesData from '../public/movies.json'
 import latestData from '../public/latest.json'
 import reviewsData from '../public/reviews.json'
 import trailerData from '../public/trailer.json'
@@ -20,11 +20,11 @@ function getRandomItems (array, numberOfItems) {
 const HomePage = () => {
   const [latest, setlatest] = useState(latestData)
 
-  // const [security, setsecurity] = useState(securityData.slice(0, 2)) // Only the first 2 items
-  // const [browser, setbrowser] = useState(browserData.slice(0, 2)) // Only the first 2 items
+  // const [movies, setmovies] = useState(moviesData.slice(0, 4)) // Only the first 2 items
+  // // const [browser, setbrowser] = useState(browserData.slice(0, 2)) // Only the first 2 items
 
   // Initial state with a consistent set of data
-  // const [security, setsecurity] = useState(securityData.slice(0, 2))
+  const [movies, setmovies] = useState(moviesData.slice(0, 4))
   const [reviews, setreviews] = useState(reviewsData.slice(0, 4))
   const [trailer, settrailer] = useState(trailerData.slice(0, 4))
   // const [graphicdesign, setgraphicdesign] = useState(
@@ -33,13 +33,13 @@ const HomePage = () => {
 
   // // Update the state with random items after the component mounts
   useEffect(() => {
-  //   const shuffledsecurityData = getRandomItems(securityData, 2)
+    const shuffledmoviesData = getRandomItems(moviesData, 4)
     const shuffledreviewsData = getRandomItems(reviewsData, 4)
     const shuffledtrailerData = getRandomItems(trailerData, 4)
   //   const shuffledgraphicdesignData = getRandomItems(graphicdesignData, 2)
     const shuffledrecapsData = getRandomItems(recapsData, 4)
 
-  //   setsecurity(shuffledsecurityData)
+    setmovies(shuffledmoviesData)
     setreviews(shuffledreviewsData)
     settrailer(shuffledtrailerData)
   //   setgraphicdesign(shuffledgraphicdesignData)
@@ -384,21 +384,7 @@ const HomePage = () => {
           Explore. Discover. Watch.{' '}
         </p>
 
-        {/* <p
-          className='px-0 text-black font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl hover:text-blue-800 mt-2'
-          style={{
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: '10px',
-            fontSize: '35px',
-            fontFamily: 'Poppins, sans-serif',
-            fontWeight: 'bold',
-            textAlign: 'center',
-            marginBottom: '15px'
-          }}
-        >
-          Select Categories.{' '}
-        </p> */}
+    
         <div
           className='shadow-lg flex items-center justify-center'
           role='navigation'
@@ -423,7 +409,7 @@ const HomePage = () => {
                   href='../trailer/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Movies Trailers<span className='p'></span>
+                   Trailers<span className='p'></span>
                 </a>
               </li>
             </button>
@@ -433,7 +419,7 @@ const HomePage = () => {
                   href='../reviews/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Movies Reviews<span className='p'></span>
+                   Reviews<span className='p'></span>
                 </a>
               </li>
             </button>
@@ -444,21 +430,31 @@ const HomePage = () => {
                   href='../recaps/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Movies Recaps<span className='p'></span>
+                   Recaps<span className='p'></span>
                 </a>
               </li>
             </button> 
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a
-                  href='../latest/'
+                  href='../movies/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Movies Post<span className='p'></span>
+                  Movies <span className='p'></span>
                 </a>
               </li>
             </button>
-          </ul>
+            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+              <li id='menu-item-194' className='menu-tutorials'>
+                <a
+                  href='../latest/'
+                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                >
+                   Post<span className='p'></span>
+                </a>
+              </li>
+            </button>
+            </ul>
         </div>
 
         {/* <h3
@@ -658,20 +654,20 @@ const HomePage = () => {
                   }}
                 >
                   Many More Coming Soon...
-                </p>
-                {security.map(securityItem => (
-                  <div key={securityItem.id} className='card'>
-                    <a href={`/security/${securityItem.id}`}>
+                </p> */}
+                {movies.map(moviesItem => (
+                  <div key={moviesItem.id} className='card'>
+                    <a href={`/movies/${moviesItem.id}`}>
                       <p
                         className='text-black text-xl bg-gradient-to-r from-amber-500 to-pink-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'
                         style={{ marginBottom: '20px' }}
                       >
-                        {securityItem.name}
+                        {moviesItem.name}
                       </p>
                       <div className='relative'>
                         <Image
-                          src={securityItem.image}
-                          alt={securityItem.title}
+                          src={moviesItem.image}
+                          alt={moviesItem.title}
                           className='rounded-lg '
                           width={140} // Specify the desired width
                           height={140} // Specify the desired height
@@ -685,10 +681,10 @@ const HomePage = () => {
                         />
 
                         <div className='bg-gradient-to-r from-pink-700 to-blue-700 bg-clip-text text-transparent text-black text-lg font-semibold mt-2'>
-                          {securityItem.text}
+                          {moviesItem.text}
                         </div>
                         <div className='badge bg-gradient-to-r from-pink-500 to-amber-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300'>
-                          {securityItem.badge}
+                          {moviesItem.badge}
                         </div>
                       </div>
                     </a>
@@ -704,7 +700,7 @@ const HomePage = () => {
                   }}
                 >
                   Many More Coming Soon...
-                </p> */}
+                </p> 
               </div>
             </div>
             <div className='sidebar'>
