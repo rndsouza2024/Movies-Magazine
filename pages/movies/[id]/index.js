@@ -58,10 +58,10 @@ const moviesDetail = ({ moviesItem }) => {
     : { id: '', thumbnail: '' };
 
   const src = isTvShow
-    ? `https://filemoon.sx/e/${currentVideoItem.id}/?thumbnail=${currentVideoItem.thumbnail}`
-    : `https://filemoon.sx/e/${movieVideoItem.id}/?thumbnail=${movieVideoItem.thumbnail}`;
-
-
+    ? `https://short.ink/${currentVideoItem.id}/?thumbnail=${currentVideoItem.thumbnail}`
+    : `https://short.ink/${movieVideoItem.id}/?thumbnail=${movieVideoItem.thumbnail}`;
+ 
+  
     useEffect(() => {
     const detectMobileDevice = () => {
       const userAgent =
@@ -802,9 +802,8 @@ const moviesDetail = ({ moviesItem }) => {
         width='100%'
         height='450px'
         allowFullScreen
-        webkitRequestFullscreen
+        scrolling="0"
         title='Video Player'
-        allow='autoplay; fullscreen'
         style={{
           filter: 'contrast(1.2) saturate(1.3) brightness(1.1) hue-rotate(15deg)'
         }}
@@ -843,7 +842,7 @@ const moviesDetail = ({ moviesItem }) => {
         }}
       />
     </div>
-            
+    
               <div className='flex flex-col items-center justify-center'></div>
               {moviesItem.mp3player && (
                 <MP3Player mp3Url={moviesItem.mp3player} />
