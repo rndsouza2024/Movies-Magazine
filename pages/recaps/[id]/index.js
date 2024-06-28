@@ -766,12 +766,7 @@ const recapsDetail = ({ recapsItem }) => {
                     filter: 'contrast(1.2) saturate(1.3) brightness(1.1) hue-rotate(15deg)'
                   }}
                 ></iframe>
-                
               </div>
-              <p className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-sm'>
-                  *Note: Use Setting in Player to improve the Quality of video
-                  to HD Quality 1080p.
-                </p>
               <div className='flex flex-col items-center justify-center'>
                 {/* <h2
                   className='text-black bg-gradient-to-r from-pink-500 to-amber-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:from-amber-600 hover:to-pink-600 transition duration-300 text-2xl'

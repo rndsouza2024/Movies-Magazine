@@ -23,46 +23,46 @@ const moviesDetail = ({ moviesItem }) => {
   const [showTimer, setShowTimer] = useState(false)
   const [isMobileDevice, setIsMobileDevice] = useState(false)
 
-  const [currentEpisodeIndex, setCurrentEpisodeIndex] = useState(0)
 
-  const isTvShow = moviesItem.videotvitem && moviesItem.videotvitem.length > 0
+  const [currentEpisodeIndex, setCurrentEpisodeIndex] = useState(0);
+
+  const isTvShow = moviesItem.videotvitem && moviesItem.videotvitem.length > 0;
 
   const handleNext = () => {
     if (isTvShow && currentEpisodeIndex < moviesItem.videotvitem.length - 1) {
-      setCurrentEpisodeIndex(currentEpisodeIndex + 1)
+      setCurrentEpisodeIndex(currentEpisodeIndex + 1);
     } else if (isTvShow) {
-      setCurrentEpisodeIndex(0) // Loop back to the first episode
+      setCurrentEpisodeIndex(0); // Loop back to the first episode
     }
-  }
+  };
 
   const handlePrevious = () => {
     if (isTvShow && currentEpisodeIndex > 0) {
-      setCurrentEpisodeIndex(currentEpisodeIndex - 1)
+      setCurrentEpisodeIndex(currentEpisodeIndex - 1);
     }
-  }
+  };
 
-  const parseVideoItem = item => {
-    if (!item) return { id: '', thumbnail: '' }
-    const [id, params] = item.split('?')
-    const thumbnail = new URLSearchParams(params).get('thumbnail')
-    return { id, thumbnail }
-  }
+  const parseVideoItem = (item) => {
+    if (!item) return { id: '', thumbnail: '' };
+    const [id, params] = item.split('?');
+    const thumbnail = new URLSearchParams(params).get('thumbnail');
+    return { id, thumbnail };
+  };
 
-  const currentVideoItem =
-    isTvShow && moviesItem.videotvitem[currentEpisodeIndex]
-      ? parseVideoItem(moviesItem.videotvitem[currentEpisodeIndex])
-      : { id: '', thumbnail: '' }
+  const currentVideoItem = isTvShow && moviesItem.videotvitem[currentEpisodeIndex]
+    ? parseVideoItem(moviesItem.videotvitem[currentEpisodeIndex])
+    : { id: '', thumbnail: '' };
 
-  const movieVideoItem =
-    moviesItem.videomoviesitem && moviesItem.videomoviesitem.length > 0
-      ? parseVideoItem(moviesItem.videomoviesitem[0])
-      : { id: '', thumbnail: '' }
+  const movieVideoItem = moviesItem.videomoviesitem && moviesItem.videomoviesitem.length > 0
+    ? parseVideoItem(moviesItem.videomoviesitem[0])
+    : { id: '', thumbnail: '' };
 
   const src = isTvShow
     ? `https://short.ink/${currentVideoItem.id}/?thumbnail=${currentVideoItem.thumbnail}`
-    : `https://short.ink/${movieVideoItem.id}/?thumbnail=${movieVideoItem.thumbnail}`
-
-  useEffect(() => {
+    : `https://short.ink/${movieVideoItem.id}/?thumbnail=${movieVideoItem.thumbnail}`;
+ 
+  
+    useEffect(() => {
     const detectMobileDevice = () => {
       const userAgent =
         typeof window.navigator === 'undefined' ? '' : navigator.userAgent
@@ -83,9 +83,7 @@ const moviesDetail = ({ moviesItem }) => {
       '@type': 'Organization',
       name: 'Movies Magazine.',
       url: 'https://moviesmagazine.vercel.app/',
-      image: [
-        'https://moviesmagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'
-      ],
+      image: ['https://moviesmagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'],
       logo: {
         '@type': 'ImageObject',
         url: 'https://moviesmagazine.vercel.app/logo.png',
@@ -101,8 +99,7 @@ const moviesDetail = ({ moviesItem }) => {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate:
-            'https://moviesmagazine.vercel.app/search?q={search_term_string}'
+          urlTemplate: 'https://moviesmagazine.vercel.app/search?q={search_term_string}'
         },
         'query-input': 'required name=search_term_string'
       }
@@ -455,7 +452,7 @@ const moviesDetail = ({ moviesItem }) => {
           }}
         />
       </Head>
-      {/* <Script src='../../propler/ads.js' defer />
+        {/* <Script src='../../propler/ads.js' defer />
         <Script src='../../propler/ads2.js' defer /> */}
 
       <div
@@ -772,103 +769,86 @@ const moviesDetail = ({ moviesItem }) => {
                 Watch Online Movies & Tv Series.
               </p>
               <div
-                style={{
-                  width: '100%',
-                  height: '500px',
-                  overflow: 'hidden',
-                  position: 'relative'
-                }}
-                className='rounded-xl mr-8 flex flex-col border-1 border-blue-600 bg-black p-2'
-              >
-                {isTvShow && (
-                  <button
-                    onClick={handleNext}
-                    disabled={
-                      currentEpisodeIndex === moviesItem.videotvitem.length - 1
-                    }
-                    style={{
-                      marginBottom: '10px',
-                      padding: '8px 16px',
-                      backgroundColor: '#51AFF7', // Blue background
-                      color: 'white', // White text
-                      border: 'none',
-                      cursor: 'pointer',
-                      borderRadius: '20px', // Rounded corners
-                      fontWeight: 'bold',
-                      alignSelf: 'center' // Center align
-                    }}
-                  >
-                    Next - Episode{' '}
-                    {currentEpisodeIndex === moviesItem.videotvitem.length - 1
-                      ? 1
-                      : currentEpisodeIndex + 2}
-                  </button>
-                )}
-                <iframe
-                  frameBorder='0'
-                  src={src}
-                  // src={`${src}?autoplay=0`}
-                  width='100%'
-                  height='450px'
-                  allowFullScreen
-                  scrolling='0'
-                  title='Video Player'
-                  style={{
-                    filter:
-                      'contrast(1.2) saturate(1.3) brightness(1.1) hue-rotate(15deg)'
-                  }}
-                ></iframe>
+      style={{
+        width: '100%',
+        height: '500px',
+        overflow: 'hidden',
+        position: 'relative'
+      }}
+      className='rounded-xl mr-8 flex flex-col border-1 border-blue-600 bg-black p-2'
+    >
+      {isTvShow && (
+        <button
+          onClick={handleNext}
+          disabled={currentEpisodeIndex === moviesItem.videotvitem.length - 1}
+          style={{
+            marginBottom: '10px',
+            padding: '8px 16px',
+            backgroundColor: '#51AFF7', // Blue background
+            color: 'white', // White text
+            border: 'none',
+            cursor: 'pointer',
+            borderRadius: '20px', // Rounded corners
+            fontWeight: 'bold',
+            alignSelf: 'center' // Center align
+          }}
+        >
+          Next - Episode {currentEpisodeIndex === moviesItem.videotvitem.length - 1 ? 1 : currentEpisodeIndex + 2}
+        </button>
+      )}
+      <iframe
+        frameBorder='0'
+        src={src}
+        width='100%'
+        height='450px'
+        allowFullScreen
+        scrolling="0"
+        title='Video Player'
+        style={{
+          filter: 'contrast(1.2) saturate(1.3) brightness(1.1) hue-rotate(15deg)'
+        }}
+      ></iframe>
+     
+      {isTvShow && (
+        <button
+          onClick={handlePrevious}
+          disabled={currentEpisodeIndex === 0}
+          style={{
+            marginTop: '10px',
+            padding: '8px 16px',
+            backgroundColor: '#32CD32', // Green background
+            color: 'white', // White text
+            border: 'none',
+            cursor: 'pointer',
+            borderRadius: '20px', // Rounded corners
+            fontWeight: 'bold',
+            alignSelf: 'center' // Center align
+          }}
+        >
+          Prev - Episode {currentEpisodeIndex === 0 ? moviesItem.videotvitem.length : currentEpisodeIndex}
+        </button>
+      )}
 
-                {isTvShow && (
-                  <button
-                    onClick={handlePrevious}
-                    disabled={currentEpisodeIndex === 0}
-                    style={{
-                      marginTop: '10px',
-                      padding: '8px 16px',
-                      backgroundColor: '#32CD32', // Green background
-                      color: 'white', // White text
-                      border: 'none',
-                      cursor: 'pointer',
-                      borderRadius: '20px', // Rounded corners
-                      fontWeight: 'bold',
-                      alignSelf: 'center' // Center align
-                    }}
-                  >
-                    Prev - Episode{' '}
-                    {currentEpisodeIndex === 0
-                      ? moviesItem.videotvitem.length
-                      : currentEpisodeIndex}
-                  </button>
-                )}
-                <p className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-sm'>
-                  *Note: Use Setting in Player to improve the Quality of video
-                  to HD Quality 1080p.
-                </p>
-                <img
-                  src={
-                    isTvShow
-                      ? currentVideoItem.thumbnail
-                      : movieVideoItem.thumbnail
-                  }
-                  alt='Video Thumbnail'
-                  style={{
-                    position: 'absolute',
-                    top: '2px', // Positioning the image at the top to avoid overlaying controls
-                    left: '10px',
-                    width: '100px',
-                    height: '56px',
-                    borderRadius: '10px'
-                  }}
-                />
-              </div>
-
+      <img
+        src={isTvShow ? currentVideoItem.thumbnail : movieVideoItem.thumbnail}
+        alt='Video Thumbnail'
+        style={{
+          position: 'absolute',
+          top: '2px', // Positioning the image at the top to avoid overlaying controls
+          left: '10px',
+          width: '100px',
+          height: '56px',
+          borderRadius: '10px'
+        }}
+      />
+    </div>
+    
               <div className='flex flex-col items-center justify-center'></div>
               {moviesItem.mp3player && (
                 <MP3Player mp3Url={moviesItem.mp3player} />
               )}
 
-              <Pagination
+              <Pagination 
                 currentPage={currentPage}
                 totalPages={totalPages}
                 route='movies'
