@@ -228,7 +228,8 @@ const latestDetail = ({ latest }) => {
           property='article:modified_time'
           content='2024-01-01T13:13:13+00:00'
         />
-        <meta property='og:image' content={`${latest && latest.backimage}`} />
+        <meta property='og:image'
+        content={latest.backimage}
 
         <meta property='og:image:width' content='1280px' />
         <meta property='og:image:height' content='720px' />

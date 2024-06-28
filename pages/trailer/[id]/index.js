@@ -350,7 +350,7 @@ const trailerDetail = ({ trailerItem }) => {
         />
         <meta
           property='og:image'
-          content={`${trailerItem && trailerItem.backimage}`}
+          content={trailerItem.backimage}
         />
 
         <meta property='og:image:width' content='1280px' />
@@ -775,11 +775,12 @@ const trailerDetail = ({ trailerItem }) => {
                   }}
                 ></iframe>
               </div>
+              <p className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-sm'>
+                  *Note: Use Setting in Player to improve the Quality of video
+                  to HD Quality 1080p.
+                </p>
               <div className='flex flex-col items-center justify-center'>
-           
-           
-
-           
+            
               </div>
               {trailerItem.mp3player && (
                 <MP3Player mp3Url={trailerItem.mp3player} />
