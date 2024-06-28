@@ -808,7 +808,11 @@ const moviesDetail = ({ moviesItem }) => {
           filter: 'contrast(1.2) saturate(1.3) brightness(1.1) hue-rotate(15deg)'
         }}
       ></iframe>
-     
+        <p   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-sm'              
+              >
+                *Note: Use Setting in Player to improve the Quality of video to
+                HD Quality 1080p.
+              </p>
       {isTvShow && (
         <button
           onClick={handlePrevious}

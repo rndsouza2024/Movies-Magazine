@@ -761,10 +761,12 @@ const reviewsDetail = ({ reviewsItem }) => {
                   }}
                 ></iframe>
               </div>
+              <p   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-sm'              
+              >
+                *Note: Use Setting in Player to improve the Quality of video to
+                HD Quality 1080p.
+              </p>
               <div className='flex flex-col items-center justify-center'>
-           
-           
-
            
               </div>
               {reviewsItem.mp3player && (
