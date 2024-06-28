@@ -382,7 +382,7 @@ const moviesDetail = ({ moviesItem }) => {
         />
         <meta
           property='og:image'
-          content={moviesItem.backimage}
+          content={`${moviesItem && moviesItem.backimage}`}
         />
 
         <meta property='og:image:width' content='1280px' />

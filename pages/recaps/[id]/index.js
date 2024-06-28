@@ -344,7 +344,7 @@ const recapsDetail = ({ recapsItem }) => {
         />
         <meta
           property='og:image'
-          content={recapsItem.backimage}
+          content={`${recapsItem && recapsItem.backimage}`}
         />
 
         <meta property='og:image:width' content='1280px' />

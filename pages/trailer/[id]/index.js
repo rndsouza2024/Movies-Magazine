@@ -350,7 +350,7 @@ const trailerDetail = ({ trailerItem }) => {
         />
         <meta
           property='og:image'
-          content={trailerItem.backimage}
+          content={`${trailerItem && trailerItem.backimage}`}
         />
 
         <meta property='og:image:width' content='1280px' />

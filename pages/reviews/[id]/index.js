@@ -350,7 +350,7 @@ const reviewsDetail = ({ reviewsItem }) => {
         />
         <meta
           property='og:image'
-          content={reviewsItem.backimage}
+          content={`${reviewsItem && reviewsItem.backimage}`}
         />
 
         <meta property='og:image:width' content='1280px' />
