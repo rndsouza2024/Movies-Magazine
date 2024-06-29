@@ -26,13 +26,13 @@ const latestDetail = ({ latest }) => {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Movies Magazine™ - Explore. Discover. Watch.',
-      url: 'https://moviesmagazine.vercel.app/',
+      url: 'https://123moviemagazine.vercel.app/',
       image: [
-        'https://moviesmagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'
+        'https://123moviemagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'
       ],
       logo: {
         '@type': 'ImageObject',
-        url: 'https://moviesmagazine.vercel.app/logo.png',
+        url: 'https://123moviemagazine.vercel.app/logo.png',
         width: 280,
         height: 80
       }
@@ -40,13 +40,13 @@ const latestDetail = ({ latest }) => {
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      url: 'https://moviesmagazine.vercel.app/',
+      url: 'https://123moviemagazine.vercel.app/',
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
           urlTemplate:
-            'https://moviesmagazine.vercel.app/search?q={search_term_string}'
+            'https://123moviemagazine.vercel.app/search?q={search_term_string}'
         },
         'query-input': 'required name=search_term_string'
       }
@@ -63,8 +63,8 @@ const latestDetail = ({ latest }) => {
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://moviesmagazine.vercel.app/#website',
-        url: 'https://moviesmagazine.vercel.app/',
+        '@id': 'https://123moviemagazine.vercel.app/#website',
+        url: 'https://123moviemagazine.vercel.app/',
         name: 'Movies Magazine',
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -79,15 +79,15 @@ const latestDetail = ({ latest }) => {
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         isPartOf: {
-          '@id': 'https://moviesmagazine.vercel.app/#website'
+          '@id': 'https://123moviemagazine.vercel.app/#website'
         },
         inLanguage: 'en-US'
       },
       {
         '@type': 'Person',
-        '@id': 'https://moviesmagazine.vercel.app/author/latest/',
+        '@id': 'https://123moviemagazine.vercel.app/author/latest/',
         name: 'Dr Trailer',
-        url: 'https://moviesmagazine.vercel.app/author/latest/',
+        url: 'https://123moviemagazine.vercel.app/author/latest/',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -95,7 +95,7 @@ const latestDetail = ({ latest }) => {
           caption: 'Dr Trailer',
           inLanguage: 'en-US'
         },
-        sameAs: ['https://moviesmagazine.vercel.app/']
+        sameAs: ['https://123moviemagazine.vercel.app/']
       },
       {
         '@type': 'Article',
@@ -105,7 +105,7 @@ const latestDetail = ({ latest }) => {
         dateModified: '2024-01-13T13:13:00+00:00',
         articleSection: 'latest',
         author: {
-          '@id': 'https://moviesmagazine.vercel.app/author/latest/'
+          '@id': 'https://123moviemagazine.vercel.app/author/latest/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -129,7 +129,7 @@ const latestDetail = ({ latest }) => {
         dateModified: '2024-01-13T13:13:00+00:00',
         articleSection: 'latest',
         author: {
-          '@id': 'https://moviesmagazine.vercel.app/author/latest/'
+          '@id': 'https://123moviemagazine.vercel.app/author/latest/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -180,7 +180,7 @@ const latestDetail = ({ latest }) => {
       name: 'Movies Magazine',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://moviesmagazine.vercel.app/og_image.jpg'
+        url: 'https://123moviemagazine.vercel.app/og_image.jpg'
       }
     },
     additionalProperty: {
@@ -206,7 +206,7 @@ const latestDetail = ({ latest }) => {
         <meta name='googlebot' content='index,follow' />
         <meta name='revisit-after' content='1 days' />
         <meta property='og:locale' content='en_US' />
-        <meta property="og:type" content="video.other" />
+        <meta property="og:type" content="video.movie" />
         <meta
           property='og:title'
           content={`${latest && latest.name} - Movies Magazine`}
@@ -283,7 +283,7 @@ const latestDetail = ({ latest }) => {
               fjs.parentNode.appendChild(js);
             }(window, document, 'script', 'webpushr-jssdk'));
 
-            webpushr('setup', { 'key': 'BI-sQqJzN6CXj_u_Vn0Gtcs-ZM3jmQjpvYR60DLPkKjckBirPbWK-OhdlXMjOL9i6BZTY9Ll8RiOllEmRw6HxGY''});
+            webpushr('setup', { 'key': 'BKSvV9lVloRq4bnhxmbaejJMu352t9jd1ysRyZifuvmrwHOnwmczwfN9NkJlCtS1uCbEhyPLpZgiT63FudsWwFE''});
           `
           }}
         />

@@ -50,13 +50,13 @@ const trailerDetail = ({ trailerItem }) => {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Movies Magazine.',
-      url: 'https://moviesmagazine.vercel.app/',
+      url: 'https://123moviemagazine.vercel.app/',
       image: [
-        'https://moviesmagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'
+        'https://123moviemagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'
       ],
       logo: {
         '@type': 'ImageObject',
-        url: 'https://moviesmagazine.vercel.app/logo.png',
+        url: 'https://123moviemagazine.vercel.app/logo.png',
         width: 280,
         height: 100
       }
@@ -64,13 +64,13 @@ const trailerDetail = ({ trailerItem }) => {
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      url: 'https://moviesmagazine.vercel.app/',
+      url: 'https://123moviemagazine.vercel.app/',
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
           urlTemplate:
-            'https://moviesmagazine.vercel.app/search?q={search_term_string}'
+            'https://123moviemagazine.vercel.app/search?q={search_term_string}'
         },
         'query-input': 'required name=search_term_string'
       }
@@ -85,7 +85,7 @@ const trailerDetail = ({ trailerItem }) => {
         '@type': 'ListItem',
         position: 1,
         name: 'Movies Magazine.',
-        item: 'https://moviesmagazine.vercel.app/'
+        item: 'https://123moviemagazine.vercel.app/'
       },
       {
         '@type': 'ListItem',
@@ -112,8 +112,8 @@ const trailerDetail = ({ trailerItem }) => {
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://moviesmagazine.vercel.app/#website',
-        url: 'https://moviesmagazine.vercel.app/',
+        '@id': 'https://123moviemagazine.vercel.app/#website',
+        url: 'https://123moviemagazine.vercel.app/',
         name: 'Movies Magazine.',
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -128,15 +128,15 @@ const trailerDetail = ({ trailerItem }) => {
         datePublished: trailerItem.datePublished,
         dateModified: trailerItem.dateModified,
         isPartOf: {
-          '@id': 'https://moviesmagazine.vercel.app/#website'
+          '@id': 'https://123moviemagazine.vercel.app/#website'
         },
         inLanguage: 'en-US'
       },
       {
         '@type': 'Person',
-        '@id': 'https://moviesmagazine.vercel.app/author/moviesmagazine./',
+        '@id': 'https://123moviemagazine.vercel.app/author/moviesmagazine./',
         name: 'Dr Trailer',
-        url: 'https://moviesmagazine.vercel.app/author/moviesmagazine./',
+        url: 'https://123moviemagazine.vercel.app/author/moviesmagazine./',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -144,7 +144,7 @@ const trailerDetail = ({ trailerItem }) => {
           caption: 'Dr Trailer',
           inLanguage: 'en-US'
         },
-        sameAs: ['https://moviesmagazine.vercel.app/']
+        sameAs: ['https://123moviemagazine.vercel.app/']
       },
       {
         '@type': 'Article',
@@ -154,7 +154,7 @@ const trailerDetail = ({ trailerItem }) => {
         dateModified: trailerItem.dateModified,
         articleSection: 'Movies trailer',
         author: {
-          '@id': 'https://moviesmagazine.vercel.app/author/trailerItem/'
+          '@id': 'https://123moviemagazine.vercel.app/author/trailerItem/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -178,7 +178,7 @@ const trailerDetail = ({ trailerItem }) => {
         dateModified: trailerItem.dateModified,
         articleSection: 'Other Software',
         author: {
-          '@id': 'https://moviesmagazine.vercel.app/author/moviesmagazine./'
+          '@id': 'https://123moviemagazine.vercel.app/author/moviesmagazine./'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -229,7 +229,7 @@ const trailerDetail = ({ trailerItem }) => {
       name: 'Movies Magazine.',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://moviesmagazine.vercel.app/og_image.jpg'
+        url: 'https://123moviemagazine.vercel.app/og_image.jpg'
       }
     },
     additionalProperty: {
@@ -283,7 +283,7 @@ const trailerDetail = ({ trailerItem }) => {
       name: 'Movies Magazine.???',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://moviesmagazine.vercel.app/og_image.jpg'
+        url: 'https://123moviemagazine.vercel.app/og_image.jpg'
       }
     },
     additionalProperty: {
@@ -320,7 +320,7 @@ const trailerDetail = ({ trailerItem }) => {
         <meta name='googlebot' content='index,follow' />
         <meta name='revisit-after' content='1 days' />
         <meta property='og:locale' content='en_US' />
-        <meta property="og:type" content="video.other" />
+        <meta property="og:type" content="video.movie" />
         <meta
           property='og:title'
           content={`${trailerItem && trailerItem.name} - Movies Magazine.`}
@@ -341,6 +341,7 @@ const trailerDetail = ({ trailerItem }) => {
           property=' og:image:alt'
           content={`${trailerItem && trailerItem.group}`}
         />
+        
         <meta name='mobile-web-app-capable' content='yes' />
         <meta property='article:section' content='Movies Review' />
         <meta name='author' content='admin' />
@@ -418,7 +419,7 @@ const trailerDetail = ({ trailerItem }) => {
               fjs.parentNode.appendChild(js);
             }(window, document, 'script', 'webpushr-jssdk'));
 
-            webpushr('setup', { 'key': 'BI-sQqJzN6CXj_u_Vn0Gtcs-ZM3jmQjpvYR60DLPkKjckBirPbWK-OhdlXMjOL9i6BZTY9Ll8RiOllEmRw6HxGY' });
+            webpushr('setup', { 'key': 'BKSvV9lVloRq4bnhxmbaejJMu352t9jd1ysRyZifuvmrwHOnwmczwfN9NkJlCtS1uCbEhyPLpZgiT63FudsWwFE' });
           `
           }}
         />
@@ -510,7 +511,7 @@ const trailerDetail = ({ trailerItem }) => {
                 </a>
               </li>
             </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+            {/* <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a
                   href='../reviews/'
@@ -530,7 +531,7 @@ const trailerDetail = ({ trailerItem }) => {
                    Recaps<span className='p'></span>
                 </a>
               </li>
-            </button> 
+            </button>  */}
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a

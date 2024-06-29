@@ -14,11 +14,11 @@ const uwatchfreeSchema = JSON.stringify([
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Movies Magazine. - Explore. Discover. Watch.',
-    url: 'https://moviesmagazine.vercel.app/',
-    image: ['https://moviesmagazine.vercel.app/favicon.ico'],
+    url: 'https://123moviemagazine.vercel.app/',
+    image: ['https://123moviemagazine.vercel.app/favicon.ico'],
     logo: {
       '@type': 'ImageObject',
-      url: 'https://moviesmagazine.vercel.app/logo.png',
+      url: 'https://123moviemagazine.vercel.app/logo.png',
       width: 280,
       height: 80
     }
@@ -26,12 +26,12 @@ const uwatchfreeSchema = JSON.stringify([
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    url: 'https://moviesmagazine.vercel.app/',
+    url: 'https://123moviemagazine.vercel.app/',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://moviesmagazine.vercel.app/search?q={search_term_string}'
+        urlTemplate: 'https://123moviemagazine.vercel.app/search?q={search_term_string}'
       },
       'query-input': 'required name=search_term_string'
     }
@@ -41,12 +41,12 @@ const uwatchfreeSchema = JSON.stringify([
 const softwareSchema = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://moviesmagazine.vercel.app/movies/',
+  '@id': 'https://123moviemagazine.vercel.app/movies/',
   headline: 'Movies Review Website | Movies Magazine.™',
-  url: 'https://moviesmagazine.vercel.app/movies/',
+  url: 'https://123moviemagazine.vercel.app/movies/',
   description:
     'Explore the world of cinema with Movies Magazine: Captivating trailer, top picks, and the latest news.',
-  image: 'https://moviesmagazine.vercel.app/wp-content/uploads/movies.webp',
+  image: 'https://123moviemagazine.vercel.app/wp-content/uploads/movies.webp',
   author: {
     '@type': 'Person',
     name: 'DrTrailer',
@@ -57,14 +57,14 @@ const softwareSchema = JSON.stringify({
     name: 'Movies Magazine. - Explore. Discover. Watch.',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://moviesmagazine.vercel.app/og_image.jpg'
+      url: 'https://123moviemagazine.vercel.app/og_image.jpg'
     }
   },
   datePublished: '2024-06-02',
   dateModified: '2024-06-02',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://moviesmagazine.vercel.app/movies/'
+    '@id': 'https://123moviemagazine.vercel.app/movies/'
   },
   additionalProperty: {
     '@type': 'PropertyValue',
@@ -81,13 +81,13 @@ const breadcrumbSchema = JSON.stringify({
       '@type': 'ListItem',
       position: 1,
       name: 'Movies Magazine.',
-      item: 'https://moviesmagazine.vercel.app/'
+      item: 'https://123moviemagazine.vercel.app/'
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Movies.',
-      item: 'https://moviesmagazine.vercel.app/movies/'
+      item: 'https://123moviemagazine.vercel.app/movies/'
     }
   ]
 })
@@ -106,7 +106,7 @@ const moviesPage = ({ items }) => {
     <div className='w-full' style={{ backgroundColor: '#D3D3D3' }}>
       <Head>
         <title> Movies Review Website | Movies Magazine.</title>
-        <link rel='canonical' href='https://moviesmagazine.vercel.app/movies/' />
+        <link rel='canonical' href='https://123moviemagazine.vercel.app/movies/' />
         <meta
           name='robots'
           content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
@@ -115,7 +115,7 @@ const moviesPage = ({ items }) => {
         <meta name='googlebot' content='index,follow' />
         <meta name='revisit-after' content='1 days' />
         <meta property='og:locale' content='en_US' />
-        <meta property="og:type" content="video.other" />
+        <meta property="og:type" content="video.movie" />
         <meta
           property='og:title'
           content='  Movies Review | Movies Magazine.'
@@ -125,13 +125,13 @@ const moviesPage = ({ items }) => {
           content='Explore the world of cinema with Movies Magazine: Captivating trailer, top picks, and the latest news.'
         />
 
-        <meta property='og:url' content='https://moviesmagazine.vercel.app/movies' />
+        <meta property='og:url' content='https://123moviemagazine.vercel.app/movies' />
 
         <meta property='og:site_name' content='Movies Magazine.' />
         <meta property='og:type' content='article' />
         <meta
           property=' og:image:alt'
-          content='https://moviesmagazine.vercel.app/wp-content/uploads/og_image.jpg'
+          content='https://123moviemagazine.vercel.app/wp-content/uploads/og_image.jpg'
         />
         <meta name='mobile-web-app-capable' content='yes' />
         <meta property='article:section' content='Movies' />
@@ -146,7 +146,7 @@ const moviesPage = ({ items }) => {
         />
         <meta
           property='og:image'
-          content='https://moviesmagazine.vercel.app/wp-content/uploads/og_image.jpg'
+          content='https://123moviemagazine.vercel.app/wp-content/uploads/og_image.jpg'
         />
         <meta property='og:image:width' content='1280px' />
         <meta property='og:image:height' content='720px' />
@@ -201,7 +201,7 @@ const moviesPage = ({ items }) => {
               fjs.parentNode.appendChild(js);
             }(window, document, 'script', 'webpushr-jssdk'));
 
-            webpushr('setup', { 'key': 'BI-sQqJzN6CXj_u_Vn0Gtcs-ZM3jmQjpvYR60DLPkKjckBirPbWK-OhdlXMjOL9i6BZTY9Ll8RiOllEmRw6HxGY' });
+            webpushr('setup', { 'key': 'BKSvV9lVloRq4bnhxmbaejJMu352t9jd1ysRyZifuvmrwHOnwmczwfN9NkJlCtS1uCbEhyPLpZgiT63FudsWwFE' });
           `
           }}
         />
@@ -253,7 +253,7 @@ const moviesPage = ({ items }) => {
                 </a>
               </li>
             </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+            {/* <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a
                   href='../reviews/'
@@ -273,7 +273,7 @@ const moviesPage = ({ items }) => {
                    Recaps<span className='p'></span>
                 </a>
               </li>
-            </button> 
+            </button>  */}
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a
@@ -519,7 +519,7 @@ const moviesPage = ({ items }) => {
 
 export async function getStaticProps () {
   try {
-    const res = await fetch('https://moviesmagazine.vercel.app/trailer.json')
+    const res = await fetch('https://123moviemagazine.vercel.app/trailer.json')
     const data = await res.json()
 
     return {
