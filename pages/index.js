@@ -497,7 +497,7 @@ const HomePage = () => {
                 ))}
                 <a
                   href='../trailer/'
-                  className='animate-pulse text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                  className='animate-pulse text-black hover:px-0 font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-2xl'
                 >
                   Many More Coming Soon...Click Here.
                 </a>
@@ -677,7 +677,7 @@ const HomePage = () => {
                 ))}
                  <a
                   href='../movies/'
-                  className='animate-pulse text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+                  className='animate-pulse text-black hover:px-0 font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-2xl'
                 >
                   Many More Coming Soon...Click Here.
                 </a>
