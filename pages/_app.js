@@ -42,7 +42,7 @@ function Application({ Component, pageProps }) {
 
       
  <Script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=664f7ed93a56e900196c14e4&product=sticky-share-buttons&source=platform" async="async"></Script>
-        <GoogleAnalytics measurementId="G-9S9ZSN5SD2" />
+        <GoogleAnalytics measurementId="G-12VQH24CVS" />
         {/* <Script async data-id="101405628" src="//static.getclicky.com/js"></Script> */}
      
         <PageTransition>  

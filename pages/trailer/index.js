@@ -202,7 +202,7 @@ const moviesPage = ({ items }) => {
               fjs.parentNode.appendChild(js);
             }(window, document, 'script', 'webpushr-jssdk'));
 
-            webpushr('setup', { 'key': 'BKSvV9lVloRq4bnhxmbaejJMu352t9jd1ysRyZifuvmrwHOnwmczwfN9NkJlCtS1uCbEhyPLpZgiT63FudsWwFE' });
+            webpushr('setup', { 'key': 'BDeuTTHBlf3TwViBs2cBn2PfLilOFFEjIt_dkh7csfiAUZQDiVh__Idu3BpAEYqNsZ2wmUUQJ1r1_Dtd3TvS_Dk' });
           `
           }}
         />
