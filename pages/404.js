@@ -20,7 +20,7 @@ export default function ErrorPage() {
             <div className="text-red-600 text-4xl font-bold flex title-font py-5 items-center justify-center"> You will be Auto Redirected to Home page.
             </div>
             <div className="flex items-center justify-center">
-                <Image src='https://123moviemagazine.vercel.app/404.webp' alt='404' width={800} height={400} loading="lazy" />
+                <Image src='https://123moviesmagazine.vercel.app/404.webp' alt='404' width={800} height={400} loading="lazy" />
             </div>
             <div className="flex items-center py-5 justify-center">
                 <Link href="/">

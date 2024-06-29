@@ -9,7 +9,7 @@ class MyDocument extends Document {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://123moviemagazine.vercel.app/sitemap.xml'
+            href='https://123moviesmagazine.vercel.app/sitemap.xml'
           />
           <link
             rel='icon'
@@ -50,7 +50,7 @@ class MyDocument extends Document {
           />
           <link
             rel='canonical'
-            href='https://123moviemagazine.vercel.app/'
+            href='https://123moviesmagazine.vercel.app/'
           />
           <meta property='og:locale' content='en_US' />
           <meta property="og:type" content="video.movie" />
@@ -64,7 +64,7 @@ class MyDocument extends Document {
           />
           <meta
             property='og:url'
-            content='https://123moviemagazine.vercel.app/'
+            content='https://123moviesmagazine.vercel.app/'
           />  
           <meta
             property='og:site_name'
@@ -72,7 +72,7 @@ class MyDocument extends Document {
           />
           <meta
             property='og:image'
-            content='https://123moviemagazine.vercel.app/og_image.jpg'
+            content='https://123moviesmagazine.vercel.app/og_image.jpg'
           />
           <meta property='og:image:width' content='1280' />
           <meta property='og:image:height' content='720' />
@@ -89,7 +89,7 @@ class MyDocument extends Document {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://123moviemagazine.vercel.app/sitemap.xml'
+            href='https://123moviesmagazine.vercel.app/sitemap.xml'
           />
           <meta name='twitter:card' content='summary_large_image' />
       

@@ -82,11 +82,11 @@ const moviesDetail = ({ moviesItem }) => {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Movies Magazine.',
-      url: 'https://123moviemagazine.vercel.app/',
-      image: ['https://123moviemagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'],
+      url: 'https://123moviesmagazine.vercel.app/',
+      image: ['https://123moviesmagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'],
       logo: {
         '@type': 'ImageObject',
-        url: 'https://123moviemagazine.vercel.app/logo.png',
+        url: 'https://123moviesmagazine.vercel.app/logo.png',
         width: 280,
         height: 100
       }
@@ -94,12 +94,12 @@ const moviesDetail = ({ moviesItem }) => {
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      url: 'https://123moviemagazine.vercel.app/',
+      url: 'https://123moviesmagazine.vercel.app/',
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate: 'https://123moviemagazine.vercel.app/search?q={search_term_string}'
+          urlTemplate: 'https://123moviesmagazine.vercel.app/search?q={search_term_string}'
         },
         'query-input': 'required name=search_term_string'
       }
@@ -114,7 +114,7 @@ const moviesDetail = ({ moviesItem }) => {
         '@type': 'ListItem',
         position: 1,
         name: 'Movies Magazine.',
-        item: 'https://123moviemagazine.vercel.app/'
+        item: 'https://123moviesmagazine.vercel.app/'
       },
       {
         '@type': 'ListItem',
@@ -141,8 +141,8 @@ const moviesDetail = ({ moviesItem }) => {
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://123moviemagazine.vercel.app/#website',
-        url: 'https://123moviemagazine.vercel.app/',
+        '@id': 'https://123moviesmagazine.vercel.app/#website',
+        url: 'https://123moviesmagazine.vercel.app/',
         name: 'Movies Magazine.',
         publisher: {
           '@id': 'https://gravatar.com/drmovies2022/#person'
@@ -157,15 +157,15 @@ const moviesDetail = ({ moviesItem }) => {
         datePublished: moviesItem.datePublished,
         dateModified: moviesItem.dateModified,
         isPartOf: {
-          '@id': 'https://123moviemagazine.vercel.app/#website'
+          '@id': 'https://123moviesmagazine.vercel.app/#website'
         },
         inLanguage: 'en-US'
       },
       {
         '@type': 'Person',
-        '@id': 'https://123moviemagazine.vercel.app/author/moviesmagazine./',
+        '@id': 'https://123moviesmagazine.vercel.app/author/moviesmagazine./',
         name: 'Dr movies',
-        url: 'https://123moviemagazine.vercel.app/author/moviesmagazine./',
+        url: 'https://123moviesmagazine.vercel.app/author/moviesmagazine./',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drmovies2022',
@@ -173,7 +173,7 @@ const moviesDetail = ({ moviesItem }) => {
           caption: 'Dr movies',
           inLanguage: 'en-US'
         },
-        sameAs: ['https://123moviemagazine.vercel.app/']
+        sameAs: ['https://123moviesmagazine.vercel.app/']
       },
       {
         '@type': 'Article',
@@ -183,7 +183,7 @@ const moviesDetail = ({ moviesItem }) => {
         dateModified: moviesItem.dateModified,
         articleSection: 'Movies movies',
         author: {
-          '@id': 'https://123moviemagazine.vercel.app/author/moviesItem/'
+          '@id': 'https://123moviesmagazine.vercel.app/author/moviesItem/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drmovies2022/#person'
@@ -207,7 +207,7 @@ const moviesDetail = ({ moviesItem }) => {
         dateModified: moviesItem.dateModified,
         articleSection: 'Other Software',
         author: {
-          '@id': 'https://123moviemagazine.vercel.app/author/moviesmagazine./'
+          '@id': 'https://123moviesmagazine.vercel.app/author/moviesmagazine./'
         },
         publisher: {
           '@id': 'https://gravatar.com/drmovies2022/#person'
@@ -258,7 +258,7 @@ const moviesDetail = ({ moviesItem }) => {
       name: 'Movies Magazine.',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://123moviemagazine.vercel.app/og_image.jpg'
+        url: 'https://123moviesmagazine.vercel.app/og_image.jpg'
       }
     },
     additionalProperty: {
@@ -312,7 +312,7 @@ const moviesDetail = ({ moviesItem }) => {
       name: 'Movies Magazine.???',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://123moviemagazine.vercel.app/og_image.jpg'
+        url: 'https://123moviesmagazine.vercel.app/og_image.jpg'
       }
     },
     additionalProperty: {

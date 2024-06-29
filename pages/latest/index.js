@@ -12,11 +12,11 @@ const uwatchfreeSchema = JSON.stringify([
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Movies Magazine - Explore. Discover. Watch.',
-    url: 'https://123moviemagazine.vercel.app/',
-    image: ['https://123moviemagazine.vercel.app/favicon.ico'],
+    url: 'https://123moviesmagazine.vercel.app/',
+    image: ['https://123moviesmagazine.vercel.app/favicon.ico'],
     logo: {
       '@type': 'ImageObject',
-      url: 'https://123moviemagazine.vercel.app/logo.png',
+      url: 'https://123moviesmagazine.vercel.app/logo.png',
       width: 280,
       height: 80
     }
@@ -24,13 +24,13 @@ const uwatchfreeSchema = JSON.stringify([
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    url: 'https://123moviemagazine.vercel.app/',
+    url: 'https://123moviesmagazine.vercel.app/',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
         urlTemplate:
-          'https://123moviemagazine.vercel.app/search?q={search_term_string}'
+          'https://123moviesmagazine.vercel.app/search?q={search_term_string}'
       },
       'query-input': 'required name=search_term_string'
     }
@@ -40,12 +40,12 @@ const uwatchfreeSchema = JSON.stringify([
 const softwareSchema = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://123moviemagazine.vercel.app/latest/',
+  '@id': 'https://123moviesmagazine.vercel.app/latest/',
   headline: 'Download Latest | Movies Magazine™',
-  url: 'https://123moviemagazine.vercel.app/latest/',
+  url: 'https://123moviesmagazine.vercel.app/latest/',
   description:
     'Movies Magazine is the top platform for exploring and downloading software,the premier platform for the latest releases and secure downloads.',
-  image: 'https://123moviemagazine.vercel.app/wp-content/uploads/browser.webp',
+  image: 'https://123moviesmagazine.vercel.app/wp-content/uploads/browser.webp',
   author: {
     '@type': 'Person',
     name: 'DrTrailer',
@@ -56,14 +56,14 @@ const softwareSchema = JSON.stringify({
     name: 'Movies Magazine - Explore. Discover. Watch.',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://123moviemagazine.vercel.app/og_image.jpg'
+      url: 'https://123moviesmagazine.vercel.app/og_image.jpg'
     }
   },
   datePublished: '2024-06-02',
   dateModified: '2024-06-02',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://123moviemagazine.vercel.app/latest/'
+    '@id': 'https://123moviesmagazine.vercel.app/latest/'
   },
   additionalProperty: {
     '@type': 'PropertyValue',
@@ -80,13 +80,13 @@ const breadcrumbSchema = JSON.stringify({
       '@type': 'ListItem',
       position: 1,
       name: 'Windows',
-      item: 'https://123moviemagazine.vercel.app/'
+      item: 'https://123moviesmagazine.vercel.app/'
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Latest Blog',
-      item: 'https://123moviemagazine.vercel.app/latest/'
+      item: 'https://123moviesmagazine.vercel.app/latest/'
     }
   ]
 })
@@ -105,7 +105,7 @@ const latestPage = ({ items }) => {
     <div className='w-full' style={{ backgroundColor: '#D3D3D3' }}>
       <Head>
         <title> Latest Movies News | Movies Magazine™</title>
-        <link rel='canonical' href='https://123moviemagazine.vercel.app/latest/' />
+        <link rel='canonical' href='https://123moviesmagazine.vercel.app/latest/' />
         <meta
           name='robots'
           content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
@@ -123,7 +123,7 @@ const latestPage = ({ items }) => {
 
         <meta
           property='og:url'
-          content='https://123moviemagazine.vercel.app/latest'
+          content='https://123moviesmagazine.vercel.app/latest'
         />
 
         <meta
@@ -134,7 +134,7 @@ const latestPage = ({ items }) => {
         <meta property='og:type' content='article' />
         <meta
           property=' og:image:alt'
-          content='https://123moviemagazine.vercel.app/og_image.jpg'
+          content='https://123moviesmagazine.vercel.app/og_image.jpg'
         />
         <meta name='mobile-web-app-capable' content='yes' />
         <meta property='article:section' content='Latest Blog' />
@@ -149,7 +149,7 @@ const latestPage = ({ items }) => {
         />
         <meta
           property='og:image'
-        content='https://123moviemagazine.vercel.app/og_image.jpg'
+        content='https://123moviesmagazine.vercel.app/og_image.jpg'
         />
         <meta property='og:image:width' content='1280px' />
         <meta property='og:image:height' content='720px' />
@@ -516,7 +516,7 @@ const latestPage = ({ items }) => {
 
 export async function getStaticProps () {
   try {
-    const res = await fetch('https://123moviemagazine.vercel.app/latest.json')
+    const res = await fetch('https://123moviesmagazine.vercel.app/latest.json')
     const data = await res.json()
 
     return {

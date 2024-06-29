@@ -50,13 +50,13 @@ const trailerDetail = ({ trailerItem }) => {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Movies Magazine.',
-      url: 'https://123moviemagazine.vercel.app/',
+      url: 'https://123moviesmagazine.vercel.app/',
       image: [
-        'https://123moviemagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'
+        'https://123moviesmagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'
       ],
       logo: {
         '@type': 'ImageObject',
-        url: 'https://123moviemagazine.vercel.app/logo.png',
+        url: 'https://123moviesmagazine.vercel.app/logo.png',
         width: 280,
         height: 100
       }
@@ -64,13 +64,13 @@ const trailerDetail = ({ trailerItem }) => {
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      url: 'https://123moviemagazine.vercel.app/',
+      url: 'https://123moviesmagazine.vercel.app/',
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
           urlTemplate:
-            'https://123moviemagazine.vercel.app/search?q={search_term_string}'
+            'https://123moviesmagazine.vercel.app/search?q={search_term_string}'
         },
         'query-input': 'required name=search_term_string'
       }
@@ -85,7 +85,7 @@ const trailerDetail = ({ trailerItem }) => {
         '@type': 'ListItem',
         position: 1,
         name: 'Movies Magazine.',
-        item: 'https://123moviemagazine.vercel.app/'
+        item: 'https://123moviesmagazine.vercel.app/'
       },
       {
         '@type': 'ListItem',
@@ -112,8 +112,8 @@ const trailerDetail = ({ trailerItem }) => {
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://123moviemagazine.vercel.app/#website',
-        url: 'https://123moviemagazine.vercel.app/',
+        '@id': 'https://123moviesmagazine.vercel.app/#website',
+        url: 'https://123moviesmagazine.vercel.app/',
         name: 'Movies Magazine.',
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -128,15 +128,15 @@ const trailerDetail = ({ trailerItem }) => {
         datePublished: trailerItem.datePublished,
         dateModified: trailerItem.dateModified,
         isPartOf: {
-          '@id': 'https://123moviemagazine.vercel.app/#website'
+          '@id': 'https://123moviesmagazine.vercel.app/#website'
         },
         inLanguage: 'en-US'
       },
       {
         '@type': 'Person',
-        '@id': 'https://123moviemagazine.vercel.app/author/moviesmagazine./',
+        '@id': 'https://123moviesmagazine.vercel.app/author/moviesmagazine./',
         name: 'Dr Trailer',
-        url: 'https://123moviemagazine.vercel.app/author/moviesmagazine./',
+        url: 'https://123moviesmagazine.vercel.app/author/moviesmagazine./',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -144,7 +144,7 @@ const trailerDetail = ({ trailerItem }) => {
           caption: 'Dr Trailer',
           inLanguage: 'en-US'
         },
-        sameAs: ['https://123moviemagazine.vercel.app/']
+        sameAs: ['https://123moviesmagazine.vercel.app/']
       },
       {
         '@type': 'Article',
@@ -154,7 +154,7 @@ const trailerDetail = ({ trailerItem }) => {
         dateModified: trailerItem.dateModified,
         articleSection: 'Movies trailer',
         author: {
-          '@id': 'https://123moviemagazine.vercel.app/author/trailerItem/'
+          '@id': 'https://123moviesmagazine.vercel.app/author/trailerItem/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -178,7 +178,7 @@ const trailerDetail = ({ trailerItem }) => {
         dateModified: trailerItem.dateModified,
         articleSection: 'Other Software',
         author: {
-          '@id': 'https://123moviemagazine.vercel.app/author/moviesmagazine./'
+          '@id': 'https://123moviesmagazine.vercel.app/author/moviesmagazine./'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -229,7 +229,7 @@ const trailerDetail = ({ trailerItem }) => {
       name: 'Movies Magazine.',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://123moviemagazine.vercel.app/og_image.jpg'
+        url: 'https://123moviesmagazine.vercel.app/og_image.jpg'
       }
     },
     additionalProperty: {
@@ -283,7 +283,7 @@ const trailerDetail = ({ trailerItem }) => {
       name: 'Movies Magazine.???',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://123moviemagazine.vercel.app/og_image.jpg'
+        url: 'https://123moviesmagazine.vercel.app/og_image.jpg'
       }
     },
     additionalProperty: {

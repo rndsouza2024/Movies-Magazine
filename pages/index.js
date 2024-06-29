@@ -52,11 +52,11 @@ const HomePage = () => {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Movies Magazine. - Explore. Discover. Watch.',
-      url: 'https://123moviemagazine.vercel.app/',
-      image: ['https://123moviemagazine.vercel.app/favicon.ico'],
+      url: 'https://123moviesmagazine.vercel.app/',
+      image: ['https://123moviesmagazine.vercel.app/favicon.ico'],
       logo: {
         '@type': 'ImageObject',
-        url: 'https://123moviemagazine.vercel.app/logo.png',
+        url: 'https://123moviesmagazine.vercel.app/logo.png',
         width: 280,
         height: 80
       }
@@ -64,13 +64,13 @@ const HomePage = () => {
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      url: 'https://123moviemagazine.vercel.app/',
+      url: 'https://123moviesmagazine.vercel.app/',
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
           urlTemplate:
-            'https://123moviemagazine.vercel.app/search?q={search_term_string}'
+            'https://123moviesmagazine.vercel.app/search?q={search_term_string}'
         },
         'query-input': 'required name=search_term_string'
       }
@@ -82,9 +82,9 @@ const HomePage = () => {
     '@graph': [
       {
         '@type': 'Person',
-        '@id': 'https://123moviemagazine.vercel.app/author/moviesmagazine/',
+        '@id': 'https://123moviesmagazine.vercel.app/author/moviesmagazine/',
         name: 'Dr Trailer',
-        url: 'https://123moviemagazine.vercel.app/author/moviesmagazine/',
+        url: 'https://123moviesmagazine.vercel.app/author/moviesmagazine/',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -95,37 +95,37 @@ const HomePage = () => {
       },
       {
         '@type': 'Organization',
-        '@id': 'https://123moviemagazine.vercel.app/#organization',
+        '@id': 'https://123moviesmagazine.vercel.app/#organization',
         name: 'Movies Magazine - Explore. Discover. Watch.',
-        url: 'https://123moviemagazine.vercel.app/'
+        url: 'https://123moviesmagazine.vercel.app/'
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://123moviemagazine.vercel.app/#website',
-        url: 'https://123moviemagazine.vercel.app/',
+        '@id': 'https://123moviesmagazine.vercel.app/#website',
+        url: 'https://123moviesmagazine.vercel.app/',
         name: 'Movies Magazine - Explore. Discover. Watch.',
         publisher: {
           '@type': 'Organization',
-          '@id': 'https://123moviemagazine.vercel.app/#organization'
+          '@id': 'https://123moviesmagazine.vercel.app/#organization'
         },
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://123moviemagazine.vercel.app/?s={search_term_string}',
+          target: 'https://123moviesmagazine.vercel.app/?s={search_term_string}',
           'query-input': 'required name=search_term_string'
         }
       },
       {
         '@type': 'WebPage',
-        '@id': 'https://123moviemagazine.vercel.app/#webpage',
-        url: 'https://123moviemagazine.vercel.app/',
+        '@id': 'https://123moviesmagazine.vercel.app/#webpage',
+        url: 'https://123moviesmagazine.vercel.app/',
         name: 'Movie',
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         about: {
           '@type': 'Person',
-          '@id': 'https://123moviemagazine.vercel.app/author/moviesmagazine/',
+          '@id': 'https://123moviesmagazine.vercel.app/author/moviesmagazine/',
           name: 'Dr Trailer',
-          url: 'https://123moviemagazine.vercel.app/author/moviesmagazine/',
+          url: 'https://123moviesmagazine.vercel.app/author/moviesmagazine/',
           image: {
             '@type': 'ImageObject',
             '@id': 'https://gravatar.com/drtrailer2022',
@@ -135,23 +135,23 @@ const HomePage = () => {
           }
         },
         isPartOf: {
-          '@id': 'https://123moviemagazine.vercel.app/#website'
+          '@id': 'https://123moviesmagazine.vercel.app/#website'
         },
         inLanguage: 'en-US',
         mainEntity: [
           {
             '@type': 'Article',
-            '@id': 'https://123moviemagazine.vercel.app/',
-            url: 'https://123moviemagazine.vercel.app/',
+            '@id': 'https://123moviesmagazine.vercel.app/',
+            url: 'https://123moviesmagazine.vercel.app/',
             headline: 'Movies Magazine - Explore. Discover. Watch.',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
               '@id':
-                'https://123moviemagazine.vercel.app/author/moviesmagazine./',
+                'https://123moviesmagazine.vercel.app/author/moviesmagazine./',
               name: 'Dr Trailer',
-              url: 'https://123moviemagazine.vercel.app/author/moviesmagazine/',
+              url: 'https://123moviesmagazine.vercel.app/author/moviesmagazine/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -162,24 +162,24 @@ const HomePage = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://123moviemagazine.vercel.app/#organization',
+              '@id': 'https://123moviesmagazine.vercel.app/#organization',
               name: 'Movies Magazine - Explore. Discover. Watch.',
-              url: 'https://123moviemagazine.vercel.app/'
+              url: 'https://123moviesmagazine.vercel.app/'
             }
           },
           {
             '@type': 'Article',
-            '@id': 'https://123moviemagazine.vercel.app/',
-            url: 'https://123moviemagazine.vercel.app/',
+            '@id': 'https://123moviesmagazine.vercel.app/',
+            url: 'https://123moviesmagazine.vercel.app/',
             headline: 'Movies Magazine. - Explore. Discover. Watch.',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
               '@id':
-                'https://123moviemagazine.vercel.app/author/moviesmagazine/',
+                'https://123moviesmagazine.vercel.app/author/moviesmagazine/',
               name: 'Dr Trailer',
-              url: 'https://123moviemagazine.vercel.app/author/moviesmagazine/',
+              url: 'https://123moviesmagazine.vercel.app/author/moviesmagazine/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -190,24 +190,24 @@ const HomePage = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://123moviemagazine.vercel.app/#organization',
+              '@id': 'https://123moviesmagazine.vercel.app/#organization',
               name: 'Movies Magazine.™ - Explore. Discover. Watch.',
-              url: 'https://123moviemagazine.vercel.app/'
+              url: 'https://123moviesmagazine.vercel.app/'
             }
           },
           {
             '@type': 'Article',
-            '@id': 'https://123moviemagazine.vercel.app/',
-            url: 'https://123moviemagazine.vercel.app/',
+            '@id': 'https://123moviesmagazine.vercel.app/',
+            url: 'https://123moviesmagazine.vercel.app/',
             headline: 'Movies Magazine.™ - Explore. Discover. Watch.',
             datePublished: '2024-01-13T13:00:00+00:00',
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
               '@id':
-                'https://123moviemagazine.vercel.app/author/moviesmagazine/',
+                'https://123moviesmagazine.vercel.app/author/moviesmagazine/',
               name: 'Dr Trailer',
-              url: 'https://123moviemagazine.vercel.app/author/moviesmagazine/',
+              url: 'https://123moviesmagazine.vercel.app/author/moviesmagazine/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -218,9 +218,9 @@ const HomePage = () => {
             },
             publisher: {
               '@type': 'Organization',
-              '@id': 'https://123moviemagazine.vercel.app/#organization',
+              '@id': 'https://123moviesmagazine.vercel.app/#organization',
               name: 'Movies Magazine. - Explore. Discover. Watch.',
-              url: 'https://123moviemagazine.vercel.app/'
+              url: 'https://123moviesmagazine.vercel.app/'
             }
           }
         ]
@@ -237,7 +237,7 @@ const HomePage = () => {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://123moviemagazine.vercel.app/sitemap.xml'
+            href='https://123moviesmagazine.vercel.app/sitemap.xml'
           />
           <meta
             name='viewport'
@@ -276,7 +276,7 @@ const HomePage = () => {
             name='description'
             content='Explore. Discover. Watch.'
           /> */}
-          {/* <link rel='canonical' href='https://123moviemagazine.vercel.app/' /> */}
+          {/* <link rel='canonical' href='https://123moviesmagazine.vercel.app/' /> */}
           <meta property='og:locale' content='en_US' />
           <meta property='og:type' content='video.movie' />
 
@@ -290,7 +290,7 @@ const HomePage = () => {
           />
           <meta
             property='og:url'
-            content='https://123moviemagazine.vercel.app/'
+            content='https://123moviesmagazine.vercel.app/'
           />
           <meta
             property='og:site_name'
@@ -298,7 +298,7 @@ const HomePage = () => {
           />
           <meta
             property='og:image'
-            content='https://123moviemagazine.vercel.app/og_image.jpg'
+            content='https://123moviesmagazine.vercel.app/og_image.jpg'
           />
           <meta property='og:image:width' content='1280' />
           <meta property='og:image:height' content='720' />
@@ -315,7 +315,7 @@ const HomePage = () => {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='https://123moviemagazine.vercel.app/sitemap.xml'
+            href='https://123moviesmagazine.vercel.app/sitemap.xml'
           />
           <meta name='twitter:card' content='summary_large_image' />
           <meta
