@@ -366,27 +366,7 @@ const latestDetail = ({ latest }) => {
                 </a>
               </li>
             </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-194' className='menu-tutorials'>
-                <a
-                  href='../reviews/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                   Reviews<span className='p'></span>
-                </a>
-              </li>
-            </button>
-           
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-11606' className='menu-security'>
-                <a
-                  href='../recaps/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                   Recaps<span className='p'></span>
-                </a>
-              </li>
-            </button> 
+        
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a
