@@ -495,17 +495,12 @@ const HomePage = () => {
                     </a>
                   </div>
                 ))}
-                <p
-                  className=' animate-pulse text-black text-2xl font-semibold mt-2'
-                  style={{
-                    marginTop: '15px',
-                    color: '#000',
-                    font: 'bold',
-                    textShadow: '1px 2px 2px #000 '
-                  }}
+                <a
+                  href='../trailer/'
+                  className='animate-pulse text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Many More Coming Soon...
-                </p>
+                  Many More Coming Soon...Click Here.
+                </a>
                 {/* {recaps.map(recapsItem => (
                   <div key={recapsItem.id} className='card'>
                     <a href={`/recaps/${recapsItem.id}`}>
@@ -680,17 +675,12 @@ const HomePage = () => {
                     </a>
                   </div>
                 ))}
-                <p
-                  className=' animate-pulse text-black text-2xl font-semibold mt-2'
-                  style={{
-                    marginTop: '15px',
-                    color: '#000',
-                    font: 'bold',
-                    textShadow: '1px 2px 2px #000 '
-                  }}
+                 <a
+                  href='../movies/'
+                  className='animate-pulse text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Many More Coming Soon...
-                </p>
+                  Many More Coming Soon...Click Here.
+                </a>
               </div>
             </div>
             <div className='sidebar'>
