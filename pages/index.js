@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { FaTelegram } from 'react-icons/fa'
 import moviesData from '../public/movies.json'
 import latestData from '../public/latest.json'
 // import reviewsData from '../public/reviews.json'
@@ -9,8 +10,6 @@ import trailerData from '../public/trailer.json'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-
-
 
 // Function to shuffle an array and return the first few items
 function getRandomItems (array, numberOfItems) {
@@ -29,20 +28,20 @@ const HomePage = () => {
   const [trailer, settrailer] = useState(trailerData.slice(0, 4))
   // const [graphicdesign, setgraphicdesign] = useState(
   //   graphicdesignData.slice(0, 2))
-    // const [recaps, setrecaps] = useState(recapsData.slice(0, 4))
+  // const [recaps, setrecaps] = useState(recapsData.slice(0, 4))
 
   // // Update the state with random items after the component mounts
   useEffect(() => {
     const shuffledmoviesData = getRandomItems(moviesData, 4)
     // const shuffledreviewsData = getRandomItems(reviewsData, 4)
     const shuffledtrailerData = getRandomItems(trailerData, 4)
-  //   const shuffledgraphicdesignData = getRandomItems(graphicdesignData, 2)
+    //   const shuffledgraphicdesignData = getRandomItems(graphicdesignData, 2)
     // const shuffledrecapsData = getRandomItems(recapsData, 4)
 
     setmovies(shuffledmoviesData)
     // setreviews(shuffledreviewsData)
     settrailer(shuffledtrailerData)
-  //   setgraphicdesign(shuffledgraphicdesignData)
+    //   setgraphicdesign(shuffledgraphicdesignData)
     // setrecaps(shuffledrecapsData)
   }, [])
 
@@ -149,7 +148,8 @@ const HomePage = () => {
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://123moviemagazine.vercel.app/author/moviesmagazine./',
+              '@id':
+                'https://123moviemagazine.vercel.app/author/moviesmagazine./',
               name: 'Dr Trailer',
               url: 'https://123moviemagazine.vercel.app/author/moviesmagazine/',
               image: {
@@ -176,7 +176,8 @@ const HomePage = () => {
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://123moviemagazine.vercel.app/author/moviesmagazine/',
+              '@id':
+                'https://123moviemagazine.vercel.app/author/moviesmagazine/',
               name: 'Dr Trailer',
               url: 'https://123moviemagazine.vercel.app/author/moviesmagazine/',
               image: {
@@ -203,7 +204,8 @@ const HomePage = () => {
             dateModified: '2024-01-13T13:13:00+00:00',
             author: {
               '@type': 'Person',
-              '@id': 'https://123moviemagazine.vercel.app/author/moviesmagazine/',
+              '@id':
+                'https://123moviemagazine.vercel.app/author/moviesmagazine/',
               name: 'Dr Trailer',
               url: 'https://123moviemagazine.vercel.app/author/moviesmagazine/',
               image: {
@@ -276,8 +278,8 @@ const HomePage = () => {
           /> */}
           {/* <link rel='canonical' href='https://123moviemagazine.vercel.app/' /> */}
           <meta property='og:locale' content='en_US' />
-          <meta property="og:type" content="video.movie" />
-       
+          <meta property='og:type' content='video.movie' />
+
           <meta
             property='og:title'
             content='Movies Magazine.™ - Explore. Discover. Watch.'
@@ -286,7 +288,10 @@ const HomePage = () => {
             property='og:description'
             content='Explore the world of cinema with Movies Magazine: Captivating reviews, top picks, and the latest news.'
           />
-          <meta property='og:url' content='https://123moviemagazine.vercel.app/' />
+          <meta
+            property='og:url'
+            content='https://123moviemagazine.vercel.app/'
+          />
           <meta
             property='og:site_name'
             content='Movies Magazine.™ - Explore. Discover. Watch.'
@@ -358,6 +363,10 @@ const HomePage = () => {
           `
             }}
           />
+          <link
+            rel='stylesheet'
+            href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'
+          />
         </Head>
 
         <h1
@@ -385,7 +394,6 @@ const HomePage = () => {
           Explore. Discover. Watch.{' '}
         </p>
 
-    
         <div
           className='shadow-lg flex items-center justify-center'
           role='navigation'
@@ -410,31 +418,10 @@ const HomePage = () => {
                   href='../trailer/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                   Trailers<span className='p'></span>
+                  Trailers<span className='p'></span>
                 </a>
               </li>
             </button>
-            {/* <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-194' className='menu-tutorials'>
-                <a
-                  href='../reviews/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                   Reviews<span className='p'></span>
-                </a>
-              </li>
-            </button>
-           
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-11606' className='menu-security'>
-                <a
-                  href='../recaps/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                   Recaps<span className='p'></span>
-                </a>
-              </li>
-            </button>  */}
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a
@@ -451,26 +438,29 @@ const HomePage = () => {
                   href='../latest/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                   Post<span className='p'></span>
+                  Post<span className='p'></span>
                 </a>
               </li>
             </button>
-            </ul>
+          </ul>
         </div>
-
-        {/* <h3
-          className='px-0 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent  font-bold hover:text-blue-800 text-3xl  mt-2'
-          style={{
-            marginTop: '15px'
-          }}
+        <a
+          href='https://t.me/watchmovietvshow/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent font-bold text-3xl mt-2 flex items-center justify-center'
+          style={{ marginTop: '15px' }}
         >
-          Most Latest & Popular Software{' '}
-        </h3> */}
+          <span>
+            For Request or Demand Movies Join Telegram
+            <i className='fab fa-telegram text-blue-600 hover:text-gray-600 ml-2 w-12 h-12 animate-pulse '></i>
+          </span>
+        </a>
         <div className='container'>
           <div className='flex-container'>
             <div className='category-container'>
               <div className='card-container'>
-              {trailer.map(trailerItem => (
+                {trailer.map(trailerItem => (
                   <div key={trailerItem.id} className='card'>
                     <a href={`/trailer/${trailerItem.id}`}>
                       <p
@@ -516,7 +506,7 @@ const HomePage = () => {
                 >
                   Many More Coming Soon...
                 </p>
-             {/* {recaps.map(recapsItem => (
+                {/* {recaps.map(recapsItem => (
                   <div key={recapsItem.id} className='card'>
                     <a href={`/recaps/${recapsItem.id}`}>
                       <p
@@ -609,7 +599,6 @@ const HomePage = () => {
                   Many More Coming Soon...
                 </p> */}
 
-                
                 {/* {graphicdesign.map(graphicdesignItem => (
                   <div key={graphicdesignItem.id} className='card'>
                     <a href={`/graphic-design/${graphicdesignItem.id}`}>
@@ -701,7 +690,7 @@ const HomePage = () => {
                   }}
                 >
                   Many More Coming Soon...
-                </p> 
+                </p>
               </div>
             </div>
             <div className='sidebar'>
@@ -878,6 +867,15 @@ const HomePage = () => {
 
             .sidebar {
               margin-top: 20px;
+            }
+          }
+
+          @media (max-width: 768px) {
+            .text-3xl {
+              font-size: 1.5rem;
+            }
+            .ml-2 {
+              margin-left: 0.5rem;
             }
           }
         `}</style>

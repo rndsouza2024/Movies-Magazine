@@ -31,7 +31,8 @@ const uwatchfreeSchema = JSON.stringify([
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://123moviemagazine.vercel.app/search?q={search_term_string}'
+        urlTemplate:
+          'https://123moviemagazine.vercel.app/search?q={search_term_string}'
       },
       'query-input': 'required name=search_term_string'
     }
@@ -106,7 +107,10 @@ const moviesPage = ({ items }) => {
     <div className='w-full' style={{ backgroundColor: '#D3D3D3' }}>
       <Head>
         <title> Movies Review Website | Movies Magazine.</title>
-        <link rel='canonical' href='https://123moviemagazine.vercel.app/movies/' />
+        <link
+          rel='canonical'
+          href='https://123moviemagazine.vercel.app/movies/'
+        />
         <meta
           name='robots'
           content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
@@ -115,7 +119,7 @@ const moviesPage = ({ items }) => {
         <meta name='googlebot' content='index,follow' />
         <meta name='revisit-after' content='1 days' />
         <meta property='og:locale' content='en_US' />
-        <meta property="og:type" content="video.movie" />
+        <meta property='og:type' content='video.movie' />
         <meta
           property='og:title'
           content='  Movies Review | Movies Magazine.'
@@ -125,7 +129,10 @@ const moviesPage = ({ items }) => {
           content='Explore the world of cinema with Movies Magazine: Captivating movies, top picks, and the latest news.'
         />
 
-        <meta property='og:url' content='https://123moviemagazine.vercel.app/movies' />
+        <meta
+          property='og:url'
+          content='https://123moviemagazine.vercel.app/movies'
+        />
 
         <meta property='og:site_name' content='Movies Magazine.' />
         <meta property='og:type' content='article' />
@@ -205,6 +212,8 @@ const moviesPage = ({ items }) => {
           `
           }}
         />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
       </Head>
       {/* <Script src='../../propler/ads.js' defer />
       <Script src='../../propler/ads2.js' defer /> */}
@@ -226,34 +235,34 @@ const moviesPage = ({ items }) => {
       </h1>
 
       <div
-          className='shadow-lg flex items-center justify-center'
-          role='navigation'
+        className='shadow-lg flex items-center justify-center'
+        role='navigation'
+      >
+        <ul
+          id='menu-header-menu'
+          className='menu flex flex-wrap justify-center'
         >
-          <ul
-            id='menu-header-menu'
-            className='menu flex flex-wrap justify-center'
-          >
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-35' className='menu-home active'>
-                <a
-                  href='/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                  Home<span className='p'></span>
-                </a>
-              </li>
-            </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-194' className='menu-tutorials'>
-                <a
-                  href='../trailer/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                   Trailers<span className='p'></span>
-                </a>
-              </li>
-            </button>
-            {/* <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+          <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+            <li id='menu-item-35' className='menu-home active'>
+              <a
+                href='/'
+                className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+              >
+                Home<span className='p'></span>
+              </a>
+            </li>
+          </button>
+          <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+            <li id='menu-item-194' className='menu-tutorials'>
+              <a
+                href='../trailer/'
+                className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+              >
+                Trailers<span className='p'></span>
+              </a>
+            </li>
+          </button>
+          {/* <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a
                   href='../reviews/'
@@ -274,35 +283,48 @@ const moviesPage = ({ items }) => {
                 </a>
               </li>
             </button>  */}
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-194' className='menu-tutorials'>
-                <a
-                  href='../movies/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                  Movies <span className='p'></span>
-                </a>
-              </li>
-            </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
-              <li id='menu-item-194' className='menu-tutorials'>
-                <a
-                  href='../latest/'
-                  className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
-                >
-                   Post<span className='p'></span>
-                </a>
-              </li>
-            </button>
-            </ul>
-        </div>
+          <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+            <li id='menu-item-194' className='menu-tutorials'>
+              <a
+                href='../movies/'
+                className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+              >
+                Movies <span className='p'></span>
+              </a>
+            </li>
+          </button>
+          <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+            <li id='menu-item-194' className='menu-tutorials'>
+              <a
+                href='../latest/'
+                className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
+              >
+                Post<span className='p'></span>
+              </a>
+            </li>
+          </button>
+        </ul>
+      </div>
+
+      <a
+          href='https://t.me/watchmovietvshow/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent font-bold text-3xl mt-2 flex items-center justify-center'
+          style={{ marginTop: '15px' }}
+        >
+          <span>
+            For Request or Demand Movies Join Telegram
+            <i className='fab fa-telegram text-blue-600 hover:text-gray-600 ml-2 w-12 h-12 animate-pulse '></i>
+          </span>
+        </a>
 
 
-      <div className='container' >
+      <div className='container'>
         {/* <h1  className='px-0 font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent'>movies Section</h1> */}
         <div className='flex-container'>
           <div className='main-content'>
-            <div className='card-container' >
+            <div className='card-container'>
               {moviesData.map(item => (
                 <div key={item.id}>
                   {/* <div key={item.id} className='card'> */}
@@ -327,10 +349,11 @@ const moviesPage = ({ items }) => {
                         {item.name}
                       </p>
                       <p className='text-black text-bg font-semibold mt-2'>
-                      Genre: {item.genre}, Directed by: {item.directorname}
+                        Genre: {item.genre}, Directed by: {item.directorname}
                       </p>
                       <p className='text-black text-bg font-semibold mt-2'>
-                      Country of origin: {item.country} Original language: {item.language}
+                        Country of origin: {item.country} Original language:{' '}
+                        {item.language}
                       </p>
 
                       <div className='bg-gradient-to-r from-pink-700 to-blue-700 bg-clip-text text-transparent text-black text-lg font-semibold mt-2'>
@@ -510,6 +533,14 @@ const moviesPage = ({ items }) => {
               margin-top: 20px;
             }
           }
+         @media (max-width: 768px) {
+      .text-3xl {
+        font-size: 1.5rem;
+      }
+      .ml-2 {
+        margin-left: 0.5rem;
+      }
+    }
         `}</style>
       </div>
     </div>

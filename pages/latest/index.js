@@ -208,6 +208,7 @@ const latestPage = ({ items }) => {
           `
           }}
         />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
       </Head>
       <Script src='../../propler/ads.js' defer />
       <Script src='../../propler/ads2.js' defer />
@@ -298,7 +299,18 @@ const latestPage = ({ items }) => {
 
 
       {/* </div> */}
-    
+      <a
+          href='https://t.me/watchmovietvshow/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent font-bold text-3xl mt-2 flex items-center justify-center'
+          style={{ marginTop: '15px' }}
+        >
+          <span>
+            For Request or Demand Movies Join Telegram
+            <i className='fab fa-telegram text-blue-600 hover:text-gray-600 ml-2 w-12 h-12 animate-pulse '></i>
+          </span>
+        </a>
       <div className='container'>
      
         <div className='flex-container'>
@@ -488,6 +500,14 @@ const latestPage = ({ items }) => {
               margin-top: 20px;
             }
           }
+              @media (max-width: 768px) {
+      .text-3xl {
+        font-size: 1.5rem;
+      }
+      .ml-2 {
+        margin-left: 0.5rem;
+      }
+    }
         `}</style>
       </div>
     </div>
