@@ -451,10 +451,10 @@ const moviesDetail = ({ moviesItem }) => {
           `
           }}
         />
-           <link
+           {/* <link
             rel='stylesheet'
             href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'
-          />
+          /> */}
       </Head>
         {/* <Script src='../../propler/ads.js' defer />
         <Script src='../../propler/ads2.js' defer /> */}
@@ -517,7 +517,7 @@ const moviesDetail = ({ moviesItem }) => {
                 </a>
               </li>
             </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+            {/* <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a
                   href='../trailer/'
@@ -526,7 +526,7 @@ const moviesDetail = ({ moviesItem }) => {
                   Trailers<span className='p'></span>
                 </a>
               </li>
-            </button>
+            </button> */}
             {/* <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a
@@ -564,7 +564,7 @@ const moviesDetail = ({ moviesItem }) => {
                   href='../latest/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Post<span className='p'></span>
+                  Latest News<span className='p'></span>
                 </a>
               </li>
             </button>
@@ -783,7 +783,7 @@ const moviesDetail = ({ moviesItem }) => {
               >
                 Watch Online Movies & Tv Series.
               </p>
-              <div
+              {/* <div
       style={{
         width: '100%',
         height: '500px',
@@ -860,8 +860,106 @@ const moviesDetail = ({ moviesItem }) => {
           borderRadius: '10px'
         }}
       />
-    </div>
-    
+    </div> */}
+    <div
+  style={{
+    width: '100%',
+    height: '500px',
+    overflow: 'hidden',
+    position: 'relative'
+  }}
+  className='rounded-xl mr-8 flex flex-col border-1 border-blue-600 bg-black p-2'
+>
+  {/* Conditional rendering based on whether it's a TV show */}
+  {isTvShow && (
+    <button
+      onClick={handleNext}
+      disabled={currentEpisodeIndex === moviesItem.videotvitem.length - 1}
+      style={{
+        marginBottom: '10px',
+        padding: '8px 16px',
+        backgroundColor: '#51AFF7',
+        color: 'white',
+        border: 'none',
+        cursor: 'pointer',
+        borderRadius: '20px',
+        fontWeight: 'bold',
+        alignSelf: 'center'
+      }}
+    >
+      Next - Episode {currentEpisodeIndex === moviesItem.videotvitem.length - 1 ? 1 : currentEpisodeIndex + 2}
+    </button>
+  )}
+
+  {/* Main video iframe */}
+  {moviesItem.dailyitem ? (
+    <iframe
+      frameBorder='0'
+      src={`https://geo.dailymotion.com/player/xkdl0.html?video=${moviesItem.dailyitem}&mute=true&Autoquality=1080p`}
+      width='100%'
+      height='450px'
+      allowFullScreen
+      scrolling="0"
+      title='Video Player'
+      style={{
+        filter: 'contrast(1.2) saturate(1.3) brightness(1.1) hue-rotate(15deg)'
+      }}
+    ></iframe>
+  ) : (
+    <iframe
+      frameBorder='0'
+      src={src}
+      width='100%'
+      height='450px'
+      allowFullScreen
+      scrolling="0"
+      title='Video Player'
+      style={{
+        filter: 'contrast(1.2) saturate(1.3) brightness(1.1) hue-rotate(15deg)'
+      }}
+    ></iframe>
+  )}
+
+  {/* Note */}
+  <p className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-sm'>
+    *Note: Use Setting in Player to improve the Quality of video to HD Quality 1080p.
+  </p>
+
+  {/* Previous button for TV shows */}
+  {isTvShow && (
+    <button
+      onClick={handlePrevious}
+      disabled={currentEpisodeIndex === 0}
+      style={{
+        marginTop: '10px',
+        padding: '8px 16px',
+        backgroundColor: '#32CD32',
+        color: 'white',
+        border: 'none',
+        cursor: 'pointer',
+        borderRadius: '20px',
+        fontWeight: 'bold',
+        alignSelf: 'center'
+      }}
+    >
+      Prev - Episode {currentEpisodeIndex === 0 ? moviesItem.videotvitem.length : currentEpisodeIndex}
+    </button>
+  )}
+
+  {/* Thumbnail */}
+  <img
+    src={isTvShow ? currentVideoItem.thumbnail : movieVideoItem.thumbnail}
+    alt='Video Thumbnail'
+    style={{
+      position: 'absolute',
+      top: '2px',
+      left: '10px',
+      width: '100px',
+      height: '56px',
+      borderRadius: '10px'
+    }}
+  />
+</div>
               <div className='flex flex-col items-center justify-center'></div>
               {moviesItem.mp3player && (
                 <MP3Player mp3Url={moviesItem.mp3player} />

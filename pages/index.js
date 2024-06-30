@@ -3,7 +3,7 @@ import { FaTelegram } from 'react-icons/fa'
 import moviesData from '../public/movies.json'
 import latestData from '../public/latest.json'
 // import reviewsData from '../public/reviews.json'
-import trailerData from '../public/trailer.json'
+// import trailerData from '../public/trailer.json'
 // import graphicdesignData from '../public/graphicdesign.json'
 // import recapsData from '../public/recaps.json'
 // import Marquee from '../components/Marquee';
@@ -23,24 +23,24 @@ const HomePage = () => {
   // // const [browser, setbrowser] = useState(browserData.slice(0, 2)) // Only the first 2 items
 
   // Initial state with a consistent set of data
-  const [movies, setmovies] = useState(moviesData.slice(0, 4))
+  const [movies, setmovies] = useState(moviesData.slice(0, 6))
   // const [reviews, setreviews] = useState(reviewsData.slice(0, 4))
-  const [trailer, settrailer] = useState(trailerData.slice(0, 4))
+  // const [trailer, settrailer] = useState(trailerData.slice(0, 4))
   // const [graphicdesign, setgraphicdesign] = useState(
   //   graphicdesignData.slice(0, 2))
   // const [recaps, setrecaps] = useState(recapsData.slice(0, 4))
 
   // // Update the state with random items after the component mounts
   useEffect(() => {
-    const shuffledmoviesData = getRandomItems(moviesData, 4)
+    const shuffledmoviesData = getRandomItems(moviesData, 6)
     // const shuffledreviewsData = getRandomItems(reviewsData, 4)
-    const shuffledtrailerData = getRandomItems(trailerData, 4)
+    // const shuffledtrailerData = getRandomItems(trailerData, 4)
     //   const shuffledgraphicdesignData = getRandomItems(graphicdesignData, 2)
     // const shuffledrecapsData = getRandomItems(recapsData, 4)
 
     setmovies(shuffledmoviesData)
     // setreviews(shuffledreviewsData)
-    settrailer(shuffledtrailerData)
+    // settrailer(shuffledtrailerData)
     //   setgraphicdesign(shuffledgraphicdesignData)
     // setrecaps(shuffledrecapsData)
   }, [])
@@ -110,7 +110,8 @@ const HomePage = () => {
         },
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://123moviesmagazine.vercel.app/?s={search_term_string}',
+          target:
+            'https://123moviesmagazine.vercel.app/?s={search_term_string}',
           'query-input': 'required name=search_term_string'
         }
       },
@@ -207,7 +208,7 @@ const HomePage = () => {
               '@id':
                 'https://123moviesmagazine.vercel.app/author/moviesmagazine/',
               name: 'Dr Trailer',
-              url: 'https://123moviesmagazine.vercel.app/author/moviesmagazine/',
+              url: 'https://123moviesmagazine.vercel.app/author/moviesmagazinMovies Magazinee/',
               image: {
                 '@type': 'ImageObject',
                 '@id': 'https://gravatar.com/drtrailer2022',
@@ -363,10 +364,10 @@ const HomePage = () => {
           `
             }}
           />
-          <link
+          {/* <link
             rel='stylesheet'
             href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'
-          />
+          /> */}
         </Head>
 
         <h1
@@ -412,7 +413,7 @@ const HomePage = () => {
                 </a>
               </li>
             </button>
-            <button className='border border-black p-2 m-1 hover:bg-orange-100'>
+            {/* <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a
                   href='../trailer/'
@@ -421,7 +422,7 @@ const HomePage = () => {
                   Trailers<span className='p'></span>
                 </a>
               </li>
-            </button>
+            </button> */}
             <button className='border border-black p-2 m-1 hover:bg-orange-100'>
               <li id='menu-item-194' className='menu-tutorials'>
                 <a
@@ -438,7 +439,7 @@ const HomePage = () => {
                   href='../latest/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                  Post<span className='p'></span>
+                  Latest News<span className='p'></span>
                 </a>
               </li>
             </button>
@@ -460,7 +461,7 @@ const HomePage = () => {
           <div className='flex-container'>
             <div className='category-container'>
               <div className='card-container'>
-                {trailer.map(trailerItem => (
+                {/* {trailer.map(trailerItem => (
                   <div key={trailerItem.id} className='card'>
                     <a href={`/trailer/${trailerItem.id}`}>
                       <p
@@ -500,7 +501,7 @@ const HomePage = () => {
                   className='animate-pulse text-black hover:px-0 font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-2xl'
                 >
                   Many More Coming Soon...Click Here.
-                </a>
+                </a> */}
                 {/* {recaps.map(recapsItem => (
                   <div key={recapsItem.id} className='card'>
                     <a href={`/recaps/${recapsItem.id}`}>
@@ -675,7 +676,7 @@ const HomePage = () => {
                     </a>
                   </div>
                 ))}
-                 <a
+                <a
                   href='../movies/'
                   className='animate-pulse text-black hover:px-0 font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-2xl'
                 >

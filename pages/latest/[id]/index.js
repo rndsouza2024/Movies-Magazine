@@ -287,7 +287,7 @@ const latestDetail = ({ latest }) => {
           `
           }}
         />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        {/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> */}
       </Head>
       <Script src='../../propler/ads.js' defer />
       <Script src='../../propler/ads2.js' defer />
@@ -384,7 +384,7 @@ const latestDetail = ({ latest }) => {
                   href='../latest/'
                   className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-xl'
                 >
-                   Post<span className='p'></span>
+                   Latest News<span className='p'></span>
                 </a>
               </li>
             </button>
