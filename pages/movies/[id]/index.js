@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import moviesData from '../../../public/movies.json'
 import latestData from '../../../public/latest.json'
 import { useEffect, useState, useRef } from 'react'
+import AdultSkipAds from '../../../components/AdultSkipAds'
 import Head from 'next/head'
 import Image from 'next/image'
 import Rating from '../../../components/Rating'
@@ -23,9 +24,10 @@ const moviesDetail = ({ moviesItem }) => {
   const [showTimer, setShowTimer] = useState(false)
   const [isMobileDevice, setIsMobileDevice] = useState(false)
 
-
+  
   const [currentEpisodeIndex, setCurrentEpisodeIndex] = useState(0);
-
+  const [showAd, setShowAd] = useState(moviesItem.badgegroup === 'Adult');
+  const videoPlayerRef = useRef(null);
   const isTvShow = moviesItem.videotvitem && moviesItem.videotvitem.length > 0;
 
   const handleNext = () => {
@@ -61,6 +63,7 @@ const moviesDetail = ({ moviesItem }) => {
     ? `https://short.ink/${currentVideoItem.id}/?thumbnail=${currentVideoItem.thumbnail}`
     : `https://short.ink/${movieVideoItem.id}/?thumbnail=${movieVideoItem.thumbnail}`;
  
+  
   
     useEffect(() => {
     const detectMobileDevice = () => {
@@ -456,9 +459,9 @@ const moviesDetail = ({ moviesItem }) => {
             href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'
           /> */}
       </Head>
-        {/* <Script src='../../propler/ads.js' defer />
-        <Script src='../../propler/ads2.js' defer /> */}
-
+        <Script src='../../propler/ads.js' defer />
+        <Script src='../../propler/ads2.js' defer />
+  <AdultSkipAds />
       <div
         className={`w-full`}
         style={{
@@ -870,7 +873,7 @@ const moviesDetail = ({ moviesItem }) => {
   }}
   className='rounded-xl mr-8 flex flex-col border-1 border-blue-600 bg-black p-2'
 >
-  {/* Conditional rendering based on whether it's a TV show */}
+
   {isTvShow && (
     <button
       onClick={handleNext}
@@ -891,7 +894,6 @@ const moviesDetail = ({ moviesItem }) => {
     </button>
   )}
 
-  {/* Main video iframe */}
   {moviesItem.dailyitem ? (
     <iframe
       frameBorder='0'
@@ -920,12 +922,10 @@ const moviesDetail = ({ moviesItem }) => {
     ></iframe>
   )}
 
-  {/* Note */}
   <p className='text-black hover:px-0 text-bg font-black bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-sm'>
     *Note: Use Setting in Player to improve the Quality of video to HD Quality 1080p.
   </p>
 
-  {/* Previous button for TV shows */}
   {isTvShow && (
     <button
       onClick={handlePrevious}
@@ -946,9 +946,8 @@ const moviesDetail = ({ moviesItem }) => {
     </button>
   )}
 
-  {/* Thumbnail */}
   <img
-    src={isTvShow ? currentVideoItem.thumbnail : movieVideoItem.thumbnail}
+      src={isTvShow ? currentVideoItem.thumbnail : movieVideoItem.thumbnail}
     alt='Video Thumbnail'
     style={{
       position: 'absolute',
