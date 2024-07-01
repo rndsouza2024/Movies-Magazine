@@ -24,12 +24,15 @@ const moviesDetail = ({ moviesItem }) => {
   const [showTimer, setShowTimer] = useState(false)
   const [isMobileDevice, setIsMobileDevice] = useState(false)
 
-  
-  const [currentEpisodeIndex, setCurrentEpisodeIndex] = useState(0);
-  const [showAd, setShowAd] = useState(moviesItem.badgegroup === 'Adult');
-  const videoPlayerRef = useRef(null);
-  const isTvShow = moviesItem.videotvitem && moviesItem.videotvitem.length > 0;
+  const { badgegroup } = moviesItem; // Extract badgegroup from moviesItem
 
+  const isAdult = badgegroup === ' Adult'; // Check if badgegroup is " Adult"
+
+  const [currentEpisodeIndex, setCurrentEpisodeIndex] = useState(0);
+
+  const videoPlayerRef = useRef(null);
+  
+  const isTvShow = moviesItem.videotvitem && moviesItem.videotvitem.length > 0;
   const handleNext = () => {
     if (isTvShow && currentEpisodeIndex < moviesItem.videotvitem.length - 1) {
       setCurrentEpisodeIndex(currentEpisodeIndex + 1);
@@ -63,6 +66,9 @@ const moviesDetail = ({ moviesItem }) => {
     ? `https://short.ink/${currentVideoItem.id}/?thumbnail=${currentVideoItem.thumbnail}`
     : `https://short.ink/${movieVideoItem.id}/?thumbnail=${movieVideoItem.thumbnail}`;
  
+  
+
+  
   
   
     useEffect(() => {
@@ -461,7 +467,7 @@ const moviesDetail = ({ moviesItem }) => {
       </Head>
         <Script src='../../propler/ads.js' defer />
         <Script src='../../propler/ads2.js' defer />
-  <AdultSkipAds />
+        {isAdult && <AdultSkipAds movie={moviesItem} />}
       <div
         className={`w-full`}
         style={{
@@ -958,6 +964,7 @@ const moviesDetail = ({ moviesItem }) => {
       borderRadius: '10px'
     }}
   />
+   
 </div>
               <div className='flex flex-col items-center justify-center'></div>
               {moviesItem.mp3player && (
