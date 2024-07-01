@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://123moviesmagazine.vercel.app/sitemap.xml
