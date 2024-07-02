@@ -90,7 +90,7 @@ const moviesDetail = ({ moviesItem }) => {
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'Movies Magazine.',
+      name: '123Movies Magazine™ - Explore. Discover. Watch.',
       url: 'https://123moviesmagazine.vercel.app/',
       image: ['https://123moviesmagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'],
       logo: {
@@ -122,7 +122,7 @@ const moviesDetail = ({ moviesItem }) => {
       {
         '@type': 'ListItem',
         position: 1,
-        name: 'Movies Magazine.',
+        name: '123Movies Magazine™.',
         item: 'https://123moviesmagazine.vercel.app/'
       },
       {
@@ -152,7 +152,7 @@ const moviesDetail = ({ moviesItem }) => {
         '@type': 'WebSite',
         '@id': 'https://123moviesmagazine.vercel.app/#website',
         url: 'https://123moviesmagazine.vercel.app/',
-        name: 'Movies Magazine.',
+        name: '123Movies Magazine™ - Explore. Discover. Watch.',
         publisher: {
           '@id': 'https://gravatar.com/drmovies2022/#person'
         },
@@ -162,7 +162,7 @@ const moviesDetail = ({ moviesItem }) => {
         '@type': 'WebPage',
         '@id': `${moviesItem.siteurl}#webpage`,
         url: moviesItem.siteurl,
-        name: `${moviesItem.name} | Movies Magazine.`,
+        name: `${moviesItem.name} | 123Movies Magazine™.`,
         datePublished: moviesItem.datePublished,
         dateModified: moviesItem.dateModified,
         isPartOf: {
@@ -187,10 +187,10 @@ const moviesDetail = ({ moviesItem }) => {
       {
         '@type': 'Article',
         '@id': `${moviesItem.siteurl}#article`,
-        headline: `Download ${moviesItem.name} | Movies Magazine.`,
+        headline: `Download ${moviesItem.name} | 123Movies Magazine™.`,
         datePublished: moviesItem.datePublished,
         dateModified: moviesItem.dateModified,
-        articleSection: 'Movies movies',
+        articleSection: 'Movies',
         author: {
           '@id': 'https://123moviesmagazine.vercel.app/author/moviesItem/'
         },
@@ -199,7 +199,7 @@ const moviesDetail = ({ moviesItem }) => {
         },
         description: moviesItem.synopsis,
         image: moviesItem.image,
-        name: `Download ${moviesItem.name} | Movies Magazine.`,
+        name: `Download ${moviesItem.name} | 123Movies Magazine™.`,
         isPartOf: {
           '@id': `${moviesItem.siteurl}#webpage`
         },
@@ -211,10 +211,10 @@ const moviesDetail = ({ moviesItem }) => {
       {
         '@type': 'BlogPosting',
         '@id': `${moviesItem.siteurl}#blogPost`,
-        headline: `Download ${moviesItem.name} | Movies Magazine.`,
+        headline: `Download ${moviesItem.name} | 123Movies Magazine™.`,
         datePublished: moviesItem.datePublished,
         dateModified: moviesItem.dateModified,
-        articleSection: 'Other Software',
+        articleSection: 'Movies',
         author: {
           '@id': 'https://123moviesmagazine.vercel.app/author/moviesmagazine./'
         },
@@ -223,7 +223,7 @@ const moviesDetail = ({ moviesItem }) => {
         },
         description: moviesItem.synopsis,
         image: moviesItem.image,
-        name: `Download ${moviesItem.name} | Movies Magazine.`,
+        name: `Download ${moviesItem.name} | 123Movies Magazine™.`,
         '@id': `${moviesItem.siteurl}#richSnippet`,
         isPartOf: {
           '@id': `${moviesItem.siteurl}#webpage`
@@ -259,12 +259,12 @@ const moviesDetail = ({ moviesItem }) => {
     },
     author: {
       '@type': 'Person',
-      name: 'Drmovies',
-      url: 'https://gravatar.com/drmovies2022'
+      name: 'DrTrailer',
+      url: 'https://gravatar.com/drtrailer2022'
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Movies Magazine.',
+      name: '123Movies Magazine™ - Explore. Discover. Watch.',
       logo: {
         '@type': 'ImageObject',
         url: 'https://123moviesmagazine.vercel.app/og_image.jpg'
@@ -313,12 +313,12 @@ const moviesDetail = ({ moviesItem }) => {
 
     author: {
       '@type': 'Person',
-      name: 'Drmovies',
-      url: 'https://gravatar.com/drmovies2022'
+      name: 'DrTrailer',
+      url: 'https://gravatar.com/drtrailer2022'
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Movies Magazine.???',
+      name: '123Movies Magazine™ - Explore. Discover. Watch.',
       logo: {
         '@type': 'ImageObject',
         url: 'https://123moviesmagazine.vercel.app/og_image.jpg'
@@ -331,16 +331,16 @@ const moviesDetail = ({ moviesItem }) => {
     }
   })
 
-  // const moviesSchema = JSON.stringify({
-  //   '@context': 'https://schema.org',
-  //   '@type': 'VideoObject',
-  //   name: moviesItem.title,
-  //   description: moviesItem.text,
-  //   uploadDate: moviesItem.datePublished,
-  //   thumbnailUrl: moviesItem.backimage,
-  //   duration: 'P34S', // Replace with the actual duration if it's different
-  //   embedUrl: moviesItem.videourl
-  // })
+  const moviesSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: moviesItem.title,
+    description: moviesItem.text,
+    uploadDate: moviesItem.datePublished,
+    thumbnailUrl: moviesItem.backimage,
+    duration: 'P34S', // Replace with the actual duration if it's different
+    embedUrl: moviesItem.videourl
+  })
 
   return (
     <div>
@@ -351,7 +351,7 @@ const moviesDetail = ({ moviesItem }) => {
         />
         <title>
           {' '}
-          123 Movies {moviesItem && moviesItem.name} | Movies Magazine.
+           {moviesItem && moviesItem.name} | 123Movies Magazine™.
         </title>
         <link rel='canonical' href={moviesItem && moviesItem.siteurl} />
         <meta name='robots' content='index, follow' />
@@ -361,11 +361,11 @@ const moviesDetail = ({ moviesItem }) => {
         <meta property='og:type' content='video.other' />
         <meta
           property='og:title'
-          content={`${moviesItem && moviesItem.name} - Movies Magazine.`}
+          content={`${moviesItem && moviesItem.name} - 123Movies Magazine™.`}
         />
         <meta
           property='og:description'
-          content='Explore the world of cinema with Movies Magazine: Captivating movies, top picks, and the latest news.'
+          content='Explore the world of cinema with 123Movies Magazine™: Captivating reviews, top picks, and the latest news.'
         />
 
         <meta property='og:url' content={`${moviesItem && moviesItem.url}`} />
@@ -373,14 +373,14 @@ const moviesDetail = ({ moviesItem }) => {
           name='keywords'
           content={`${moviesItem && moviesItem.keywords}`}
         />
-        <meta property='og:site_name' content='Movies Magazine.' />
+        <meta property='og:site_name' content='123Movies Magazine™' />
         <meta property='og:type' content='article' />
         <meta
           property=' og:image:alt'
           content={`${moviesItem && moviesItem.group}`}
         />
         <meta name='mobile-web-app-capable' content='yes' />
-        <meta property='article:section' content='Movies Review' />
+        <meta property='article:section' content='Movies' />
         <meta name='author' content='admin' />
         <meta
           property='article:modified_time'

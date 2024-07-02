@@ -25,7 +25,7 @@ const latestDetail = ({ latest }) => {
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'Movies Magazine™ - Explore. Discover. Watch.',
+      name: '123Movies Magazine™ - Explore. Discover. Watch.',
       url: 'https://123moviesmagazine.vercel.app/',
       image: [
         'https://123moviesmagazine.vercel.app/wp-content/uploads/2023/05/favicon.ico'
@@ -100,7 +100,7 @@ const latestDetail = ({ latest }) => {
       {
         '@type': 'Article',
         '@id': `/${latest['latest.watch']}#article`,
-        headline: `Watch ${latest.name} | Movies Magazine`,
+        headline: `Watch ${latest.name} | 123Movies Magazine™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         articleSection: 'latest',
@@ -110,9 +110,9 @@ const latestDetail = ({ latest }) => {
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
-        description: `Explore. Discover. Download - Free Your Desired Software.`,
+        description: `Explore the world of cinema with 123Movies Magazine™: Captivating reviews, top picks, and the latest news.`,
         image: latest.image,
-        name: `Watch ${latest.name} | Movies Magazine`,
+        name: `Watch ${latest.name} | 123Movies Magazine™`,
         isPartOf: {
           '@id': `/${latest['latest.watch']}#webpage`
         },
@@ -124,7 +124,7 @@ const latestDetail = ({ latest }) => {
       {
         '@type': 'BlogPosting',
         '@id': `/${latest['latest.watch']}#blogPost`,
-        headline: `Watch ${latest.name} | Movies Magazine`,
+        headline: `Watch ${latest.name} | 123Movies Magazine™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         articleSection: 'latest',
@@ -134,9 +134,9 @@ const latestDetail = ({ latest }) => {
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
-        description: `Explore. Discover. Download - Free Your Desired Software.`,
+        description: `Explore the world of cinema with 123Movies Magazine™: Captivating reviews, top picks, and the latest news.`,
         image: latest.image,
-        name: `Watch ${latest.name} | Movies Magazine`,
+        name: `Watch ${latest.name} | 123Movies Magazine™`,
         '@id': `/${latest['latest.watch']}#richSnippet`,
         isPartOf: {
           '@id': `/${latest['latest.watch']}#webpage`
@@ -177,7 +177,7 @@ const latestDetail = ({ latest }) => {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Movies Magazine',
+      name: '123Movies Magazine™',
       logo: {
         '@type': 'ImageObject',
         url: 'https://123moviesmagazine.vercel.app/og_image.jpg'
@@ -214,7 +214,7 @@ const latestDetail = ({ latest }) => {
 
         <meta
           property='og:description'
-          content='Movies Magazine is the top platform for exploring and downloading software,the premier platform for the latest releases and secure downloads.'
+          content='Explore the world of cinema with 123Movies Magazine™: Captivating reviews, top picks, and the latest news.'
         />
         <meta property='og:url' content={`${latest && latest.url}`} />
         <meta name='keywords' content={`${latest && latest.keywords}`} />

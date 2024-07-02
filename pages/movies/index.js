@@ -13,7 +13,7 @@ const uwatchfreeSchema = JSON.stringify([
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Movies Magazine. - Explore. Discover. Watch.',
+    name: '123Movies Magazine™ - Explore. Discover. Watch.',
     url: 'https://123moviesmagazine.vercel.app/',
     image: ['https://123moviesmagazine.vercel.app/favicon.ico'],
     logo: {
@@ -43,10 +43,10 @@ const softwareSchema = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Article',
   '@id': 'https://123moviesmagazine.vercel.app/movies/',
-  headline: 'Movies Review Website | Movies Magazine.™',
+  headline: '123Movies Magazine™ - Explore. Discover. Watch.',
   url: 'https://123moviesmagazine.vercel.app/movies/',
   description:
-    'Explore the world of cinema with Movies Magazine: Captivating movies, top picks, and the latest news.',
+    'Explore the world of cinema with 123Movies Magazine™: Captivating reviews, top picks, and the latest news.',
   image: 'https://123moviesmagazine.vercel.app/wp-content/uploads/movies.webp',
   author: {
     '@type': 'Person',
@@ -55,7 +55,7 @@ const softwareSchema = JSON.stringify({
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Movies Magazine. - Explore. Discover. Watch.',
+    name: '123Movies Magazine™ - Explore. Discover. Watch.',
     logo: {
       '@type': 'ImageObject',
       url: 'https://123moviesmagazine.vercel.app/og_image.jpg'
@@ -81,7 +81,7 @@ const breadcrumbSchema = JSON.stringify({
     {
       '@type': 'ListItem',
       position: 1,
-      name: 'Movies Magazine.',
+      name: '123Movies Magazine™.',
       item: 'https://123moviesmagazine.vercel.app/'
     },
     {
@@ -106,7 +106,7 @@ const moviesPage = ({ items }) => {
   return (
     <div className='w-full' style={{ backgroundColor: '#D3D3D3' }}>
       <Head>
-        <title> Movies Review Website | Movies Magazine.</title>
+        <title> 123Movies Magazine™ - Movies.</title>
         <link
           rel='canonical'
           href='https://123moviesmagazine.vercel.app/movies/'
@@ -122,11 +122,11 @@ const moviesPage = ({ items }) => {
         <meta property='og:type' content='video.movie' />
         <meta
           property='og:title'
-          content='  Movies Review | Movies Magazine.'
+          content='  123Movies Magazine™ - Explore. Discover. Watch.'
         />
         <meta
           property='og:description'
-          content='Explore the world of cinema with Movies Magazine: Captivating movies, top picks, and the latest news.'
+          content='Explore the world of cinema with 123Movies Magazine™: Captivating reviews, top picks, and the latest news.'
         />
 
         <meta
@@ -134,7 +134,7 @@ const moviesPage = ({ items }) => {
           content='https://123moviesmagazine.vercel.app/movies'
         />
 
-        <meta property='og:site_name' content='Movies Magazine.' />
+        <meta property='og:site_name' content='123Movies Magazine™' />
         <meta property='og:type' content='article' />
         <meta
           property=' og:image:alt'
