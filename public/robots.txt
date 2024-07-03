@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://123moviesmagazine.vercel.app/
+
+# Sitemaps
+Sitemap: https://123moviesmagazine.vercel.app/sitemap.xml
