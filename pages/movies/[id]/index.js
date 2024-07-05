@@ -171,7 +171,7 @@ const moviesDetail = ({ moviesItem }) => {
         '@type': 'WebPage',
         '@id': `${moviesItem.siteurl}#webpage`,
         url: moviesItem.siteurl,
-        name: `${moviesItem.name} | 123 Movies Magazine™.`,
+        name: `Watch ${moviesItem.name} | 123 Movies Magazine™.`,
         datePublished: moviesItem.datePublished,
         dateModified: moviesItem.dateModified,
         isPartOf: {
@@ -196,7 +196,7 @@ const moviesDetail = ({ moviesItem }) => {
       {
         '@type': 'Article',
         '@id': `${moviesItem.siteurl}#article`,
-        headline: `Download ${moviesItem.name} | 123 Movies Magazine™.`,
+        headline: `Watch ${moviesItem.name} | 123 Movies Magazine™.`,
         datePublished: moviesItem.datePublished,
         dateModified: moviesItem.dateModified,
         articleSection: 'Movies',
@@ -208,7 +208,7 @@ const moviesDetail = ({ moviesItem }) => {
         },
         description: moviesItem.synopsis,
         image: moviesItem.image,
-        name: `Download ${moviesItem.name} | 123 Movies Magazine™.`,
+        name: `Watch ${moviesItem.name} | 123 Movies Magazine™.`,
         isPartOf: {
           '@id': `${moviesItem.siteurl}#webpage`
         },
@@ -220,7 +220,7 @@ const moviesDetail = ({ moviesItem }) => {
       {
         '@type': 'BlogPosting',
         '@id': `${moviesItem.siteurl}#blogPost`,
-        headline: `Download ${moviesItem.name} | 123 Movies Magazine™.`,
+        headline: `Watch ${moviesItem.name} | 123 Movies Magazine™.`,
         datePublished: moviesItem.datePublished,
         dateModified: moviesItem.dateModified,
         articleSection: 'Movies',
@@ -232,7 +232,7 @@ const moviesDetail = ({ moviesItem }) => {
         },
         description: moviesItem.synopsis,
         image: moviesItem.image,
-        name: `Download ${moviesItem.name} | 123 Movies Magazine™.`,
+        name: `Watch ${moviesItem.name} | 123 Movies Magazine™.`,
         '@id': `${moviesItem.siteurl}#richSnippet`,
         isPartOf: {
           '@id': `${moviesItem.siteurl}#webpage`

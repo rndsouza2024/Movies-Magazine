@@ -182,7 +182,7 @@ const moviesp1Detail = ({ moviesp1Item }) => {
         '@type': 'WebPage',
         '@id': `${moviesp1Item.siteurl}#webpage`,
         url: moviesp1Item.siteurl,
-        name: `${moviesp1Item.name} | 123 Movies Magazine™.`,
+        name: `Watch ${moviesp1Item.name} | 123 Movies Magazine™.`,
         datePublished: moviesp1Item.datePublished,
         dateModified: moviesp1Item.dateModified,
         isPartOf: {
@@ -207,7 +207,7 @@ const moviesp1Detail = ({ moviesp1Item }) => {
       {
         '@type': 'Article',
         '@id': `${moviesp1Item.siteurl}#article`,
-        headline: `Download ${moviesp1Item.name} | 123 Movies Magazine™.`,
+        headline: `Watch ${moviesp1Item.name} | 123 Movies Magazine™.`,
         datePublished: moviesp1Item.datePublished,
         dateModified: moviesp1Item.dateModified,
         articleSection: 'Movies',
@@ -219,7 +219,7 @@ const moviesp1Detail = ({ moviesp1Item }) => {
         },
         description: moviesp1Item.synopsis,
         image: moviesp1Item.image,
-        name: `Download ${moviesp1Item.name} | 123 Movies Magazine™.`,
+        name: `Watch ${moviesp1Item.name} | 123 Movies Magazine™.`,
         isPartOf: {
           '@id': `${moviesp1Item.siteurl}#webpage`
         },
@@ -231,7 +231,7 @@ const moviesp1Detail = ({ moviesp1Item }) => {
       {
         '@type': 'BlogPosting',
         '@id': `${moviesp1Item.siteurl}#blogPost`,
-        headline: `Download ${moviesp1Item.name} | 123 Movies Magazine™.`,
+        headline: `Watch ${moviesp1Item.name} | 123 Movies Magazine™.`,
         datePublished: moviesp1Item.datePublished,
         dateModified: moviesp1Item.dateModified,
         articleSection: 'Movies',
@@ -243,7 +243,7 @@ const moviesp1Detail = ({ moviesp1Item }) => {
         },
         description: moviesp1Item.synopsis,
         image: moviesp1Item.image,
-        name: `Download ${moviesp1Item.name} | 123 Movies Magazine™.`,
+        name: `Watch ${moviesp1Item.name} | 123 Movies Magazine™.`,
         '@id': `${moviesp1Item.siteurl}#richSnippet`,
         isPartOf: {
           '@id': `${moviesp1Item.siteurl}#webpage`
