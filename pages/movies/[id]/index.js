@@ -1031,7 +1031,7 @@ const moviesDetail = ({ moviesItem }) => {
                     'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                 }}
               />
-              {moviesItem.news1.split('\n\n').map((paragraph, idx) => (
+              {/* {moviesItem.news1.split('\n\n').map((paragraph, idx) => (
                 <p
                   key={idx}
                   className='description text-black font-bold mt-2 text-xl'
@@ -1042,7 +1042,7 @@ const moviesDetail = ({ moviesItem }) => {
                 >
                   {paragraph}
                 </p>
-              ))}
+              ))} */}
 
               <div className='flex flex-col items-center justify-center'>
                 {moviesItem.image2 && (

@@ -1052,7 +1052,7 @@ const moviesp1Detail = ({ moviesp1Item }) => {
                     'contrast(1.3) saturate(1.4) brightness(1.2) hue-rotate(10deg)'
                 }}
               />
-              {moviesp1Item.news1.split('\n\n').map((paragraph, idx) => (
+              {/* {moviesp1Item.news1.split('\n\n').map((paragraph, idx) => (
                 <p
                   key={idx}
                   className='description text-black font-bold mt-2 text-xl'
@@ -1063,7 +1063,7 @@ const moviesp1Detail = ({ moviesp1Item }) => {
                 >
                   {paragraph}
                 </p>
-              ))}
+              ))} */}
 
               <div className='flex flex-col items-center justify-center'>
                 {moviesp1Item.image2 && (
