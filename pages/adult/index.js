@@ -377,9 +377,6 @@ const adultPage = ({ items }) => {
                         Genre: {item.genre}, Directed by: {item.directorname}
                       </p>
                       <p className='text-black text-bg font-semibold mt-2'>
-                        Total Episodes: {item.episode} 
-                      </p>
-                      <p className='text-black text-bg font-semibold mt-2'>
                         Country of origin: {item.country} Original language:{' '}
                         {item.language}
                       </p>
