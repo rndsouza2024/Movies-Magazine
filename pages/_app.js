@@ -71,8 +71,8 @@ function Application({ Component, pageProps }) {
   return (
     <div className='center'>
     
-      <GoogleAnalytics measurementId='G-JMSKR580QF' />
-      <Script async data-id="101459579" src="//static.getclicky.com/js"></Script>
+      <GoogleAnalytics measurementId='G-LCHSB7E5RC' />
+      {/* <Script async data-id="101459579" src="//static.getclicky.com/js"></Script> */}
       
 
       <PageTransition>
